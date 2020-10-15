@@ -41,7 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FakeDatabase.cs" />
     <Compile Include="model\Khoa.cs" />
     <Compile Include="model\Lop.cs" />
     <Compile Include="model\SinhVien.cs" />

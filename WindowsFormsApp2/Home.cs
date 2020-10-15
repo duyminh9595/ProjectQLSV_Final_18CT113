@@ -24,11 +24,14 @@ namespace WindowsFormsApp2
         {
             int dem = 0;
             int nam = 0, nu = 0;
+            int namBefore1 = 0, namBefore2 = 0, namBefore3 = 0, namBefore4 = 0,namBefore0=0;
+            int namhientai = DateTime.Now.Year;
             foreach(Khoa data in LoadExcel.lstKhoa)
             {
                 dem = 0;
                 foreach(Lop dataLop in data.dsLop)
                 {
+                    int temp = 0;
                     foreach(SinhVien dataSV in dataLop.dsSinhVien)
                     {
                         if(dataSV.GioiTinh.Equals("NAM"))
@@ -43,6 +46,28 @@ namespace WindowsFormsApp2
                         {
                             ++dem;
                         }
+                        ++temp;
+                    }
+
+                    if (dataLop.NamNhapHoc ==namhientai)
+                    {
+                        namBefore0 += temp;
+                    }
+                    if (dataLop.NamNhapHoc == namhientai-1)
+                    {
+                        namBefore1 += temp;
+                    }
+                    if (dataLop.NamNhapHoc == namhientai-2)
+                    {
+                        namBefore2 += temp;
+                    }
+                    if (dataLop.NamNhapHoc == namhientai-3)
+                    {
+                        namBefore3 += temp;
+                    }
+                    if (dataLop.NamNhapHoc == namhientai-4)
+                    {
+                        namBefore4 += temp;
                     }
                 }
                 if(dem!=0)
@@ -56,6 +81,11 @@ namespace WindowsFormsApp2
             {
                 chartSVTheoGioiTinh.Series["Series1"].Points.AddXY("Nữ", nu.ToString());
             }
+            charSVTheoNam.Series["SLSV"].Points.AddXY("Năm " + namhientai.ToString() , namBefore0.ToString());
+            charSVTheoNam.Series["SLSV"].Points.AddXY("Năm " + (namhientai-1).ToString() , namBefore1.ToString());
+            charSVTheoNam.Series["SLSV"].Points.AddXY("Năm " + (namhientai - 2).ToString() , namBefore2.ToString());
+            charSVTheoNam.Series["SLSV"].Points.AddXY("Năm " + (namhientai - 3).ToString() , namBefore3.ToString());
+            charSVTheoNam.Series["SLSV"].Points.AddXY("Năm " + (namhientai - 4).ToString() , namBefore4.ToString());
         }
     }
 }

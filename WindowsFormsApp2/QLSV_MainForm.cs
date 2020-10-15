@@ -20,6 +20,11 @@ namespace WindowsFormsApp2
 
         private void gunaLabel1_Click(object sender, EventArgs e)
         {
+            pnData.Controls.Clear();
+            Home formHome = new Home() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            formHome.FormBorderStyle = FormBorderStyle.None;
+            pnData.Controls.Add(formHome);
+            formHome.Show();
         }
         private void QLSV_MainForm_Load(object sender, EventArgs e)
         {
@@ -29,21 +34,5 @@ namespace WindowsFormsApp2
         }
 
         
-        private void ckbHome_Click_1(object sender, EventArgs e)
-        {
-            if (ckbHome.Checked)
-            {
-                ckbHome.BackColor = System.Drawing.Color.White;
-                pnData.Controls.Clear();
-                Home formHome = new Home() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-                formHome.FormBorderStyle = FormBorderStyle.None;
-                pnData.Controls.Add(formHome);
-                formHome.Show();
-            }
-            else
-            {
-                pnData.Controls.Clear();
-            }
-        }
     }
 }

@@ -32,10 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLSV_MainForm));
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.gunaGradientPanel1 = new Guna.UI.WinForms.GunaGradientPanel();
-            this.ckbHome = new Guna.UI.WinForms.GunaImageCheckBox();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.pnData = new System.Windows.Forms.Panel();
-            this.gunaGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaElipse1
@@ -47,7 +45,6 @@
             // 
             this.gunaGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientPanel1.BackgroundImage")));
             this.gunaGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.gunaGradientPanel1.Controls.Add(this.ckbHome);
             this.gunaGradientPanel1.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(113)))), ((int)(((byte)(182)))));
             this.gunaGradientPanel1.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(113)))), ((int)(((byte)(182)))));
             this.gunaGradientPanel1.GradientColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(113)))), ((int)(((byte)(182)))));
@@ -57,18 +54,6 @@
             this.gunaGradientPanel1.Size = new System.Drawing.Size(128, 664);
             this.gunaGradientPanel1.TabIndex = 0;
             this.gunaGradientPanel1.Text = "gunaGradientPanel1";
-            // 
-            // ckbHome
-            // 
-            this.ckbHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(113)))), ((int)(((byte)(182)))));
-            this.ckbHome.ImageCheckedOff = global::WindowsFormsApp2.Properties.Resources.home_50px;
-            this.ckbHome.ImageCheckedOn = global::WindowsFormsApp2.Properties.Resources.student_male_100px;
-            this.ckbHome.ImageSize = new System.Drawing.Size(50, 50);
-            this.ckbHome.Location = new System.Drawing.Point(0, 76);
-            this.ckbHome.Name = "ckbHome";
-            this.ckbHome.Size = new System.Drawing.Size(128, 63);
-            this.ckbHome.TabIndex = 0;
-            this.ckbHome.Click += new System.EventHandler(this.ckbHome_Click_1);
             // 
             // gunaLabel1
             // 
@@ -102,7 +87,6 @@
             this.Name = "QLSV_MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QLSV_MainForm";
-            this.gunaGradientPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -111,7 +95,6 @@
 
         private Guna.UI.WinForms.GunaElipse gunaElipse1;
         private Guna.UI.WinForms.GunaGradientPanel gunaGradientPanel1;
-        private Guna.UI.WinForms.GunaImageCheckBox ckbHome;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private System.Windows.Forms.Panel pnData;
     }
