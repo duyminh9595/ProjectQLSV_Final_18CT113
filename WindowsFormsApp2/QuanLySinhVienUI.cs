@@ -19,7 +19,7 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
         }
-        LoadExcel data;
+        /*LoadExcel data;
         BindingSource khoaBinDing = new BindingSource();
         BindingSource lopBinDing = new BindingSource();
         BindingSource svBinDing = new BindingSource();
@@ -102,8 +102,8 @@ namespace WindowsFormsApp2
             if(lopSelected!=-1)
             {
                 svBinDing.DataSource = data.lstKhoa[khoaSelected].dsLop[lopSelected].dsSinhVien;
-                svBinDing.ResetBindings(false);
+            svBinDing.ResetBindings(false);
             }
-        }
+        }*/
     }
 }

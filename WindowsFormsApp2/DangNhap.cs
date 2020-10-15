@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLSV_Library;
+using QLSV_Library.model;
 using QLSV_Library.service;
 
 namespace WindowsFormsApp2
@@ -62,20 +63,33 @@ namespace WindowsFormsApp2
                     MessageBox.Show("Loi");
             }
         }
-
+        bool checkDN = false;
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            if(txtID.Text.Equals("admin")&& txtPass.Text.Equals("123456"))
+            foreach(Khoa data in LoadExcel.lstKhoa)
             {
-
-                StatusDangNhapcs.check = true;
-                this.Close();
+                foreach(Lop dataLop in data.dsLop)
+                {
+                    foreach(SinhVien dataSV in dataLop.dsSinhVien)
+                    {
+                        if (txtID.Text.Equals(dataSV.MSSV) && txtPass.Text.Equals(dataSV.MatKhau))
+                        {
+                            this.Hide();
+                            QLSV_MainForm mainQL = new QLSV_MainForm();
+                            mainQL.Show();
+                            checkDN = true;
+                        }
+                    }
+                }
+            }
+            if(checkDN==false)
+            {
+                MessageBox.Show("Loi", "Ngu vl");
             }
         }
 
         private void DangNhap_Load(object sender, EventArgs e)
         {
-            
            
         }
     }

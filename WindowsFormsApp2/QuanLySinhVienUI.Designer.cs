@@ -53,7 +53,6 @@
             this.btnThemLop.TabIndex = 1;
             this.btnThemLop.Text = "OK";
             this.btnThemLop.UseVisualStyleBackColor = true;
-            this.btnThemLop.Click += new System.EventHandler(this.btnThemLop_Click);
             // 
             // txtTenLop
             // 
@@ -71,7 +70,6 @@
             this.lsKhoa.Name = "lsKhoa";
             this.lsKhoa.Size = new System.Drawing.Size(148, 290);
             this.lsKhoa.TabIndex = 3;
-            this.lsKhoa.SelectedIndexChanged += new System.EventHandler(this.lsKhoa_SelectedIndexChanged);
             // 
             // lsLop
             // 
@@ -81,7 +79,6 @@
             this.lsLop.Name = "lsLop";
             this.lsLop.Size = new System.Drawing.Size(190, 290);
             this.lsLop.TabIndex = 4;
-            this.lsLop.SelectedIndexChanged += new System.EventHandler(this.lsLop_SelectedIndexChanged);
             // 
             // lsSV
             // 
@@ -106,7 +103,6 @@
             this.Name = "QuanLySinhVienUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QuanLySinhVienUI";
-            this.Load += new System.EventHandler(this.QuanLySinhVienUI_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

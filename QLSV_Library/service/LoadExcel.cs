@@ -9,15 +9,15 @@ using QLSV_Library.model;
 
 namespace QLSV_Library.service
 {
-    public class LoadExcel
+    public static class LoadExcel
     {
-        string path = @"C:\Users\Duy minh\source\repos\WindowsFormsApp1\WindowsFormsApp1\QLSV_Library\Database.xlsx";
-        _Application excel = new _Excel.Application();
-        Workbook wb;
-        Worksheet ws;
-        Worksheet ws1;
-        public List<Khoa> lstKhoa;
-        public LoadExcel()
+        static string path = @"C:\Users\Duy minh\source\repos\WindowsFormsApp1\WindowsFormsApp1\QLSV_Library\Database.xlsx";
+        static _Application excel = new _Excel.Application();
+        static Workbook wb;
+        static Worksheet ws;
+        static Worksheet ws1;
+        public static List<Khoa> lstKhoa;
+        static LoadExcel()
         {
             wb = excel.Workbooks.Open(path);
             lstKhoa = new List<Khoa>();
@@ -26,7 +26,7 @@ namespace QLSV_Library.service
             ReadSinhVien(0, 0);
             excel.Quit();
         }
-        public void ReadKhoa(int i,int j)
+        public static void ReadKhoa(int i,int j)
         {
             ws = wb.Worksheets[1];
             i++;
@@ -40,7 +40,7 @@ namespace QLSV_Library.service
                 ++i;
             }
         }
-        public void ReadLop(int i, int j)
+        public static void ReadLop(int i, int j)
         {
             ws1 = wb.Worksheets[2];
             i++;
@@ -65,7 +65,7 @@ namespace QLSV_Library.service
                 ++i;
             }
         }
-        public void ReadSinhVien(int i, int j)
+        public static void ReadSinhVien(int i, int j)
         {
             ws = wb.Worksheets[3];
             i++;
@@ -81,6 +81,8 @@ namespace QLSV_Library.service
                     sv.DiaChi = ws.Cells[i, 4].Value;
                     sv.MatKhau = ws.Cells[i, 5].Value;
                     sv.NgaySinh = ws.Cells[i, 6].Value;
+                    sv.TrangThaiHocXong = ws.Cells[i, 7].Value;
+                    sv.GioiTinh=ws.Cells[i, 8].Value;
                     string maKhoa = s[2].ToString() + s[3].ToString();
                     string tenlop= s[0].ToString() + s[1].ToString()+s[2].ToString() + s[3].ToString()+ s[4].ToString(); 
                     bool themSV = false;

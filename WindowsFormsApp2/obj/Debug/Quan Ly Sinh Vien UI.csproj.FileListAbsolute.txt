@@ -26,3 +26,5 @@ C:\Users\Duy minh\source\repos\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp
 C:\Users\Duy minh\source\repos\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp2\obj\Debug\Quan Ly Sinh Vien UI.csproj.CopyComplete
 C:\Users\Duy minh\source\repos\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
 C:\Users\Duy minh\source\repos\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+C:\Users\Duy minh\source\repos\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.QLSV_MainForm.resources
+C:\Users\Duy minh\source\repos\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Home.resources
