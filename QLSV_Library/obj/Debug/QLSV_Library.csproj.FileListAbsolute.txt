@@ -1,0 +1,7 @@
+C:\Users\duy minh\Downloads\WindowsFormsApp1\WindowsFormsApp1\QLSV_Library\bin\Debug\QLSV_Library.dll
+C:\Users\duy minh\Downloads\WindowsFormsApp1\WindowsFormsApp1\QLSV_Library\bin\Debug\QLSV_Library.pdb
+C:\Users\duy minh\Downloads\WindowsFormsApp1\WindowsFormsApp1\QLSV_Library\obj\Debug\QLSV_Library.csproj.CoreCompileInputs.cache
+C:\Users\duy minh\Downloads\WindowsFormsApp1\WindowsFormsApp1\QLSV_Library\obj\Debug\QLSV_Library.dll
+C:\Users\duy minh\Downloads\WindowsFormsApp1\WindowsFormsApp1\QLSV_Library\obj\Debug\QLSV_Library.pdb
+C:\Users\duy minh\Downloads\WindowsFormsApp1\WindowsFormsApp1\QLSV_Library\obj\Debug\QLSV_Library.csprojAssemblyReference.cache
+C:\Users\duy minh\Downloads\WindowsFormsApp1\WindowsFormsApp1\QLSV_Library\obj\Debug\QLSV_Library.csproj.ResolveComReference.cache

@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30011.22
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp2", "WindowsFormsApp2\WindowsFormsApp2.csproj", "{E1EFA6C4-F39D-43C1-8291-E9719C03D979}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quan Ly Sinh Vien UI", "WindowsFormsApp2\Quan Ly Sinh Vien UI.csproj", "{E1EFA6C4-F39D-43C1-8291-E9719C03D979}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLySinhVien_Library", "QuanLySinhVien_Library\QuanLySinhVien_Library.csproj", "{362ACF37-DF21-4024-8D4D-D5C512BF7B61}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLSV_Library", "QLSV_Library\QLSV_Library.csproj", "{F2FC0A58-61BB-4CBB-8DFC-78D4626CF26A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{E1EFA6C4-F39D-43C1-8291-E9719C03D979}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1EFA6C4-F39D-43C1-8291-E9719C03D979}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1EFA6C4-F39D-43C1-8291-E9719C03D979}.Release|Any CPU.Build.0 = Release|Any CPU
-		{362ACF37-DF21-4024-8D4D-D5C512BF7B61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{362ACF37-DF21-4024-8D4D-D5C512BF7B61}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{362ACF37-DF21-4024-8D4D-D5C512BF7B61}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{362ACF37-DF21-4024-8D4D-D5C512BF7B61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2FC0A58-61BB-4CBB-8DFC-78D4626CF26A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2FC0A58-61BB-4CBB-8DFC-78D4626CF26A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2FC0A58-61BB-4CBB-8DFC-78D4626CF26A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2FC0A58-61BB-4CBB-8DFC-78D4626CF26A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,14 @@
+C:\Users\duy minh\Downloads\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+C:\Users\duy minh\Downloads\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+C:\Users\duy minh\Downloads\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+C:\Users\duy minh\Downloads\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.DangNhap.resources
+C:\Users\duy minh\Downloads\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+C:\Users\duy minh\Downloads\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp2\obj\Debug\Quan Ly Sinh Vien UI.csproj.GenerateResource.cache
+C:\Users\duy minh\Downloads\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp2\obj\Debug\Quan Ly Sinh Vien UI.csproj.CoreCompileInputs.cache
+C:\Users\duy minh\Downloads\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp2\obj\Debug\Quan Ly Sinh Vien UI.csproj.CopyComplete
+C:\Users\duy minh\Downloads\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+C:\Users\duy minh\Downloads\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+C:\Users\duy minh\Downloads\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp2\obj\Debug\Quan Ly Sinh Vien UI.csprojAssemblyReference.cache
+C:\Users\duy minh\Downloads\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.QuanLySinhVienUI.resources
+C:\Users\duy minh\Downloads\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp2\bin\Debug\QLSV_Library.dll
+C:\Users\duy minh\Downloads\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp2\bin\Debug\QLSV_Library.pdb
