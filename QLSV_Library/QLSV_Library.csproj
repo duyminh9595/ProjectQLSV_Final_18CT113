@@ -80,7 +80,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Database.xlsx" />
-    <None Include="service\Database.xlsx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

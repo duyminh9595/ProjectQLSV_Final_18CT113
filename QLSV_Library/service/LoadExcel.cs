@@ -11,15 +11,14 @@ namespace QLSV_Library.service
 {
     public class LoadExcel
     {
-        string path = "";
+        string path = @"C:\Users\Duy minh\source\repos\WindowsFormsApp1\WindowsFormsApp1\QLSV_Library\Database.xlsx";
         _Application excel = new _Excel.Application();
         Workbook wb;
         Worksheet ws;
         Worksheet ws1;
         public List<Khoa> lstKhoa;
-        public LoadExcel(string path)
+        public LoadExcel()
         {
-            this.path = path;
             wb = excel.Workbooks.Open(path);
             lstKhoa = new List<Khoa>();
             ReadKhoa(0, 0);
@@ -50,10 +49,10 @@ namespace QLSV_Library.service
             {
                 string s = "";
                 s= ws1.Cells[i, 2].Value;
-                string[] arr = s.Split('-');
+                string maKhoa = s[2].ToString() + s[3].ToString();
                 foreach(Khoa data in lstKhoa)
                 {
-                    if(arr[1].Equals(data.MaKhoa))
+                    if(maKhoa.Equals(data.MaKhoa))
                     {
                         Lop lop = new Lop();
                         lop.MaLop = s;
@@ -71,29 +70,41 @@ namespace QLSV_Library.service
             ws = wb.Worksheets[3];
             i++;
             j++;
-            while (ws.Cells[i, j].Value != null)
-            {
-                SinhVien sv = new SinhVien();
-                string s = ws.Cells[i, 1].Value;
-                string[] arr = s.Split('-');
-                sv.MSSV = s;
-                sv.Ten = ws.Cells[i, 2].Value;
-                sv.SDT = ws.Cells[i, 3].Value;
-                sv.DiaChi= ws.Cells[i, 4].Value;
-                sv.NgaySinh= ws.Cells[i, 5].Value;
-                string maKhoa = arr[0][2].ToString() + arr[0][3].ToString();
-                foreach(Khoa dataKhoa in lstKhoa)
+            
+                while (ws.Cells[i, j].Value != null)
                 {
-                    if(dataKhoa.Equals(maKhoa))
+                    SinhVien sv = new SinhVien();
+                    string s = ws.Cells[i, 1].Value;
+                    sv.MSSV = s;
+                    sv.Ten = ws.Cells[i, 2].Value;
+                    sv.SDT = ws.Cells[i, 3].Value;
+                    sv.DiaChi = ws.Cells[i, 4].Value;
+                    sv.MatKhau = ws.Cells[i, 5].Value;
+                    sv.NgaySinh = ws.Cells[i, 6].Value;
+                    string maKhoa = s[2].ToString() + s[3].ToString();
+                    string tenlop= s[0].ToString() + s[1].ToString()+s[2].ToString() + s[3].ToString()+ s[4].ToString(); 
+                    bool themSV = false;
+                    foreach (Khoa dataKhoa in lstKhoa)
                     {
-                        foreach (Lop dataLop in dataKhoa.dsLop)
+                        if (dataKhoa.MaKhoa.Equals(maKhoa))
                         {
-                            if (arr[1].Equals)
+                            foreach (Lop dataLop in dataKhoa.dsLop)
+                            {
+                                if (dataLop.MaLop.Equals(tenlop))
+                                {
+                                    dataLop.dsSinhVien.Add(sv);
+                                    themSV = true;
+                                    break;
+                                }
+                            }
+                            if (themSV == true)
+                                break;
+                        }
                     }
-                    }
+                        
+                    ++i;
                 }
-                ++i;
-            }
+            
         }
     }
 }

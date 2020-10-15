@@ -33,20 +33,23 @@
             this.txtTenLop = new System.Windows.Forms.TextBox();
             this.lsKhoa = new System.Windows.Forms.ListBox();
             this.lsLop = new System.Windows.Forms.ListBox();
+            this.lsSV = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // txtMaLop
             // 
-            this.txtMaLop.Location = new System.Drawing.Point(22, 13);
+            this.txtMaLop.Location = new System.Drawing.Point(16, 11);
+            this.txtMaLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtMaLop.Name = "txtMaLop";
-            this.txtMaLop.Size = new System.Drawing.Size(196, 22);
+            this.txtMaLop.Size = new System.Drawing.Size(148, 20);
             this.txtMaLop.TabIndex = 0;
             // 
             // btnThemLop
             // 
-            this.btnThemLop.Location = new System.Drawing.Point(604, 11);
+            this.btnThemLop.Location = new System.Drawing.Point(453, 9);
+            this.btnThemLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnThemLop.Name = "btnThemLop";
-            this.btnThemLop.Size = new System.Drawing.Size(121, 23);
+            this.btnThemLop.Size = new System.Drawing.Size(91, 19);
             this.btnThemLop.TabIndex = 1;
             this.btnThemLop.Text = "OK";
             this.btnThemLop.UseVisualStyleBackColor = true;
@@ -54,40 +57,52 @@
             // 
             // txtTenLop
             // 
-            this.txtTenLop.Location = new System.Drawing.Point(242, 12);
+            this.txtTenLop.Location = new System.Drawing.Point(182, 10);
+            this.txtTenLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTenLop.Name = "txtTenLop";
-            this.txtTenLop.Size = new System.Drawing.Size(196, 22);
+            this.txtTenLop.Size = new System.Drawing.Size(148, 20);
             this.txtTenLop.TabIndex = 2;
             // 
             // lsKhoa
             // 
             this.lsKhoa.FormattingEnabled = true;
-            this.lsKhoa.ItemHeight = 16;
-            this.lsKhoa.Location = new System.Drawing.Point(22, 64);
+            this.lsKhoa.Location = new System.Drawing.Point(16, 52);
+            this.lsKhoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lsKhoa.Name = "lsKhoa";
-            this.lsKhoa.Size = new System.Drawing.Size(196, 356);
+            this.lsKhoa.Size = new System.Drawing.Size(148, 290);
             this.lsKhoa.TabIndex = 3;
             this.lsKhoa.SelectedIndexChanged += new System.EventHandler(this.lsKhoa_SelectedIndexChanged);
             // 
             // lsLop
             // 
             this.lsLop.FormattingEnabled = true;
-            this.lsLop.ItemHeight = 16;
-            this.lsLop.Location = new System.Drawing.Point(253, 64);
+            this.lsLop.Location = new System.Drawing.Point(190, 52);
+            this.lsLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lsLop.Name = "lsLop";
-            this.lsLop.Size = new System.Drawing.Size(252, 356);
+            this.lsLop.Size = new System.Drawing.Size(190, 290);
             this.lsLop.TabIndex = 4;
+            this.lsLop.SelectedIndexChanged += new System.EventHandler(this.lsLop_SelectedIndexChanged);
+            // 
+            // lsSV
+            // 
+            this.lsSV.FormattingEnabled = true;
+            this.lsSV.Location = new System.Drawing.Point(406, 52);
+            this.lsSV.Name = "lsSV";
+            this.lsSV.Size = new System.Drawing.Size(120, 290);
+            this.lsSV.TabIndex = 5;
             // 
             // QuanLySinhVienUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.lsSV);
             this.Controls.Add(this.lsLop);
             this.Controls.Add(this.lsKhoa);
             this.Controls.Add(this.txtTenLop);
             this.Controls.Add(this.btnThemLop);
             this.Controls.Add(this.txtMaLop);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "QuanLySinhVienUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QuanLySinhVienUI";
@@ -104,5 +119,6 @@
         private System.Windows.Forms.TextBox txtTenLop;
         private System.Windows.Forms.ListBox lsKhoa;
         private System.Windows.Forms.ListBox lsLop;
+        private System.Windows.Forms.ListBox lsSV;
     }
 }

@@ -22,10 +22,12 @@ namespace WindowsFormsApp2
         LoadExcel data;
         BindingSource khoaBinDing = new BindingSource();
         BindingSource lopBinDing = new BindingSource();
+        BindingSource svBinDing = new BindingSource();
         bool checkLoadKhoa = false;
+        bool checkLoadLop = false;
         private void QuanLySinhVienUI_Load(object sender, EventArgs e)
         {
-            data = new LoadExcel(@"C:\Users\duy minh\Downloads\WindowsFormsApp1\WindowsFormsApp1\QLSV_Library\service\Database.xlsx");
+            data = new LoadExcel();
             DangNhap dnUI = new DangNhap();
             dnUI.ShowDialog();
             if (StatusDangNhapcs.check==true)
@@ -38,16 +40,30 @@ namespace WindowsFormsApp2
                 loadLop();
             }
         }
-
+        int khoaSelected=-1;
         private void loadLop()
         {
             if(checkLoadKhoa==true)
             {
-                int khoaSelected = lsKhoa.SelectedIndex;
+                khoaSelected = lsKhoa.SelectedIndex;
                 lopBinDing.DataSource = data.lstKhoa[khoaSelected].dsLop;
                 lsLop.DataSource = lopBinDing;
                 lsLop.DisplayMember = "Display";
                 lsLop.ValueMember = "Display";
+                checkLoadLop = true;
+                loadSV();
+            }
+        }
+
+        private void loadSV()
+        {
+            if(checkLoadKhoa==true && checkLoadLop==true)
+            {
+                int lopSelected = lsLop.SelectedIndex;
+                svBinDing.DataSource = data.lstKhoa[khoaSelected].dsLop[lopSelected].dsSinhVien;
+                lsSV.DataSource = svBinDing;
+                lsSV.DisplayMember = "Display";
+                lsSV.ValueMember = "Display";
             }
         }
 
@@ -75,9 +91,19 @@ namespace WindowsFormsApp2
 
         private void lsKhoa_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int khoaSelected = lsKhoa.SelectedIndex;
+            khoaSelected = lsKhoa.SelectedIndex;
             lopBinDing.DataSource = data.lstKhoa[khoaSelected].dsLop;
             lopBinDing.ResetBindings(false);
+        }
+
+        private void lsLop_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int lopSelected = lsLop.SelectedIndex;
+            if(lopSelected!=-1)
+            {
+                svBinDing.DataSource = data.lstKhoa[khoaSelected].dsLop[lopSelected].dsSinhVien;
+                svBinDing.ResetBindings(false);
+            }
         }
     }
 }

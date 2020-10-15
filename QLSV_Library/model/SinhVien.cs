@@ -13,7 +13,7 @@ namespace QLSV_Library.model
         public double SDT { get; set; }
         public string DiaChi { get; set; }
         public string MatKhau { get; set; }
-        public string NgaySinh { get; set; }
+        public DateTime NgaySinh { get; set; }
         public string Display { get { return Ten; } }
     }
 }
