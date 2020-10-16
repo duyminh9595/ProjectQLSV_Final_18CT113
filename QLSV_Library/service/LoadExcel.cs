@@ -11,7 +11,7 @@ namespace QLSV_Library.service
 {
     public static class LoadExcel
     {
-        static string path = @"C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\QLSV_Library\Database.xlsx";
+        static string path = @"Database.xlsx";
         static _Application excel = new _Excel.Application();
         static Workbook wb;
         static Worksheet ws;
@@ -20,7 +20,7 @@ namespace QLSV_Library.service
         public static List<Khoa> lstKhoa;
         static LoadExcel()
         {
-            wb = excel.Workbooks.Open(path);
+            wb = excel.Workbooks.Open(AppDomain.CurrentDomain.BaseDirectory+path);
             lstKhoa = new List<Khoa>();
             svChuaXepLop = new SinhVienChuaXepLop();
             ReadKhoa(0, 0);

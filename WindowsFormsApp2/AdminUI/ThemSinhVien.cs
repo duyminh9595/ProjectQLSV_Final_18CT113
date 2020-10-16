@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp2
+namespace WindowsFormsApp2.AdminUI
 {
-    public partial class ThemSinhVienForm : Form
+    public partial class ThemSinhVien : Form
     {
-        public ThemSinhVienForm()
+        public ThemSinhVien()
         {
             InitializeComponent();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
