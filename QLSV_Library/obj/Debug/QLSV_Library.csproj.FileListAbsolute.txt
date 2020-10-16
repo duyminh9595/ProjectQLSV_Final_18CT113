@@ -12,3 +12,9 @@ C:\Users\Duy minh\source\repos\WindowsFormsApp1\WindowsFormsApp1\QLSV_Library\ob
 C:\Users\Duy minh\source\repos\WindowsFormsApp1\WindowsFormsApp1\QLSV_Library\obj\Debug\QLSV_Library.pdb
 C:\Users\Duy minh\source\repos\WindowsFormsApp1\WindowsFormsApp1\QLSV_Library\bin\Debug\QLSV_Library.dll
 C:\Users\Duy minh\source\repos\WindowsFormsApp1\WindowsFormsApp1\QLSV_Library\bin\Debug\QLSV_Library.pdb
+C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\QLSV_Library\obj\Debug\QLSV_Library.csprojResolveAssemblyReference.cache
+C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\QLSV_Library\obj\Debug\QLSV_Library.csproj.ResolveComReference.cache
+C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\QLSV_Library\obj\Debug\QLSV_Library.dll
+C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\QLSV_Library\obj\Debug\QLSV_Library.pdb
+C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\QLSV_Library\bin\Debug\QLSV_Library.dll
+C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\QLSV_Library\bin\Debug\QLSV_Library.pdb

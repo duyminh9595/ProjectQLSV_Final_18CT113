@@ -28,3 +28,17 @@ C:\Users\Duy minh\source\repos\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp
 C:\Users\Duy minh\source\repos\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
 C:\Users\Duy minh\source\repos\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.QLSV_MainForm.resources
 C:\Users\Duy minh\source\repos\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Home.resources
+C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\QLSV_Library.dll
+C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\QLSV_Library.pdb
+C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\Quan Ly Sinh Vien UI.csprojResolveAssemblyReference.cache
+C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.DangNhap.resources
+C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Home.resources
+C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.QLSV_MainForm.resources
+C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.QuanLySinhVienUI.resources
+C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\Quan Ly Sinh Vien UI.csproj.GenerateResource.Cache

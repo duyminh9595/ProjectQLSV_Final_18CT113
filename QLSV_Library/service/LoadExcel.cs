@@ -11,7 +11,7 @@ namespace QLSV_Library.service
 {
     public static class LoadExcel
     {
-        static string path = @"C:\Users\Duy minh\source\repos\WindowsFormsApp1\WindowsFormsApp1\QLSV_Library\Database.xlsx";
+        static string path = @"C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\QLSV_Library\Database.xlsx";
         static _Application excel = new _Excel.Application();
         static Workbook wb;
         static Worksheet ws;
@@ -76,10 +76,8 @@ namespace QLSV_Library.service
                 {
                     SinhVien sv = new SinhVien();
                     string s = "";
-                    if (ws.Cells[i, 2].Value != null)
+                    if (ws.Cells[i, 1].Value != null)
                         s = ws.Cells[i, 1].Value;
-                    else
-                        s = "Rong";
                     sv.MSSV = s;
                     sv.Ten = ws.Cells[i, 2].Value;
                     sv.SDT = ws.Cells[i, 3].Value;
@@ -89,7 +87,7 @@ namespace QLSV_Library.service
                     sv.TrangThaiHocXong = ws.Cells[i, 7].Value;
                     sv.GioiTinh=ws.Cells[i, 8].Value;
                     sv.UserName = ws.Cells[i, 9].Value;
-                    if(!s.Equals("Rong"))
+                    if(!String.IsNullOrEmpty(s))
                     {
                         string maKhoa = s[2].ToString() + s[3].ToString();
                         string tenlop = s[0].ToString() + s[1].ToString() + s[2].ToString() + s[3].ToString() + s[4].ToString();
