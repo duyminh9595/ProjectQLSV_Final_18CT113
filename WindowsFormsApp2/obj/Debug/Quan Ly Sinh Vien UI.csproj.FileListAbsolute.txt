@@ -42,3 +42,4 @@ C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsA
 C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.QLSV_MainForm.resources
 C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.QuanLySinhVienUI.resources
 C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\Quan Ly Sinh Vien UI.csproj.GenerateResource.Cache
+C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.ThemSinhVienForm.resources

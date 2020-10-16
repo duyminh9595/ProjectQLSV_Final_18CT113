@@ -44,6 +44,7 @@ namespace WindowsFormsApp2
             this.label2 = new System.Windows.Forms.Label();
             this.txtID = new Guna.UI.WinForms.GunaLineTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.gunaShadowPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -63,7 +64,7 @@ namespace WindowsFormsApp2
             this.gunaPictureBox1.Image = global::WindowsFormsApp2.Properties.Resources.students;
             this.gunaPictureBox1.Location = new System.Drawing.Point(62, 75);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
-            this.gunaPictureBox1.Size = new System.Drawing.Size(345, 313);
+            this.gunaPictureBox1.Size = new System.Drawing.Size(312, 313);
             this.gunaPictureBox1.TabIndex = 1;
             this.gunaPictureBox1.TabStop = false;
             // 
@@ -103,7 +104,7 @@ namespace WindowsFormsApp2
             this.gunaShadowPanel1.Controls.Add(this.gunaLabel1);
             this.gunaShadowPanel1.Location = new System.Drawing.Point(470, 75);
             this.gunaShadowPanel1.Name = "gunaShadowPanel1";
-            this.gunaShadowPanel1.ShadowColor = System.Drawing.Color.Silver;
+            this.gunaShadowPanel1.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(181)))));
             this.gunaShadowPanel1.Size = new System.Drawing.Size(244, 313);
             this.gunaShadowPanel1.TabIndex = 0;
             // 
@@ -214,12 +215,24 @@ namespace WindowsFormsApp2
             this.label1.TabIndex = 2;
             this.label1.Text = "User Name";
             // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(62, 13);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(652, 59);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Đồ Án Quản Lý Sinh Viên";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // DangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(156)))), ((int)(((byte)(217)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.gunaPictureBox1);
             this.Controls.Add(this.gunaShadowPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -249,6 +262,7 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.Label lblQuenMatKhau;
         private Guna.UI.WinForms.GunaCheckBox ckbHienMatKhau;
         private Guna.UI.WinForms.GunaGradientButton btnDangNhap;
+        private System.Windows.Forms.Label label3;
     }
 }
 

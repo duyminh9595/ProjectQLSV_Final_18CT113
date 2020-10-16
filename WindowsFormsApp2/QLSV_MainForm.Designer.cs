@@ -29,31 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QLSV_MainForm));
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
-            this.gunaGradientPanel1 = new Guna.UI.WinForms.GunaGradientPanel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.pnData = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // gunaElipse1
             // 
             this.gunaElipse1.Radius = 45;
             this.gunaElipse1.TargetControl = this;
-            // 
-            // gunaGradientPanel1
-            // 
-            this.gunaGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientPanel1.BackgroundImage")));
-            this.gunaGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.gunaGradientPanel1.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(113)))), ((int)(((byte)(182)))));
-            this.gunaGradientPanel1.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(113)))), ((int)(((byte)(182)))));
-            this.gunaGradientPanel1.GradientColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(113)))), ((int)(((byte)(182)))));
-            this.gunaGradientPanel1.GradientColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(113)))), ((int)(((byte)(182)))));
-            this.gunaGradientPanel1.Location = new System.Drawing.Point(24, 41);
-            this.gunaGradientPanel1.Name = "gunaGradientPanel1";
-            this.gunaGradientPanel1.Size = new System.Drawing.Size(128, 664);
-            this.gunaGradientPanel1.TabIndex = 0;
-            this.gunaGradientPanel1.Text = "gunaGradientPanel1";
             // 
             // gunaLabel1
             // 
@@ -73,21 +58,30 @@
             this.pnData.Size = new System.Drawing.Size(791, 664);
             this.pnData.TabIndex = 2;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(147)))), ((int)(((byte)(212)))));
+            this.panel1.Location = new System.Drawing.Point(26, 44);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(121, 360);
+            this.panel1.TabIndex = 3;
+            // 
             // QLSV_MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1000, 750);
+            this.BackColor = System.Drawing.Color.LightGray;
+            this.ClientSize = new System.Drawing.Size(1000, 749);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnData);
             this.Controls.Add(this.gunaLabel1);
-            this.Controls.Add(this.gunaGradientPanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "QLSV_MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QLSV_MainForm";
+            this.Load += new System.EventHandler(this.QLSV_MainForm_Load_1);
             this.ResumeLayout(false);
 
         }
@@ -95,8 +89,8 @@
         #endregion
 
         private Guna.UI.WinForms.GunaElipse gunaElipse1;
-        private Guna.UI.WinForms.GunaGradientPanel gunaGradientPanel1;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private System.Windows.Forms.Panel pnData;
+        private System.Windows.Forms.Panel panel1;
     }
 }

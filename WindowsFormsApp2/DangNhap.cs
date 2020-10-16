@@ -90,7 +90,7 @@ namespace WindowsFormsApp2
 
         private void DangNhap_Load(object sender, EventArgs e)
         {
-           
+            label3.Text=label3.Text.ToUpper();
         }
     }
 }

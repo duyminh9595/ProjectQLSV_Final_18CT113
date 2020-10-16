@@ -48,6 +48,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="service\LoadExcel.cs" />
     <Compile Include="service\StatusDangNhapcs.cs" />
+    <Compile Include="service\ThemMoiSV.cs" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">

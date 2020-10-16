@@ -33,6 +33,9 @@ namespace WindowsFormsApp2
            dnUI.ShowDialog();
         }
 
-        
+        private void QLSV_MainForm_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
