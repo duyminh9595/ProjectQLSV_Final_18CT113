@@ -16,6 +16,7 @@ namespace QLSV_Library.model
         public DateTime NgaySinh { get; set; }
         public string TrangThaiHocXong { get; set; }
         public string GioiTinh { get; set; }
+        public string UserName { get; set; }
         public string Display { get { return Ten; } }
     }
 }

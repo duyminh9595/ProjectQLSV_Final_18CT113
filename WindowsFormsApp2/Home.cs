@@ -19,13 +19,15 @@ namespace WindowsFormsApp2
             InitializeComponent();
             
         }
-
+        int slsvconhoc = 0, slsvchuaxeplop = 0;
         private void Home_Load(object sender, EventArgs e)
         {
             int dem = 0;
             int nam = 0, nu = 0;
             int namBefore1 = 0, namBefore2 = 0, namBefore3 = 0, namBefore4 = 0,namBefore0=0;
             int namhientai = DateTime.Now.Year;
+            int svTinhDongNai = 0, svTinhKhac = 0;
+            
             foreach(Khoa data in LoadExcel.lstKhoa)
             {
                 dem = 0;
@@ -45,6 +47,15 @@ namespace WindowsFormsApp2
                         if(dataSV.TrangThaiHocXong.Equals("NO"))
                         {
                             ++dem;
+                            ++slsvconhoc;
+                        }
+                        if(dataSV.DiaChi.Contains("Đồng Nai"))
+                        {
+                            ++svTinhDongNai;
+                        }
+                        if (!dataSV.DiaChi.Contains("Đồng Nai"))
+                        {
+                            ++svTinhKhac;
                         }
                         ++temp;
                     }
@@ -86,6 +97,16 @@ namespace WindowsFormsApp2
             charSVTheoNam.Series["SLSV"].Points.AddXY("Năm " + (namhientai - 2).ToString() , namBefore2.ToString());
             charSVTheoNam.Series["SLSV"].Points.AddXY("Năm " + (namhientai - 3).ToString() , namBefore3.ToString());
             charSVTheoNam.Series["SLSV"].Points.AddXY("Năm " + (namhientai - 4).ToString() , namBefore4.ToString());
+            if(svTinhKhac!=0)
+            {
+                chartSVTinhThanh.Series["Series1"].Points.AddXY("Ngoại Tỉnh", svTinhKhac.ToString());
+            }
+            if(svTinhDongNai!=0)
+            {
+                chartSVTinhThanh.Series["Series1"].Points.AddXY("Tỉnh Đồng Nai", svTinhDongNai.ToString());
+            }
+            lblSVConHoc.Text = slsvconhoc.ToString();
+            lblChuaXepLop.Text = LoadExcel.svChuaXepLop.dsSVChuaXepLop.Count().ToString();
         }
     }
 }

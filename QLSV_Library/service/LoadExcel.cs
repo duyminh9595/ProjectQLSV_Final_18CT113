@@ -16,14 +16,16 @@ namespace QLSV_Library.service
         static Workbook wb;
         static Worksheet ws;
         static Worksheet ws1;
+        public static SinhVienChuaXepLop svChuaXepLop;
         public static List<Khoa> lstKhoa;
         static LoadExcel()
         {
             wb = excel.Workbooks.Open(path);
             lstKhoa = new List<Khoa>();
+            svChuaXepLop = new SinhVienChuaXepLop();
             ReadKhoa(0, 0);
             ReadLop(0, 0);
-            ReadSinhVien(0, 0);
+            ReadSinhVien(0);
             excel.Quit();
         }
         public static void ReadKhoa(int i,int j)
@@ -65,16 +67,19 @@ namespace QLSV_Library.service
                 ++i;
             }
         }
-        public static void ReadSinhVien(int i, int j)
+        public static void ReadSinhVien(int i)
         {
             ws = wb.Worksheets[3];
             i++;
-            j++;
             
-                while (ws.Cells[i, j].Value != null)
+                while (ws.Cells[i, 2].Value != null)
                 {
                     SinhVien sv = new SinhVien();
-                    string s = ws.Cells[i, 1].Value;
+                    string s = "";
+                    if (ws.Cells[i, 2].Value != null)
+                        s = ws.Cells[i, 1].Value;
+                    else
+                        s = "Rong";
                     sv.MSSV = s;
                     sv.Ten = ws.Cells[i, 2].Value;
                     sv.SDT = ws.Cells[i, 3].Value;
@@ -83,26 +88,35 @@ namespace QLSV_Library.service
                     sv.NgaySinh = ws.Cells[i, 6].Value;
                     sv.TrangThaiHocXong = ws.Cells[i, 7].Value;
                     sv.GioiTinh=ws.Cells[i, 8].Value;
-                    string maKhoa = s[2].ToString() + s[3].ToString();
-                    string tenlop= s[0].ToString() + s[1].ToString()+s[2].ToString() + s[3].ToString()+ s[4].ToString(); 
-                    bool themSV = false;
-                    foreach (Khoa dataKhoa in lstKhoa)
+                    sv.UserName = ws.Cells[i, 9].Value;
+                    if(!s.Equals("Rong"))
                     {
-                        if (dataKhoa.MaKhoa.Equals(maKhoa))
+                        string maKhoa = s[2].ToString() + s[3].ToString();
+                        string tenlop = s[0].ToString() + s[1].ToString() + s[2].ToString() + s[3].ToString() + s[4].ToString();
+                        bool themSV = false;
+                        foreach (Khoa dataKhoa in lstKhoa)
                         {
-                            foreach (Lop dataLop in dataKhoa.dsLop)
+                            if (dataKhoa.MaKhoa.Equals(maKhoa))
                             {
-                                if (dataLop.MaLop.Equals(tenlop))
+                                foreach (Lop dataLop in dataKhoa.dsLop)
                                 {
-                                    dataLop.dsSinhVien.Add(sv);
-                                    themSV = true;
-                                    break;
+                                    if (dataLop.MaLop.Equals(tenlop))
+                                    {
+                                        dataLop.dsSinhVien.Add(sv);
+                                        themSV = true;
+                                        break;
+                                    }
                                 }
+                                if (themSV == true)
+                                    break;
                             }
-                            if (themSV == true)
-                                break;
                         }
                     }
+                    else
+                    {
+                        svChuaXepLop.dsSVChuaXepLop.Add(sv);
+                    }
+                    
                         
                     ++i;
                 }

@@ -22,7 +22,7 @@ namespace WindowsFormsApp2
         {
             pnData.Controls.Clear();
             Home formHome = new Home() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            formHome.FormBorderStyle = FormBorderStyle.None;
+            
             pnData.Controls.Add(formHome);
             formHome.Show();
         }

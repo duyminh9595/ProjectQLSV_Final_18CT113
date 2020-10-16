@@ -72,7 +72,7 @@ namespace WindowsFormsApp2
                 {
                     foreach(SinhVien dataSV in dataLop.dsSinhVien)
                     {
-                        if (txtID.Text.Equals(dataSV.MSSV) && txtPass.Text.Equals(dataSV.MatKhau))
+                        if (txtID.Text.Equals(dataSV.UserName) && txtPass.Text.Equals(dataSV.MatKhau))
                         {
                             this.Hide();
                             QLSV_MainForm mainQL = new QLSV_MainForm();
