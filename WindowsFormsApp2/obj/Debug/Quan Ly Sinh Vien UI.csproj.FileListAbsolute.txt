@@ -20,7 +20,6 @@ C:\Users\Duy minh\source\repos\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp
 C:\Users\Duy minh\source\repos\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp2\obj\Debug\Quan Ly Sinh Vien UI.csprojAssemblyReference.cache
 C:\Users\Duy minh\source\repos\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.DangNhap.resources
 C:\Users\Duy minh\source\repos\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
-C:\Users\Duy minh\source\repos\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.QuanLySinhVienUI.resources
 C:\Users\Duy minh\source\repos\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp2\obj\Debug\Quan Ly Sinh Vien UI.csproj.GenerateResource.cache
 C:\Users\Duy minh\source\repos\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp2\obj\Debug\Quan Ly Sinh Vien UI.csproj.CoreCompileInputs.cache
 C:\Users\Duy minh\source\repos\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp2\obj\Debug\Quan Ly Sinh Vien UI.csproj.CopyComplete
@@ -44,3 +43,4 @@ C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsA
 C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\Quan Ly Sinh Vien UI.csproj.GenerateResource.Cache
 C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.ThemSinhVienForm.resources
 C:\Users\Duy minh\source\repos\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AdminUI.ThemSinhVien.resources
+C:\Users\Duy minh\source\repos\WindowsFormsApp1\WindowsFormsApp1\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AdminUI.SinhVienUI.resources

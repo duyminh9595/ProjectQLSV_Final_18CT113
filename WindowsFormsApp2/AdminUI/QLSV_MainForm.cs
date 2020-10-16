@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLSV_Library.service;
+using WindowsFormsApp2.AdminUI;
 
 namespace WindowsFormsApp2
 {
@@ -38,6 +39,18 @@ namespace WindowsFormsApp2
 
         }
 
-       
+        private void btnSignOut_Click(object sender, EventArgs e)
+        {
+            LoadExcel.exitUI();
+        }
+
+        private void btnSinhVien_Click(object sender, EventArgs e)
+        {
+            pnData.Controls.Clear();
+            SinhVienUI formSV = new SinhVienUI() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+
+            pnData.Controls.Add(formSV);
+            formSV.Show();
+        }
     }
 }

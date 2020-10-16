@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QLSV_Library.model;
+using QLSV_Library.service;
 
 namespace WindowsFormsApp2.AdminUI
 {
@@ -19,6 +21,21 @@ namespace WindowsFormsApp2.AdminUI
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            SinhVien sv = new SinhVien();
+            sv.Ten = txtTen.Text;
+            sv.DiaChi = txtDiaChi.Text;
+            sv.SDT = Int32.Parse(txtSDT.Text);
+            sv.UserName = txtEmail.Text;
+            pickDate.CustomFormat = "dd/MM/yyyy";
+            DateTime iDate = pickDate.Value;
+            sv.NgaySinh = iDate;
+            LoadExcel.svChuaXepLop.dsSVChuaXepLop.Add(sv);
+            MessageBox.Show("Thêm Thành Công","Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
     }

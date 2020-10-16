@@ -18,7 +18,7 @@ namespace WindowsFormsApp2
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new DangNhap());
-            Application.Run(new ThemSinhVien());
+            Application.Run(new DangNhap());
         }
     }
 }

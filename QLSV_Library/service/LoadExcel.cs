@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.Office.Interop.Excel;
 using _Excel = Microsoft.Office.Interop.Excel;
 using QLSV_Library.model;
+using System.Net.Http;
 
 namespace QLSV_Library.service
 {
@@ -119,6 +120,100 @@ namespace QLSV_Library.service
                     ++i;
                 }
             
+        }
+        public static void saveExcel()
+        {
+            wb.Save();
+            
+            wb.Close();
+        }
+        public static void writeExcel()
+        {
+            writeLop();
+            writeKhoa();
+            writeSinhVien();
+        }
+
+        private static void writeLop()
+        {
+            ws = wb.Worksheets[2];
+            ws.Cells.ClearContents();
+            int i = 1;
+            int j = 0;
+            foreach(Khoa dataKhoa in lstKhoa)
+            {
+                foreach(Lop dataLop in dataKhoa.dsLop)
+                {
+                    j = 1;
+                    ws.Cells[i, j++].Value = dataLop.NamNhapHoc;
+                    ws.Cells[i, j++].Value = dataLop.MaLop;
+                    ws.Cells[i, j++].Value = dataLop.TenLop;
+                    ++i;
+                }
+            }
+        }
+
+        private static void writeSinhVien()
+        {
+            ws = wb.Worksheets[3];
+            ws.Cells.ClearContents();
+            int i = 1;
+            int j = 0;
+            foreach (Khoa dataKhoa in lstKhoa)
+            {
+                foreach (Lop dataLop in dataKhoa.dsLop)
+                {
+                    foreach(SinhVien dataSinhVien in dataLop.dsSinhVien)
+                    {
+                        j = 1;
+                        ws.Cells[i, j++].Value = dataSinhVien.MSSV.ToString();
+                        ws.Cells[i, j++].Value = dataSinhVien.Ten;
+                        ws.Cells[i, j++].Value = dataSinhVien.SDT.ToString();
+                        ws.Cells[i, j++].Value = dataSinhVien.DiaChi;
+                        ws.Cells[i, j++].Value = dataSinhVien.MatKhau;
+                        ws.Cells[i, j++].Value = dataSinhVien.NgaySinh;
+                        ws.Cells[i, j++].Value = dataSinhVien.TrangThaiHocXong;
+                        ws.Cells[i, j++].Value = dataSinhVien.GioiTinh;
+                        ws.Cells[i, j++].Value = dataSinhVien.UserName;
+                        ++i;
+                    }
+                }
+            }
+            foreach(SinhVien dataSinhVien in svChuaXepLop.dsSVChuaXepLop)
+            {
+                j = 2;
+                ws.Cells[i, j++].Value = dataSinhVien.Ten;
+                ws.Cells[i, j++].Value = dataSinhVien.SDT.ToString();
+                ws.Cells[i, j++].Value = dataSinhVien.DiaChi;
+                ws.Cells[i, j++].Value = dataSinhVien.MatKhau;
+                ws.Cells[i, j++].Value = dataSinhVien.NgaySinh;
+                ws.Cells[i, j++].Value = dataSinhVien.TrangThaiHocXong;
+                ws.Cells[i, j++].Value= dataSinhVien.GioiTinh;
+                ws.Cells[i, j++].Value = dataSinhVien.UserName;
+                ++i;
+            }
+        }
+
+        private static void writeKhoa()
+        {
+            ws = wb.Worksheets[1];
+            ws.Cells.ClearContents();
+            int i = 1;
+            int j = 0;
+            foreach (Khoa data in lstKhoa)
+            {
+                j = 1;
+                ws.Cells[i, j++].Value = data.MaKhoa;
+                ws.Cells[i, j].Value = data.TenKhoa;
+                ++i;
+            }
+        }
+        public static void exitUI()
+        {
+            wb = excel.Workbooks.Open(AppDomain.CurrentDomain.BaseDirectory + path);
+            writeExcel();
+            saveExcel();
+            excel.Quit();
         }
     }
 }

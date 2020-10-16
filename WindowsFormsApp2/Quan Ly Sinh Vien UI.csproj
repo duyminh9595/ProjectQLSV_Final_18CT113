@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminUI\SinhVienUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUI\SinhVienUI.Designer.cs">
+      <DependentUpon>SinhVienUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminUI\ThemSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,12 +93,9 @@
     <Compile Include="AdminUI\QLSV_MainForm.Designer.cs">
       <DependentUpon>QLSV_MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLySinhVienUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="QuanLySinhVienUI.Designer.cs">
-      <DependentUpon>QuanLySinhVienUI.cs</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="AdminUI\SinhVienUI.resx">
+      <DependentUpon>SinhVienUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminUI\ThemSinhVien.resx">
       <DependentUpon>ThemSinhVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,9 +117,6 @@
     </Compile>
     <EmbeddedResource Include="AdminUI\QLSV_MainForm.resx">
       <DependentUpon>QLSV_MainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QuanLySinhVienUI.resx">
-      <DependentUpon>QuanLySinhVienUI.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

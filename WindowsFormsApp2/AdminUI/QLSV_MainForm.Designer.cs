@@ -34,6 +34,8 @@
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.pnData = new System.Windows.Forms.Panel();
             this.gunaGradientPanel1 = new Guna.UI.WinForms.GunaGradientPanel();
+            this.btnSignOut = new System.Windows.Forms.Button();
+            this.btnSinhVien = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // gunaElipse1
@@ -73,12 +75,34 @@
             this.gunaGradientPanel1.TabIndex = 3;
             this.gunaGradientPanel1.Text = "gunaGradientPanel1";
             // 
+            // btnSignOut
+            // 
+            this.btnSignOut.Location = new System.Drawing.Point(715, 13);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Size = new System.Drawing.Size(75, 23);
+            this.btnSignOut.TabIndex = 4;
+            this.btnSignOut.Text = "button1";
+            this.btnSignOut.UseVisualStyleBackColor = true;
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
+            // 
+            // btnSinhVien
+            // 
+            this.btnSinhVien.Location = new System.Drawing.Point(57, 13);
+            this.btnSinhVien.Name = "btnSinhVien";
+            this.btnSinhVien.Size = new System.Drawing.Size(75, 23);
+            this.btnSinhVien.TabIndex = 5;
+            this.btnSinhVien.Text = "button1";
+            this.btnSinhVien.UseVisualStyleBackColor = true;
+            this.btnSinhVien.Click += new System.EventHandler(this.btnSinhVien_Click);
+            // 
             // QLSV_MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1000, 749);
+            this.Controls.Add(this.btnSinhVien);
+            this.Controls.Add(this.btnSignOut);
             this.Controls.Add(this.gunaGradientPanel1);
             this.Controls.Add(this.pnData);
             this.Controls.Add(this.gunaLabel1);
@@ -99,5 +123,7 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private System.Windows.Forms.Panel pnData;
         private Guna.UI.WinForms.GunaGradientPanel gunaGradientPanel1;
+        private System.Windows.Forms.Button btnSignOut;
+        private System.Windows.Forms.Button btnSinhVien;
     }
 }

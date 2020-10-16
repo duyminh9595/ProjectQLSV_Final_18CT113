@@ -84,7 +84,7 @@ namespace WindowsFormsApp2
             }
             if(checkDN==false)
             {
-                MessageBox.Show("Loi", "Ngu vl");
+                MessageBox.Show("Sai Tên Đăng Nhập Hoặc Mật Khẩu", "Warning!!!!!!!",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 
