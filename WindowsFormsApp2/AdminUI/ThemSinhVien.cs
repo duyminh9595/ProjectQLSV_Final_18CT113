@@ -31,6 +31,14 @@ namespace WindowsFormsApp2.AdminUI
             sv.Ten = txtTen.Text;
             sv.DiaChi = txtDiaChi.Text;
             sv.SDT = Int32.Parse(txtSDT.Text);
+            if ((string)cmbGioiTinh.SelectedItem == "Nam")
+            {
+
+                sv.GioiTinh = "NAM";
+            }
+            else
+                sv.GioiTinh = "NU";
+            sv.TrangThaiHocXong = "NO";
             sv.UserName = txtEmail.Text;
             pickDate.CustomFormat = "dd/MM/yyyy";
             DateTime iDate = pickDate.Value;
