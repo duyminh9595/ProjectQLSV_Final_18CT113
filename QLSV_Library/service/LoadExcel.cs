@@ -25,6 +25,8 @@ namespace QLSV_Library.service
         {
             wb = excel.Workbooks.Open(AppDomain.CurrentDomain.BaseDirectory+path);
             lstKhoa = new List<Khoa>();
+            lstLop = new List<Lop>();
+            lstSinhVien = new List<SinhVien>();
             svChuaXepLop = new SinhVienChuaXepLop();
             ReadKhoa(0, 0);
             ReadLop(0, 0);
@@ -81,7 +83,7 @@ namespace QLSV_Library.service
                 {
                     SinhVien sv = new SinhVien();
                     string s = "";
-                    if (ws.Cells[i, 1].Value != null)
+                    if (ws.Cells[i, 10].Value != null)
                         s = ws.Cells[i, 10].Value;
                     double mssv = ws.Cells[i, 1].Value;
                     sv.MSSV = mssv.ToString();
@@ -102,11 +104,13 @@ namespace QLSV_Library.service
                         {
                             if (dataKhoa.MaKhoa.Equals(maKhoa))
                             {
-                                foreach (Lop dataLop in dataKhoa.dsLop)
+                                foreach (Lop dataLop in lstLop)
                                 {
                                     if (dataLop.MaLop.Equals(tenlop))
                                     {
                                         dataLop.dsSinhVien.Add(sv);
+                                        sv.lop =dataLop;
+                                        lstSinhVien.Add(sv);
                                         themSV = true;
                                         break;
                                     }
@@ -145,16 +149,14 @@ namespace QLSV_Library.service
             ws.Cells.ClearContents();
             int i = 1;
             int j = 0;
-            foreach(Khoa dataKhoa in lstKhoa)
+            foreach(Lop dataLop in lstLop)
             {
-                foreach(Lop dataLop in dataKhoa.dsLop)
-                {
-                    j = 1;
-                    ws.Cells[i, j++].Value = dataLop.NamNhapHoc;
-                    ws.Cells[i, j++].Value = dataLop.MaLop;
-                    ws.Cells[i, j++].Value = dataLop.TenLop;
-                    ++i;
-                }
+                j = 1;
+                ws.Cells[i, j++].Value = dataLop.NamNhapHoc;
+                ws.Cells[i, j++].Value = dataLop.MaLop;
+                ws.Cells[i, j++].Value = dataLop.TenLop;
+                ws.Cells[i, j++].Value = dataLop.khoa.MaKhoa;
+                ++i;
             }
         }
 
@@ -164,11 +166,7 @@ namespace QLSV_Library.service
             ws.Cells.ClearContents();
             int i = 1;
             int j = 0;
-            foreach (Khoa dataKhoa in lstKhoa)
-            {
-                foreach (Lop dataLop in dataKhoa.dsLop)
-                {
-                    foreach(SinhVien dataSinhVien in dataLop.dsSinhVien)
+                    foreach(SinhVien dataSinhVien in lstSinhVien)
                     {
                         j = 1;
                         ws.Cells[i, j++].Value = dataSinhVien.MSSV.ToString();
@@ -180,13 +178,14 @@ namespace QLSV_Library.service
                         ws.Cells[i, j++].Value = dataSinhVien.TrangThaiHocXong;
                         ws.Cells[i, j++].Value = dataSinhVien.GioiTinh;
                         ws.Cells[i, j++].Value = dataSinhVien.UserName;
-                        ++i;
-                    }
-                }
+                ws.Cells[i, j++].Value = dataSinhVien.lop.MaLop;
+                ++i;
+                    
             }
             foreach(SinhVien dataSinhVien in svChuaXepLop.dsSVChuaXepLop)
             {
-                j = 2;
+                j = 1;
+                ws.Cells[i, j++].Value = dataSinhVien.MSSV;
                 ws.Cells[i, j++].Value = dataSinhVien.Ten;
                 ws.Cells[i, j++].Value = dataSinhVien.SDT.ToString();
                 ws.Cells[i, j++].Value = dataSinhVien.DiaChi;
