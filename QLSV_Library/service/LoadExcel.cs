@@ -19,6 +19,8 @@ namespace QLSV_Library.service
         static Worksheet ws1;
         public static SinhVienChuaXepLop svChuaXepLop;
         public static List<Khoa> lstKhoa;
+        public static List<Lop> lstLop;
+        public static List<SinhVien> lstSinhVien;
         static LoadExcel()
         {
             wb = excel.Workbooks.Open(AppDomain.CurrentDomain.BaseDirectory+path);
@@ -61,6 +63,8 @@ namespace QLSV_Library.service
                         lop.MaLop = s;
                         lop.TenLop = ws1.Cells[i, 3].Value;
                         lop.NamNhapHoc = ws1.Cells[i, 1].Value;
+                        lop.khoa = data;
+                        lstLop.Add(lop);
                         data.dsLop.Add(lop);
                         break;
                     }
@@ -78,8 +82,9 @@ namespace QLSV_Library.service
                     SinhVien sv = new SinhVien();
                     string s = "";
                     if (ws.Cells[i, 1].Value != null)
-                        s = ws.Cells[i, 1].Value;
-                    sv.MSSV = s;
+                        s = ws.Cells[i, 10].Value;
+                    double mssv = ws.Cells[i, 1].Value;
+                    sv.MSSV = mssv.ToString();
                     sv.Ten = ws.Cells[i, 2].Value;
                     sv.SDT = ws.Cells[i, 3].Value;
                     sv.DiaChi = ws.Cells[i, 4].Value;
