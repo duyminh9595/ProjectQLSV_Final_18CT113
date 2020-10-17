@@ -43,7 +43,7 @@ namespace WindowsFormsApp2.AdminUI
             pickDate.CustomFormat = "dd/MM/yyyy";
             DateTime iDate = pickDate.Value;
             sv.NgaySinh = iDate;
-            LoadExcel.svChuaXepLop.dsSVChuaXepLop.Add(sv);
+            LoadExcel.svChuaXepLop.dsSVChuaXepLop.Add(sv);  
             MessageBox.Show("Thêm Thành Công","Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
