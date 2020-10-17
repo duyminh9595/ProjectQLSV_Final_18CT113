@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea29 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend29 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series29 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea30 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend30 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series30 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea31 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend31 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series31 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea32 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend32 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series32 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chartSLSV = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
@@ -66,20 +66,20 @@
             // 
             // chartSLSV
             // 
-            chartArea29.AlignmentOrientation = ((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations)((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Vertical | System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal)));
-            chartArea29.Name = "ChartArea1";
-            this.chartSLSV.ChartAreas.Add(chartArea29);
-            legend29.Name = "Legend1";
-            this.chartSLSV.Legends.Add(legend29);
+            chartArea1.AlignmentOrientation = ((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations)((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Vertical | System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal)));
+            chartArea1.Name = "ChartArea1";
+            this.chartSLSV.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartSLSV.Legends.Add(legend1);
             this.chartSLSV.Location = new System.Drawing.Point(4, 43);
             this.chartSLSV.Name = "chartSLSV";
-            series29.ChartArea = "ChartArea1";
-            series29.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series29.Legend = "Legend1";
-            series29.Name = "Series1";
-            series29.YValuesPerPoint = 4;
-            this.chartSLSV.Series.Add(series29);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            series1.YValuesPerPoint = 4;
+            this.chartSLSV.Series.Add(series1);
             this.chartSLSV.Size = new System.Drawing.Size(311, 124);
             this.chartSLSV.TabIndex = 0;
             this.chartSLSV.Text = "chart1";
@@ -111,20 +111,20 @@
             // 
             // chartSVTheoGioiTinh
             // 
-            chartArea30.Name = "ChartArea1";
-            this.chartSVTheoGioiTinh.ChartAreas.Add(chartArea30);
-            legend30.Name = "Legend1";
-            this.chartSVTheoGioiTinh.Legends.Add(legend30);
+            chartArea2.Name = "ChartArea1";
+            this.chartSVTheoGioiTinh.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartSVTheoGioiTinh.Legends.Add(legend2);
             this.chartSVTheoGioiTinh.Location = new System.Drawing.Point(321, 45);
             this.chartSVTheoGioiTinh.Name = "chartSVTheoGioiTinh";
             this.chartSVTheoGioiTinh.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Light;
-            series30.ChartArea = "ChartArea1";
-            series30.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series30.Legend = "Legend1";
-            series30.Name = "Series1";
-            series30.YValuesPerPoint = 4;
-            this.chartSVTheoGioiTinh.Series.Add(series30);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            series2.YValuesPerPoint = 4;
+            this.chartSVTheoGioiTinh.Series.Add(series2);
             this.chartSVTheoGioiTinh.Size = new System.Drawing.Size(266, 122);
             this.chartSVTheoGioiTinh.TabIndex = 2;
             this.chartSVTheoGioiTinh.Text = "chart1";
@@ -136,19 +136,19 @@
             // 
             // charSVTheoNam
             // 
-            chartArea31.Name = "ChartArea1";
-            this.charSVTheoNam.ChartAreas.Add(chartArea31);
-            legend31.Name = "Legend1";
-            this.charSVTheoNam.Legends.Add(legend31);
+            chartArea3.Name = "ChartArea1";
+            this.charSVTheoNam.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.charSVTheoNam.Legends.Add(legend3);
             this.charSVTheoNam.Location = new System.Drawing.Point(4, 202);
             this.charSVTheoNam.Name = "charSVTheoNam";
-            series31.ChartArea = "ChartArea1";
-            series31.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series31.Legend = "Legend1";
-            series31.Name = "SLSV";
-            series31.XValueMember = "Năm";
-            series31.YValueMembers = "Số Người";
-            this.charSVTheoNam.Series.Add(series31);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Legend = "Legend1";
+            series3.Name = "SLSV";
+            series3.XValueMember = "Năm";
+            series3.YValueMembers = "Số Người";
+            this.charSVTheoNam.Series.Add(series3);
             this.charSVTheoNam.Size = new System.Drawing.Size(583, 196);
             this.charSVTheoNam.TabIndex = 4;
             // 
@@ -174,20 +174,20 @@
             // 
             // chartSVTinhThanh
             // 
-            chartArea32.Name = "ChartArea1";
-            this.chartSVTinhThanh.ChartAreas.Add(chartArea32);
-            legend32.Name = "Legend1";
-            this.chartSVTinhThanh.Legends.Add(legend32);
+            chartArea4.Name = "ChartArea1";
+            this.chartSVTinhThanh.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartSVTinhThanh.Legends.Add(legend4);
             this.chartSVTinhThanh.Location = new System.Drawing.Point(4, 433);
             this.chartSVTinhThanh.Name = "chartSVTinhThanh";
             this.chartSVTinhThanh.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series32.ChartArea = "ChartArea1";
-            series32.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series32.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series32.Legend = "Legend1";
-            series32.Name = "Series1";
-            this.chartSVTinhThanh.Series.Add(series32);
-            this.chartSVTinhThanh.Size = new System.Drawing.Size(303, 92);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chartSVTinhThanh.Series.Add(series4);
+            this.chartSVTinhThanh.Size = new System.Drawing.Size(303, 112);
             this.chartSVTinhThanh.TabIndex = 6;
             this.chartSVTinhThanh.Text = "chart1";
             // 

@@ -18,6 +18,6 @@ namespace QLSV_Library.model
         public string GioiTinh { get; set; }
         public string UserName { get; set; }
         public Lop lop { get; set; }
-        public string Display { get { return Ten; } }
+
     }
 }

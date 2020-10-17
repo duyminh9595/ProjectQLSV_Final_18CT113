@@ -18,5 +18,9 @@ namespace QLSV_Library.model
         {
             dsSinhVien = new List<SinhVien>();
         }
+        public override string ToString()
+        {
+            return TenLop;
+        }
     }
 }

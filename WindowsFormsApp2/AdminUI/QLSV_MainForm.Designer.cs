@@ -58,7 +58,7 @@
             this.pnData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnData.Location = new System.Drawing.Point(179, 41);
             this.pnData.Name = "pnData";
-            this.pnData.Size = new System.Drawing.Size(791, 664);
+            this.pnData.Size = new System.Drawing.Size(791, 696);
             this.pnData.TabIndex = 2;
             // 
             // gunaGradientPanel1
@@ -71,7 +71,7 @@
             this.gunaGradientPanel1.GradientColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
             this.gunaGradientPanel1.Location = new System.Drawing.Point(26, 41);
             this.gunaGradientPanel1.Name = "gunaGradientPanel1";
-            this.gunaGradientPanel1.Size = new System.Drawing.Size(133, 664);
+            this.gunaGradientPanel1.Size = new System.Drawing.Size(133, 696);
             this.gunaGradientPanel1.TabIndex = 3;
             this.gunaGradientPanel1.Text = "gunaGradientPanel1";
             // 

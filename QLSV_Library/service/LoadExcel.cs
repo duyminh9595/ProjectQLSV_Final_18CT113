@@ -123,6 +123,7 @@ namespace QLSV_Library.service
                     else
                     {
                         svChuaXepLop.dsSVChuaXepLop.Add(sv);
+                        lstSinhVien.Add(sv);
                     }
                     
                         
