@@ -167,19 +167,19 @@ namespace QLSV_Library.service
             ws.Cells.ClearContents();
             int i = 1;
             int j = 0;
-                    foreach(SinhVien dataSinhVien in lstSinhVien)
-                    {
-                        j = 1;
-                        ws.Cells[i, j++].Value = dataSinhVien.MSSV.ToString();
-                        ws.Cells[i, j++].Value = dataSinhVien.Ten;
-                        ws.Cells[i, j++].Value = dataSinhVien.SDT.ToString();
-                        ws.Cells[i, j++].Value = dataSinhVien.DiaChi;
-                        ws.Cells[i, j++].Value = dataSinhVien.MatKhau;
-                        ws.Cells[i, j++].Value = dataSinhVien.NgaySinh;
-                        ws.Cells[i, j++].Value = dataSinhVien.TrangThaiHocXong;
-                        ws.Cells[i, j++].Value = dataSinhVien.GioiTinh;
-                        ws.Cells[i, j++].Value = dataSinhVien.UserName;
-                ws.Cells[i, j++].Value = dataSinhVien.lop.MaLop;
+            foreach (SinhVien dataSinhVien in lstSinhVien)
+            {
+                j = 1;
+                ws.Cells[i, j++].Value = dataSinhVien.MSSV.ToString();
+                ws.Cells[i, j++].Value = dataSinhVien.Ten;
+                ws.Cells[i, j++].Value = dataSinhVien.SDT.ToString();
+                ws.Cells[i, j++].Value = dataSinhVien.DiaChi;
+                ws.Cells[i, j++].Value = dataSinhVien.MatKhau;
+                ws.Cells[i, j++].Value = dataSinhVien.NgaySinh;
+                ws.Cells[i, j++].Value = dataSinhVien.TrangThaiHocXong;
+                ws.Cells[i, j++].Value = dataSinhVien.GioiTinh;
+                ws.Cells[i, j++].Value = dataSinhVien.UserName;
+                ws.Cells[i, j++].Value = dataSinhVien.lop.MaLop; 
                 ++i;
                     
             }

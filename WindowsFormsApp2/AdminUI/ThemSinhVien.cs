@@ -27,7 +27,7 @@ namespace WindowsFormsApp2.AdminUI
         private void btnThem_Click(object sender, EventArgs e)
         {
             SinhVien sv = new SinhVien();
-            sv.MSSV = 113.ToString();
+            sv.MSSV = 11800923.ToString();
             sv.Ten = txtTen.Text;
             sv.DiaChi = txtDiaChi.Text;
             sv.SDT = Int32.Parse(txtSDT.Text);
