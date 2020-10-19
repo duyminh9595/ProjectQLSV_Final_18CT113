@@ -179,23 +179,10 @@ namespace QLSV_Library.service
                 ws.Cells[i, j++].Value = dataSinhVien.TrangThaiHocXong;
                 ws.Cells[i, j++].Value = dataSinhVien.GioiTinh;
                 ws.Cells[i, j++].Value = dataSinhVien.UserName;
-                ws.Cells[i, j++].Value = dataSinhVien.lop.MaLop; 
+                if(dataSinhVien.lop!=null)
+                    ws.Cells[i, j++].Value = dataSinhVien.lop.MaLop; 
                 ++i;
                     
-            }
-            foreach(SinhVien dataSinhVien in svChuaXepLop.dsSVChuaXepLop)
-            {
-                j = 1;
-                ws.Cells[i, j++].Value = dataSinhVien.MSSV;
-                ws.Cells[i, j++].Value = dataSinhVien.Ten;
-                ws.Cells[i, j++].Value = dataSinhVien.SDT.ToString();
-                ws.Cells[i, j++].Value = dataSinhVien.DiaChi;
-                ws.Cells[i, j++].Value = dataSinhVien.MatKhau;
-                ws.Cells[i, j++].Value = dataSinhVien.NgaySinh;
-                ws.Cells[i, j++].Value = dataSinhVien.TrangThaiHocXong;
-                ws.Cells[i, j++].Value= dataSinhVien.GioiTinh;
-                ws.Cells[i, j++].Value = dataSinhVien.UserName;
-                ++i;
             }
         }
 
