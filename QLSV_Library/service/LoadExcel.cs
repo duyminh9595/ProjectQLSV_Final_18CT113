@@ -21,6 +21,7 @@ namespace QLSV_Library.service
         public static List<Khoa> lstKhoa;
         public static List<Lop> lstLop;
         public static List<SinhVien> lstSinhVien;
+        public static List<NamHoc> lstNam;
         static LoadExcel()
         {
             wb = excel.Workbooks.Open(AppDomain.CurrentDomain.BaseDirectory+path);
@@ -28,11 +29,28 @@ namespace QLSV_Library.service
             lstLop = new List<Lop>();
             lstSinhVien = new List<SinhVien>();
             svChuaXepLop = new SinhVienChuaXepLop();
+            lstNam = new List<NamHoc>();
             ReadKhoa(0, 0);
             ReadLop(0, 0);
             ReadSinhVien(0);
+            ReadNam(0);
             excel.Quit();
         }
+
+        private static void ReadNam(int i)
+        {
+            ws = wb.Worksheets[4];
+            i++;
+            while (ws.Cells[i, 1].Value != null)
+            {
+                NamHoc nam = new NamHoc();
+                nam.Nam= ws.Cells[i, 1].Value;
+                nam.SL = ws.Cells[i, 2].Value;
+                lstNam.Add(nam);
+                ++i;
+            }
+        }
+
         public static void ReadKhoa(int i,int j)
         {
             ws = wb.Worksheets[1];
@@ -89,7 +107,7 @@ namespace QLSV_Library.service
                     sv.MSSV = mssv.ToString();
                     sv.Ten = ws.Cells[i, 2].Value;
                     sv.SDT = ws.Cells[i, 3].Value;
-                    sv.DiaChi = ws.Cells[i, 4].Value;
+                    sv.DiaChi = ws.Cells[i, 4].Value.ToString();
                     sv.MatKhau = ws.Cells[i, 5].Value;
                     sv.NgaySinh = ws.Cells[i, 6].Value;
                     sv.TrangThaiHocXong = ws.Cells[i, 7].Value;
@@ -142,6 +160,22 @@ namespace QLSV_Library.service
             writeLop();
             writeKhoa();
             writeSinhVien();
+            writeNam();
+        }
+
+        private static void writeNam()
+        {
+            ws = wb.Worksheets[4];
+            ws.Cells.ClearContents();
+            int i = 1;
+            int j = 0;
+            foreach (NamHoc nam in lstNam)
+            {
+                j = 1;
+                ws.Cells[i, j++].Value = nam.Nam;
+                ws.Cells[i, j].Value = nam.SL;
+                ++i;
+            }
         }
 
         private static void writeLop()

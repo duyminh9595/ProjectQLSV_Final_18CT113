@@ -61,11 +61,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminUI\ChuyenLopFormSVUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUI\ChuyenLopFormSVUI.Designer.cs">
+      <DependentUpon>ChuyenLopFormSVUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\PhanLopFormSVUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUI\PhanLopFormSVUI.Designer.cs">
+      <DependentUpon>PhanLopFormSVUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\PhanLopUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUI\PhanLopUI.Designer.cs">
+      <DependentUpon>PhanLopUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminUI\SinhVienUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminUI\SinhVienUI.Designer.cs">
       <DependentUpon>SinhVienUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUI\SuaSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUI\SuaSinhVien.Designer.cs">
+      <DependentUpon>SuaSinhVien.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminUI\ThemSinhVien.cs">
       <SubType>Form</SubType>
@@ -93,8 +117,20 @@
     <Compile Include="AdminUI\QLSV_MainForm.Designer.cs">
       <DependentUpon>QLSV_MainForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminUI\ChuyenLopFormSVUI.resx">
+      <DependentUpon>ChuyenLopFormSVUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUI\PhanLopFormSVUI.resx">
+      <DependentUpon>PhanLopFormSVUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUI\PhanLopUI.resx">
+      <DependentUpon>PhanLopUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminUI\SinhVienUI.resx">
       <DependentUpon>SinhVienUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUI\SuaSinhVien.resx">
+      <DependentUpon>SuaSinhVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminUI\ThemSinhVien.resx">
       <DependentUpon>ThemSinhVien.cs</DependentUpon>

@@ -115,6 +115,7 @@
             this.txtSDT.SelectedText = "";
             this.txtSDT.Size = new System.Drawing.Size(275, 44);
             this.txtSDT.TabIndex = 5;
+            this.txtSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSDT_KeyPress);
             // 
             // label3
             // 
@@ -145,7 +146,7 @@
             this.pickDate.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.pickDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pickDate.ForeColor = System.Drawing.Color.Black;
-            this.pickDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.pickDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.pickDate.Location = new System.Drawing.Point(120, 286);
             this.pickDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.pickDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -156,7 +157,7 @@
             this.pickDate.OnPressedColor = System.Drawing.Color.Black;
             this.pickDate.Size = new System.Drawing.Size(275, 44);
             this.pickDate.TabIndex = 7;
-            this.pickDate.Text = "10/16/2020";
+            this.pickDate.Text = "16/10/2020";
             this.pickDate.Value = new System.DateTime(2020, 10, 16, 18, 53, 41, 194);
             // 
             // label5
@@ -315,6 +316,7 @@
             this.Name = "ThemSinhVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThemSinhVien";
+            this.Load += new System.EventHandler(this.ThemSinhVien_Load);
             this.ResumeLayout(false);
 
         }

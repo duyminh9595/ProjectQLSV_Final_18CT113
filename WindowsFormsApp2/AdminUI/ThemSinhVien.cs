@@ -26,8 +26,42 @@ namespace WindowsFormsApp2.AdminUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            if(!String.IsNullOrWhiteSpace(txtSDT.Text)&& !String.IsNullOrWhiteSpace(txtTen.Text)&&!String.IsNullOrWhiteSpace(txtEmail.Text)
+                &&!String.IsNullOrWhiteSpace(txtDiaChi.Text))
+            {
+                chucNangThem();
+            }
+            else
+            {
+                MessageBox.Show("Chưa Nhập Đủ Thông Tin", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        public static string mssv = "";
+        private void chucNangThem()
+        {
+            int sl = LoadExcel.lstSinhVien.Count;
             SinhVien sv = new SinhVien();
-            sv.MSSV = 11800923.ToString();
+            int slsv = 0;
+            int namHoc = DateTime.Now.Year;
+            List<SinhVien> lst = LoadExcel.lstSinhVien;
+            /*foreach (SinhVien data in lst)
+            {
+                if ((data.MSSV[0].ToString() + data.MSSV[1].ToString()).Equals(namHoc.ToString()))
+                {
+                    ++slsv;
+                }
+
+            }*/
+            foreach(NamHoc namhoc in LoadExcel.lstNam)
+            {
+                if(namhoc.Nam==(double)namHoc)
+                {
+                    slsv = (int)namhoc.SL;
+                    namhoc.SL = slsv + 1;
+                }
+            }
+            mssv = ((namHoc%100) * Math.Pow(10, 6) + (slsv+1)).ToString();
+            sv.MSSV = mssv;
             sv.Ten = txtTen.Text;
             sv.DiaChi = txtDiaChi.Text;
             sv.SDT = Int32.Parse(txtSDT.Text);
@@ -39,14 +73,39 @@ namespace WindowsFormsApp2.AdminUI
             else
                 sv.GioiTinh = "NU";
             sv.TrangThaiHocXong = "NO";
+            sv.MatKhau = "a123456";
             sv.UserName = txtEmail.Text;
-            pickDate.CustomFormat = "dd/MM/yyyy";
             DateTime iDate = pickDate.Value;
-            sv.NgaySinh = iDate;
+            sv.NgaySinh = DateTime.Parse(iDate.ToShortDateString());
             LoadExcel.svChuaXepLop.dsSVChuaXepLop.Add(sv);
             LoadExcel.lstSinhVien.Add(sv);
-            MessageBox.Show("Thêm Thành Công","Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
+            if (sl < LoadExcel.lstSinhVien.Count)
+            {
+                MessageBox.Show("Thêm Thành Công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if(MessageBox.Show("Bạn Có Muốn Phân Lớp Luôn Không?", "Chấm Hỏi", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    PhanLopUI ui = new PhanLopUI();
+                    ui.Text = "Phân Lớp Cho MSSV " + mssv;
+                    ui.ShowDialog();
+                }
+                this.Close();
+            }
+            else
+                MessageBox.Show("Thêm Thất Bại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void ThemSinhVien_Load(object sender, EventArgs e)
+        {
+            cmbGioiTinh.SelectedItem = "Nam";
+            pickDate.CustomFormat = "dd/MM/yyyy";
+        }
+
+        private void txtSDT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

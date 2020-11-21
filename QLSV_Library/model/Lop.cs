@@ -20,7 +20,7 @@ namespace QLSV_Library.model
         }
         public override string ToString()
         {
-            return TenLop;
+            return MaLop;
         }
     }
 }

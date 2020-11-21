@@ -42,15 +42,13 @@ namespace WindowsFormsApp2
         private void btnSignOut_Click(object sender, EventArgs e)
         {
             LoadExcel.exitUI();
+            Application.Exit();
         }
 
         private void btnSinhVien_Click(object sender, EventArgs e)
         {
-            pnData.Controls.Clear();
-            SinhVienUI formSV = new SinhVienUI() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-
-            pnData.Controls.Add(formSV);
-            formSV.Show();
+            SinhVienUI formSV = new SinhVienUI() ;
+            formSV.ShowDialog();
         }
     }
 }

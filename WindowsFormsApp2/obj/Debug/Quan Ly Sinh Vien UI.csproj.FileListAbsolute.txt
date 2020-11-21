@@ -62,3 +62,7 @@ C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\ob
 C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\Quan Ly Sinh Vien UI.csproj.CopyComplete
 C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
 C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AdminUI.PhanLopUI.resources
+C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AdminUI.SuaSinhVien.resources
+C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AdminUI.PhanLopFormSVUI.resources
+C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AdminUI.ChuyenLopFormSVUI.resources

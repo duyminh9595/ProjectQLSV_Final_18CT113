@@ -32,7 +32,9 @@ namespace WindowsFormsApp2.AdminUI
         void tongSoTrang()
         {
             //so sv moi trang
-            totalPaging = lstSinhVien.Count / 1;
+            totalPaging = lstSinhVien.Count / 12;
+            if (lstSinhVien.Count % 12 != 0)
+                totalPaging += 1;
         }
         void indexPagingSinhVien(int a)
         {
@@ -40,7 +42,7 @@ namespace WindowsFormsApp2.AdminUI
             lstPaging = new List<SinhVien>();
             if(lstPaging.Count>=0)
             {
-                for (int i = (a - 1) * 1; i < a * 1; i++)
+                for (int i = (a - 1) * 12; i < a * 12; i++)
                 {
                     if (i >= lstSinhVien.Count)
                         break;
@@ -50,12 +52,23 @@ namespace WindowsFormsApp2.AdminUI
         }
         private void SinhVienUI_Load(object sender, EventArgs e)
         {
+            loadDGVSinhVien();
+            btnChuyenLop.Enabled = false;
+            btnPhanLop.Enabled = false;
+            
+        }
+
+        private void loadDGVSinhVien()
+        {
             lstSinhVien = LoadExcel.lstSinhVien;
             tongSoTrang();
             btnPre.Enabled = false;
             txtPage.Text = "1";
             indexPagingSinhVien(1);
-
+            if (lstSinhVien.Count <= 12)
+                btnNext.Enabled = false;
+            else
+                btnNext.Enabled = true;
             dgvThongTinhSinhVien.AutoGenerateColumns = false;
             dgvThongTinhSinhVien.DataSource = lstPaging;
             dgvThongTinhSinhVien.Columns[0].Name = "mssv"; // name
@@ -74,7 +87,9 @@ namespace WindowsFormsApp2.AdminUI
             dgvThongTinhSinhVien.Columns[3].Name = "tenlop";
             dgvThongTinhSinhVien.Columns[3].DataPropertyName = "Lop";
 
-           
+            dgvThongTinhSinhVien.Columns[4].HeaderText = "Năm Sinh";
+            dgvThongTinhSinhVien.Columns[4].Name = "namsinh";
+            dgvThongTinhSinhVien.Columns[4].DataPropertyName = "NgaySinh";
         }
 
         private void txtPage_TextChanged(object sender, EventArgs e)
@@ -87,6 +102,10 @@ namespace WindowsFormsApp2.AdminUI
             {
                 loadPaging();   
             }
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
         void loadPaging()
         {
@@ -97,6 +116,8 @@ namespace WindowsFormsApp2.AdminUI
                 dgvThongTinhSinhVien.DataSource = lstPaging;
                 btnNext.Enabled = false;
                 btnPre.Enabled = true;
+                if (totalPaging == 1 || totalPaging == 0)
+                    btnPre.Enabled = false;
             }
             else if (Int32.Parse(txtPage.Text) <= 1)
             {
@@ -105,6 +126,8 @@ namespace WindowsFormsApp2.AdminUI
                 txtPage.Text = "1";
                 btnNext.Enabled = true;
                 btnPre.Enabled = false;
+                if (totalPaging == 1 || totalPaging == 0)
+                    btnNext.Enabled = false;
             }
             else
             {
@@ -137,19 +160,62 @@ namespace WindowsFormsApp2.AdminUI
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            if(!String.IsNullOrEmpty(txtTimKiem.Text))
+            if(rdbMS.Checked)
+            {
+                searchTheoMS();
+            }
+            if(rdbTen.Checked)
+            {
+                searchTheoTen();
+            }
+            if(rdbChuaLop.Checked)
+            {
+                searchTheoTenChuaXepLop();
+            }
+        }
+
+        private void searchTheoTenChuaXepLop()
+        {
+            if (!String.IsNullOrEmpty(txtTimKiem.Text))
             {
                 lstSinhVien = new List<SinhVien>();
-                foreach(SinhVien data in LoadExcel.lstSinhVien)
+                foreach (SinhVien data in LoadExcel.lstSinhVien.Where(p =>p.lop==null).ToList())
                 {
-                    if (data.Ten.Contains(txtTimKiem.Text))
+                    if (data.Ten.ToLower().Contains(txtTimKiem.Text.ToLower()))
                         lstSinhVien.Add(data);
                 }
                 dgvThongTinhSinhVien.DataSource = null;
                 tongSoTrang();
                 indexPagingSinhVien(1);
                 dgvThongTinhSinhVien.DataSource = lstPaging;
-                if (totalPaging == 0)
+                if (totalPaging == 1 || totalPaging == 0)
+                    btnNext.Enabled = false;
+                else
+                    btnNext.Enabled = true;
+                txtPage.Text = "1";
+                btnPre.Enabled = false;
+            }
+            else
+            {
+                svChuaXepLop();
+            }
+        }
+
+        private void searchTheoMS()
+        {
+            if (!String.IsNullOrEmpty(txtTimKiem.Text))
+            {
+                lstSinhVien = new List<SinhVien>();
+                foreach (SinhVien data in LoadExcel.lstSinhVien)
+                {
+                    if (data.MSSV.Equals(txtTimKiem.Text))
+                        lstSinhVien.Add(data);
+                }
+                dgvThongTinhSinhVien.DataSource = null;
+                tongSoTrang();
+                indexPagingSinhVien(1);
+                dgvThongTinhSinhVien.DataSource = lstPaging;
+                if (totalPaging == 1 || totalPaging == 0)
                     btnNext.Enabled = false;
                 else
                     btnNext.Enabled = true;
@@ -162,6 +228,197 @@ namespace WindowsFormsApp2.AdminUI
             }
         }
 
+        private void searchTheoTen()
+        {
+            if (!String.IsNullOrEmpty(txtTimKiem.Text))
+            {
+                lstSinhVien = new List<SinhVien>();
+                foreach (SinhVien data in LoadExcel.lstSinhVien)
+                {
+                    if (data.Ten.ToLower().Contains(txtTimKiem.Text.ToLower()))
+                        lstSinhVien.Add(data);
+                }
+                dgvThongTinhSinhVien.DataSource = null;
+                tongSoTrang();
+                indexPagingSinhVien(1);
+                dgvThongTinhSinhVien.DataSource = lstPaging;
+                if (totalPaging == 1 || totalPaging == 0)
+                    btnNext.Enabled = false;
+                else
+                    btnNext.Enabled = true;
+                txtPage.Text = "1";
+                btnPre.Enabled = false;
+            }
+            else
+            {
+                loadDanhSachSinhVien();
+            }
+        }
+
+        public static int mssvSelected = -1;
+        private void dgvThongTinhSinhVien_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(dgvThongTinhSinhVien.Rows[e.RowIndex].Cells[e.ColumnIndex].Value!=null)
+            {
+                mssvSelected = Int32.Parse(dgvThongTinhSinhVien.Rows[e.RowIndex].Cells["mssv"].FormattedValue.ToString());
+            }
+            foreach(SinhVien sv in LoadExcel.lstSinhVien)
+            {
+                if(sv.MSSV.Equals(mssvSelected.ToString()))
+                {
+                    if(sv.lop==null)
+                    {
+                        btnChuyenLop.Enabled = false;
+                        btnPhanLop.Enabled = true;
+                    }
+                    else
+                    {
+                        btnChuyenLop.Enabled = true;
+                        btnPhanLop.Enabled = false;
+                    }
+                }
+            }
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            ThemSinhVien ui = new ThemSinhVien();
+            ui.ShowDialog();
+            loadDGVSinhVien();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnXoaSV_Click(object sender, EventArgs e)
+        {
+            if(mssvSelected!=-1)
+            {
+                if (MessageBox.Show("Bạn Có Chắc Xóa Sinh Viên Này Không?", "Chấm Hỏi", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    foreach(SinhVien sv in LoadExcel.lstSinhVien)
+                    {
+                        if(sv.MSSV.Equals(mssvSelected.ToString()))
+                        {
+                            foreach(Lop lop in LoadExcel.lstLop)
+                            {
+                                if(lop.dsSinhVien.Contains(sv))
+                                {
+                                    lop.dsSinhVien.Remove(sv);
+                                    break;
+                                }
+                            }
+                            LoadExcel.lstSinhVien.Remove(sv);
+                            MessageBox.Show("Xóa Thành Công");
+                            break;
+                            
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Chưa chọn sinh viên cần xóa", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            mssvSelected = -1;
+            btnPhanLop.Enabled = false;
+            btnChuyenLop.Enabled = false;
+            loadDanhSachSinhVien();
+        }
+
+        private void btnSuaSV_Click(object sender, EventArgs e)
+        {
+            if(mssvSelected==-1)
+            {
+                MessageBox.Show("Chưa Chọn Sinh Viên", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                SuaSinhVien sua = new SuaSinhVien();
+                sua.ShowDialog();
+            }
+            loadDanhSachSinhVien();
+            mssvSelected = -1;
+            btnPhanLop.Enabled = false;
+            btnChuyenLop.Enabled = false;
+        }
+
+        private void rdbChuaLop_Click(object sender, EventArgs e)
+        {
+            mssvSelected = -1;
+            btnPhanLop.Enabled = false;
+            btnChuyenLop.Enabled = false;
+            svChuaXepLop();
+        }
+
+        private void svChuaXepLop()
+        {
+
+            lstSinhVien = LoadExcel.lstSinhVien.Where(p => p.lop==null).ToList();
+            tongSoTrang();
+            indexPagingSinhVien(1);
+            txtTimKiem.Text = "";
+            dgvThongTinhSinhVien.DataSource = lstPaging;
+            if (totalPaging == 1 || totalPaging == 0)
+                btnNext.Enabled = false;
+            else
+                btnNext.Enabled = true;
+            txtPage.Text = "1";
+            btnPre.Enabled = false;
+        }
+
+        private void rdbMS_Click(object sender, EventArgs e)
+        {
+            loadDanhSachSinhVien();
+            mssvSelected = -1;
+            btnPhanLop.Enabled = false;
+            btnChuyenLop.Enabled = false;
+        }
+
+        private void rdbTen_Click(object sender, EventArgs e)
+        {
+            loadDanhSachSinhVien();
+            mssvSelected = -1;
+            btnPhanLop.Enabled = false;
+            btnChuyenLop.Enabled = false;
+        }
+        private void btnPhanLop_Click(object sender, EventArgs e)
+        {
+            if(mssvSelected==-1)
+            {
+                MessageBox.Show("Chưa Chọn Sinh Viên", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                PhanLopFormSVUI ui = new PhanLopFormSVUI();
+                ui.ShowDialog();
+            }
+            loadDanhSachSinhVien();
+            mssvSelected = -1;
+            rdbTen.Checked = true;
+            btnPhanLop.Enabled = false;
+            btnChuyenLop.Enabled = false;
+        }
+
+        private void btnChuyenLop_Click(object sender, EventArgs e)
+        {
+            if (mssvSelected == -1)
+            {
+                MessageBox.Show("Chưa Chọn Sinh Viên", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                ChuyenLopFormSVUI form = new ChuyenLopFormSVUI();
+                form.ShowDialog();
+            }
+            mssvSelected = -1;
+            loadDanhSachSinhVien();
+            btnPhanLop.Enabled = false;
+            btnChuyenLop.Enabled = false;
+        }
+
         private void loadDanhSachSinhVien()
         {
             lstSinhVien = LoadExcel.lstSinhVien;
@@ -169,7 +426,7 @@ namespace WindowsFormsApp2.AdminUI
             indexPagingSinhVien(1);
             txtTimKiem.Text = "";
             dgvThongTinhSinhVien.DataSource = lstPaging;
-            if (totalPaging == 0)
+            if (totalPaging == 1||totalPaging==0)
                 btnNext.Enabled = false;
             else
                 btnNext.Enabled = true;

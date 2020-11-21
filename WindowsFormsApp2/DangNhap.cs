@@ -66,11 +66,8 @@ namespace WindowsFormsApp2
         bool checkDN = false;
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            foreach(Khoa data in LoadExcel.lstKhoa)
-            {
-                foreach(Lop dataLop in data.dsLop)
-                {
-                    foreach(SinhVien dataSV in dataLop.dsSinhVien)
+            
+                    foreach(SinhVien dataSV in LoadExcel.lstSinhVien)
                     {
                         if (txtID.Text.Equals(dataSV.UserName) && txtPass.Text.Equals(dataSV.MatKhau))
                         {
@@ -79,8 +76,7 @@ namespace WindowsFormsApp2
                             mainQL.Show();
                             checkDN = true;
                         }
-                    }
-                }
+                    
             }
             if(checkDN==false)
             {
@@ -90,7 +86,6 @@ namespace WindowsFormsApp2
 
         private void DangNhap_Load(object sender, EventArgs e)
         {
-            label3.Text=label3.Text.ToUpper();
         }
     }
 }

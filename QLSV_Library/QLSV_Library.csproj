@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="model\Khoa.cs" />
     <Compile Include="model\Lop.cs" />
+    <Compile Include="model\NamHoc.cs" />
     <Compile Include="model\SinhVien.cs" />
     <Compile Include="model\SinhVienChuaXepLop.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
