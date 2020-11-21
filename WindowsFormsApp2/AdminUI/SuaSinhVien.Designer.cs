@@ -132,8 +132,8 @@
             this.cmbGioiTinh.ForeColor = System.Drawing.Color.Black;
             this.cmbGioiTinh.FormattingEnabled = true;
             this.cmbGioiTinh.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
+            "NAM",
+            "NU"});
             this.cmbGioiTinh.Location = new System.Drawing.Point(120, 367);
             this.cmbGioiTinh.Name = "cmbGioiTinh";
             this.cmbGioiTinh.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
