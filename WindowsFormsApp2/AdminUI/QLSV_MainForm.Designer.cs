@@ -34,8 +34,10 @@
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.pnData = new System.Windows.Forms.Panel();
             this.gunaGradientPanel1 = new Guna.UI.WinForms.GunaGradientPanel();
+            this.btnLop = new System.Windows.Forms.Button();
             this.btnSignOut = new System.Windows.Forms.Button();
             this.btnSinhVien = new System.Windows.Forms.Button();
+            this.gunaGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaElipse1
@@ -65,6 +67,7 @@
             // 
             this.gunaGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientPanel1.BackgroundImage")));
             this.gunaGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gunaGradientPanel1.Controls.Add(this.btnLop);
             this.gunaGradientPanel1.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
             this.gunaGradientPanel1.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
             this.gunaGradientPanel1.GradientColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
@@ -74,6 +77,16 @@
             this.gunaGradientPanel1.Size = new System.Drawing.Size(133, 696);
             this.gunaGradientPanel1.TabIndex = 3;
             this.gunaGradientPanel1.Text = "gunaGradientPanel1";
+            // 
+            // btnLop
+            // 
+            this.btnLop.Location = new System.Drawing.Point(31, 83);
+            this.btnLop.Name = "btnLop";
+            this.btnLop.Size = new System.Drawing.Size(75, 39);
+            this.btnLop.TabIndex = 6;
+            this.btnLop.Text = "Lop";
+            this.btnLop.UseVisualStyleBackColor = true;
+            this.btnLop.Click += new System.EventHandler(this.btnLop_Click);
             // 
             // btnSignOut
             // 
@@ -113,6 +126,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QLSV_MainForm";
             this.Load += new System.EventHandler(this.QLSV_MainForm_Load_1);
+            this.gunaGradientPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -125,5 +139,6 @@
         private Guna.UI.WinForms.GunaGradientPanel gunaGradientPanel1;
         private System.Windows.Forms.Button btnSignOut;
         private System.Windows.Forms.Button btnSinhVien;
+        private System.Windows.Forms.Button btnLop;
     }
 }

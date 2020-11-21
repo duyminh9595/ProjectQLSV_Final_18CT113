@@ -50,5 +50,11 @@ namespace WindowsFormsApp2
             SinhVienUI formSV = new SinhVienUI() ;
             formSV.ShowDialog();
         }
+
+        private void btnLop_Click(object sender, EventArgs e)
+        {
+            LopUI ui = new LopUI();
+            ui.ShowDialog();
+        }
     }
 }
