@@ -48,6 +48,17 @@ namespace WindowsFormsApp2.AdminUI
 
             loadNamHoc();
             loadNganhHoc();
+            loadLopHoc();
+        }
+
+        private void loadLopHoc()
+        {
+            if(checkLoadNganh==true)
+            {
+                cmbLop.DataSource = LoadExcel.lstLop.Where(p => p.khoa == cmbNganh.SelectedItem && p.NamNhapHoc == (double)cmbNamHoc.SelectedValue).ToList();
+                cmbLop.DisplayMember = "TenLop";
+                cmbLop.ValueMember = "MaLop";
+            }
         }
 
         private void loadNganhHoc()

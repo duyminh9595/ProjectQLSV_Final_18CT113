@@ -37,6 +37,7 @@
             this.btnLop = new System.Windows.Forms.Button();
             this.btnSignOut = new System.Windows.Forms.Button();
             this.btnSinhVien = new System.Windows.Forms.Button();
+            this.btnGiaoVien = new System.Windows.Forms.Button();
             this.gunaGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +68,7 @@
             // 
             this.gunaGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientPanel1.BackgroundImage")));
             this.gunaGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gunaGradientPanel1.Controls.Add(this.btnGiaoVien);
             this.gunaGradientPanel1.Controls.Add(this.btnLop);
             this.gunaGradientPanel1.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
             this.gunaGradientPanel1.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
@@ -80,11 +82,11 @@
             // 
             // btnLop
             // 
-            this.btnLop.Location = new System.Drawing.Point(31, 83);
+            this.btnLop.Location = new System.Drawing.Point(15, 26);
             this.btnLop.Name = "btnLop";
-            this.btnLop.Size = new System.Drawing.Size(75, 39);
+            this.btnLop.Size = new System.Drawing.Size(102, 84);
             this.btnLop.TabIndex = 6;
-            this.btnLop.Text = "Lop";
+            this.btnLop.Text = "In Danh Sach Lop";
             this.btnLop.UseVisualStyleBackColor = true;
             this.btnLop.Click += new System.EventHandler(this.btnLop_Click);
             // 
@@ -94,7 +96,7 @@
             this.btnSignOut.Name = "btnSignOut";
             this.btnSignOut.Size = new System.Drawing.Size(75, 23);
             this.btnSignOut.TabIndex = 4;
-            this.btnSignOut.Text = "button1";
+            this.btnSignOut.Text = "Thoat";
             this.btnSignOut.UseVisualStyleBackColor = true;
             this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
             // 
@@ -104,9 +106,19 @@
             this.btnSinhVien.Name = "btnSinhVien";
             this.btnSinhVien.Size = new System.Drawing.Size(75, 23);
             this.btnSinhVien.TabIndex = 5;
-            this.btnSinhVien.Text = "button1";
+            this.btnSinhVien.Text = "SinhVien";
             this.btnSinhVien.UseVisualStyleBackColor = true;
             this.btnSinhVien.Click += new System.EventHandler(this.btnSinhVien_Click);
+            // 
+            // btnGiaoVien
+            // 
+            this.btnGiaoVien.Location = new System.Drawing.Point(15, 140);
+            this.btnGiaoVien.Name = "btnGiaoVien";
+            this.btnGiaoVien.Size = new System.Drawing.Size(102, 84);
+            this.btnGiaoVien.TabIndex = 7;
+            this.btnGiaoVien.Text = "Giáo Viên";
+            this.btnGiaoVien.UseVisualStyleBackColor = true;
+            this.btnGiaoVien.Click += new System.EventHandler(this.btnGiaoVien_Click);
             // 
             // QLSV_MainForm
             // 
@@ -140,5 +152,6 @@
         private System.Windows.Forms.Button btnSignOut;
         private System.Windows.Forms.Button btnSinhVien;
         private System.Windows.Forms.Button btnLop;
+        private System.Windows.Forms.Button btnGiaoVien;
     }
 }

@@ -103,6 +103,12 @@
     <Compile Include="AdminUI\PhanLopFormSVUI.Designer.cs">
       <DependentUpon>PhanLopFormSVUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminUI\PhanLopGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUI\PhanLopGiaoVien.Designer.cs">
+      <DependentUpon>PhanLopGiaoVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminUI\PhanLopUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminUI\PhanLopFormSVUI.resx">
       <DependentUpon>PhanLopFormSVUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUI\PhanLopGiaoVien.resx">
+      <DependentUpon>PhanLopGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminUI\PhanLopUI.resx">
       <DependentUpon>PhanLopUI.cs</DependentUpon>

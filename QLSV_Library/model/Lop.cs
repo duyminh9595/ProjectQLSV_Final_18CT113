@@ -13,6 +13,7 @@ namespace QLSV_Library.model
         public double NamNhapHoc { get; set; }
         public List<SinhVien> dsSinhVien { get; set; }
         public Khoa khoa { get; set; }
+        public GiaoVien giaoVien { get; set; }
         public string Display { get { return TenLop; } }
         public Lop()
         {
@@ -22,5 +23,7 @@ namespace QLSV_Library.model
         {
             return MaLop;
         }
+        public string TenGV { get { return giaoVien.TenGV; } }
+        public string sisoLop { get { return dsSinhVien.Count().ToString(); } }
     }
 }

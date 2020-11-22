@@ -22,6 +22,7 @@ namespace QLSV_Library.service
         public static List<Lop> lstLop;
         public static List<SinhVien> lstSinhVien;
         public static List<NamHoc> lstNam;
+        public static List<GiaoVien> lstGV;
         static LoadExcel()
         {
             wb = excel.Workbooks.Open(AppDomain.CurrentDomain.BaseDirectory+path);
@@ -30,11 +31,28 @@ namespace QLSV_Library.service
             lstSinhVien = new List<SinhVien>();
             svChuaXepLop = new SinhVienChuaXepLop();
             lstNam = new List<NamHoc>();
+            lstGV = new List<GiaoVien>();
+            ReadGV(0);
             ReadKhoa(0, 0);
             ReadLop(0, 0);
             ReadSinhVien(0);
             ReadNam(0);
             excel.Quit();
+        }
+
+        private static void ReadGV(int i)
+        {
+            ws = wb.Worksheets[5];
+            i++;
+            while (ws.Cells[i, 1].Value != null)
+            {
+                GiaoVien gv = new GiaoVien();
+                gv.MaGV = ws.Cells[i, 1].Value;
+                gv.TenGV = ws.Cells[i, 2].Value;
+                gv.Email = ws.Cells[i, 3].Value;
+                lstGV.Add(gv);
+                ++i;
+            }
         }
 
         private static void ReadNam(int i)
@@ -84,6 +102,15 @@ namespace QLSV_Library.service
                         lop.TenLop = ws1.Cells[i, 3].Value;
                         lop.NamNhapHoc = ws1.Cells[i, 1].Value;
                         lop.khoa = data;
+                        string magv = ws1.Cells[i, 5].Value;
+                        foreach(GiaoVien gv in lstGV)
+                        {
+                            if(gv.MaGV.Equals(magv))
+                            {
+                                lop.giaoVien = gv;
+                                break;
+                            }
+                        }
                         lstLop.Add(lop);
                         data.dsLop.Add(lop);
                         break;
@@ -161,6 +188,23 @@ namespace QLSV_Library.service
             writeKhoa();
             writeSinhVien();
             writeNam();
+            writeGiaoVien();
+        }
+
+        private static void writeGiaoVien()
+        {
+            ws = wb.Worksheets[5];
+            ws.Cells.ClearContents();
+            int i = 1;
+            int j = 0;
+            foreach (GiaoVien gv in lstGV)
+            {
+                j = 1;
+                ws.Cells[i, j++].Value = gv.MaGV;
+                ws.Cells[i, j++].Value = gv.TenGV;
+                ws.Cells[i, j].Value = gv.Email;
+                ++i;
+            }
         }
 
         private static void writeNam()
@@ -191,6 +235,7 @@ namespace QLSV_Library.service
                 ws.Cells[i, j++].Value = dataLop.MaLop;
                 ws.Cells[i, j++].Value = dataLop.TenLop;
                 ws.Cells[i, j++].Value = dataLop.khoa.MaKhoa;
+                ws.Cells[i, j++].Value = dataLop.giaoVien.MaGV;
                 ++i;
             }
         }

@@ -24,3 +24,4 @@ C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\QLSV_Library\obj\De
 C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\QLSV_Library\obj\Debug\QLSV_Library.csproj.CoreCompileInputs.cache
 C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\QLSV_Library\obj\Debug\QLSV_Library.dll
 C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\QLSV_Library\obj\Debug\QLSV_Library.pdb
+C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\QLSV_Library\obj\Debug\QLSV_Library.csprojAssemblyReference.cache

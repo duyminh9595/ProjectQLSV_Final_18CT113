@@ -56,5 +56,11 @@ namespace WindowsFormsApp2
             LopUI ui = new LopUI();
             ui.ShowDialog();
         }
+
+        private void btnGiaoVien_Click(object sender, EventArgs e)
+        {
+            PhanLopGiaoVien ui = new PhanLopGiaoVien();
+            ui.ShowDialog();
+        }
     }
 }

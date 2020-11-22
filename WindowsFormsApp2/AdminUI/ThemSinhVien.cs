@@ -29,13 +29,24 @@ namespace WindowsFormsApp2.AdminUI
             if(!String.IsNullOrWhiteSpace(txtSDT.Text)&& !String.IsNullOrWhiteSpace(txtTen.Text)&&!String.IsNullOrWhiteSpace(txtEmail.Text)
                 &&!String.IsNullOrWhiteSpace(txtDiaChi.Text))
             {
-                chucNangThem();
+                if (txtEmail.Text.Contains("@"))
+                    checkThem();
+                else
+                    MessageBox.Show("Emai không đúng định dạng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
                 MessageBox.Show("Chưa Nhập Đủ Thông Tin", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void checkThem()
+        {
+            bool check = false;
+
+            chucNangThem();
+        }
+
         public static string mssv = "";
         private void chucNangThem()
         {
