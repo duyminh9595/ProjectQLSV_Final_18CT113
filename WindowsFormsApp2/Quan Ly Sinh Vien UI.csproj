@@ -85,6 +85,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminUI\ChiTiet_PhanLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminUI\ChiTiet_PhanLop.Designer.cs">
+      <DependentUpon>ChiTiet_PhanLop.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminUI\ChuyenLopFormSVUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +160,9 @@
       <DependentUpon>QLSV_MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="AdminUI\ChiTiet_PhanLop.resx">
+      <DependentUpon>ChiTiet_PhanLop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminUI\ChuyenLopFormSVUI.resx">
       <DependentUpon>ChuyenLopFormSVUI.cs</DependentUpon>
     </EmbeddedResource>
