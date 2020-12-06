@@ -8,6 +8,8 @@ namespace QLSV_Library.service
 {
     public static class StatusDangNhapcs
     {
-        public static bool check = false;
+        public static int check= 0;
+        public static string user = "";
+        public static string pass = "";
     }
 }

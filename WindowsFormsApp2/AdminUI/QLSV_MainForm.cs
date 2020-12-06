@@ -62,5 +62,23 @@ namespace WindowsFormsApp2
             PhanLopGiaoVien ui = new PhanLopGiaoVien();
             ui.ShowDialog();
         }
+
+        private void btnThemLop_Click(object sender, EventArgs e)
+        {
+            ThemLop ui = new ThemLop();
+            ui.ShowDialog();
+        }
+
+        private void btnMatKhau_Click(object sender, EventArgs e)
+        {
+            DoiMatKhau ui = new DoiMatKhau();
+            ui.ShowDialog();
+        }
+
+        private void btnMKGV_Click(object sender, EventArgs e)
+        {
+            DoiMatKhauGV ui = new DoiMatKhauGV();
+            ui.ShowDialog();
+        }
     }
 }

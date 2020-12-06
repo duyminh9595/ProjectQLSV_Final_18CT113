@@ -47,7 +47,6 @@ C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsA
 C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
 C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
 C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
-C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\Guna.UI.dll
 C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\QLSV_Library.dll
 C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\QLSV_Library.pdb
 C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\Quan Ly Sinh Vien UI.csprojAssemblyReference.cache
@@ -67,10 +66,6 @@ C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\ob
 C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AdminUI.PhanLopFormSVUI.resources
 C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AdminUI.ChuyenLopFormSVUI.resources
 C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AdminUI.LopUI.resources
-C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\SqlServerTypes\x64\msvcr120.dll
-C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
-C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\SqlServerTypes\x86\msvcr120.dll
-C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
 C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\Microsoft.ReportViewer.Common.dll
 C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\Microsoft.ReportViewer.DataVisualization.DLL
 C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\Microsoft.ReportViewer.Design.DLL
@@ -111,3 +106,13 @@ C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\ob
 C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\RdlCompile.cache
 C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\RdlCompile.compiled
 C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AdminUI.PhanLopGiaoVien.resources
+C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AdminUI.ChiTiet_PhanLop.resources
+C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AdminUI.PhanLopGiaoVien_DanhSachSinhVien.resources
+C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AdminUI.PhanLopGiaoVien_GiaoVien.resources
+C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AdminUI.ThemLop.resources
+C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AdminUI.DoiMatKhau.resources
+C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AdminUI.DoiMatKhauGV.resources
+C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.User_UI.DoiMatKhau_USer.resources
+C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.User_UI.GiaoDienUser.resources
+C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.User_UI.ThongTinSinhVien_User.resources
+C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.User_UI.ThongTinGiaoVien_User.resources

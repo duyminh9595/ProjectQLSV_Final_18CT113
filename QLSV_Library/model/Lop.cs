@@ -23,7 +23,7 @@ namespace QLSV_Library.model
         {
             return MaLop;
         }
-        public string TenGV { get { return giaoVien.TenGV; } }
+        public string TenGV { get { if (giaoVien != null) return giaoVien.TenGV; else return ""; } }
         public string sisoLop { get { return dsSinhVien.Count().ToString(); } }
     }
 }

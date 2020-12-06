@@ -296,24 +296,38 @@ namespace WindowsFormsApp2.AdminUI
         {
             if(mssvSelected!=-1)
             {
+                string malop = "";
                 if (MessageBox.Show("Bạn Có Chắc Xóa Sinh Viên Này Không?", "Chấm Hỏi", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     foreach(SinhVien sv in LoadExcel.lstSinhVien)
                     {
                         if(sv.MSSV.Equals(mssvSelected.ToString()))
                         {
-                            foreach(Lop lop in LoadExcel.lstLop)
+                            if(sv.TrangThaiHocXong.Equals("NO"))
                             {
-                                if(lop.dsSinhVien.Contains(sv))
+                                foreach (Lop lop in LoadExcel.lstLop)
                                 {
-                                    lop.dsSinhVien.Remove(sv);
-                                    break;
+                                    if (lop.dsSinhVien.Contains(sv))
+                                    {
+                                        lop.dsSinhVien.Remove(sv);
+                                        break;
+                                    }
                                 }
+                                LoadExcel.lstSinhVien.Remove(sv);
+                                MessageBox.Show("Xóa Thành Công");
+                                break;
                             }
-                            LoadExcel.lstSinhVien.Remove(sv);
-                            MessageBox.Show("Xóa Thành Công");
-                            break;
-                            
+                            else
+                            {
+                                foreach (Lop lop in LoadExcel.lstLop)
+                                {
+                                    if (lop.dsSinhVien.Contains(sv))
+                                    {
+                                        malop = lop.MaLop;
+                                    }
+                                }
+                                MessageBox.Show("Sinh viên này đang là lớp trưởng của lớp " + malop, "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
                         }
                     }
                 }
@@ -336,6 +350,7 @@ namespace WindowsFormsApp2.AdminUI
             }
             else
             {
+                MessageBox.Show(mssvSelected.ToString());
                 SuaSinhVien sua = new SuaSinhVien();
                 sua.ShowDialog();
             }
@@ -410,13 +425,57 @@ namespace WindowsFormsApp2.AdminUI
             }
             else
             {
-                ChuyenLopFormSVUI form = new ChuyenLopFormSVUI();
-                form.ShowDialog();
+                bool checkLT = false;
+                string malop = "";
+                foreach(SinhVien sv in LoadExcel.lstSinhVien)
+                {
+                    if(sv.MSSV.Equals(mssvSelected.ToString()))
+                    {
+                        if(sv.TrangThaiHocXong.Equals("YES"))
+                        {
+                            checkLT = true;
+                            
+                        }
+                        malop = sv.lop.MaLop;
+                        break;
+                    }
+                }
+                if (checkLT == false)
+                {
+                    ChuyenLopFormSVUI form = new ChuyenLopFormSVUI();
+                    form.ShowDialog();
+                }
+                else
+                    MessageBox.Show("Sinh viên này đang là lớp trưởng của lớp " + malop, "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             mssvSelected = -1;
             loadDanhSachSinhVien();
             btnPhanLop.Enabled = false;
             btnChuyenLop.Enabled = false;
+        }
+
+        private void dgvThongTinhSinhVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvThongTinhSinhVien.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                mssvSelected = Int32.Parse(dgvThongTinhSinhVien.Rows[e.RowIndex].Cells["mssv"].FormattedValue.ToString());
+            }
+            foreach (SinhVien sv in LoadExcel.lstSinhVien)
+            {
+                if (sv.MSSV.Equals(mssvSelected.ToString()))
+                {
+                    if (sv.lop == null)
+                    {
+                        btnChuyenLop.Enabled = false;
+                        btnPhanLop.Enabled = true;
+                    }
+                    else
+                    {
+                        btnChuyenLop.Enabled = true;
+                        btnPhanLop.Enabled = false;
+                    }
+                }
+            }
         }
 
         private void loadDanhSachSinhVien()

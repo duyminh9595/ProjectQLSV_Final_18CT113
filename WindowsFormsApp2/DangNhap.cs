@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using QLSV_Library;
 using QLSV_Library.model;
 using QLSV_Library.service;
+using WindowsFormsApp2.User_UI;
 
 namespace WindowsFormsApp2
 {
@@ -66,22 +67,93 @@ namespace WindowsFormsApp2
         bool checkDN = false;
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            
-                    foreach(SinhVien dataSV in LoadExcel.lstSinhVien)
+            if(!String.IsNullOrEmpty(txtID.Text)&&!String.IsNullOrEmpty(txtPass.Text))
+            {
+                if (txtID.Text.ToUpper().Contains("GV"))
+                {
+                    foreach(GiaoVien gv in LoadExcel.lstGV)
                     {
-                        if (txtID.Text.Equals(dataSV.UserName) && txtPass.Text.Equals(dataSV.MatKhau))
+                        if(gv.MaGV.Equals(txtID.Text))
                         {
-                            this.Hide();
-                            QLSV_MainForm mainQL = new QLSV_MainForm();
-                            mainQL.Show();
-                            checkDN = true;
+                            if (gv.PassWord.Equals(txtPass.Text))
+                            {
+                                StatusDangNhapcs.user = txtID.Text;
+                                StatusDangNhapcs.check = 3;
+                                StatusDangNhapcs.pass = txtPass.Text;
+                                checkDN = true;
+                            }
+                            else
+                                break;
                         }
-                    
+                    }
+                }
+                else if (txtID.Text.Contains("admin"))
+                {
+                    foreach(Admin a in LoadExcel.lstAdmin)
+                    {
+                        if(a.UserName.Equals(txtID.Text))
+                        {
+                            if (a.PassWord.Equals(txtPass.Text))
+                            {
+                                StatusDangNhapcs.user = txtID.Text;
+                                StatusDangNhapcs.check = 4;
+                                StatusDangNhapcs.pass = txtPass.Text;
+                                checkDN = true;
+                            }
+                            else
+                                break;
+                        }
+                    }
+                }
+                else
+                {
+                    foreach (SinhVien dataSV in LoadExcel.lstSinhVien)
+                    {
+                        if (txtID.Text.Equals(dataSV.MSSV) && txtPass.Text.Equals(dataSV.MatKhau))
+                        {
+                            if (dataSV.TrangThaiHocXong.Equals("YES"))
+                            {
+
+                                StatusDangNhapcs.user = txtID.Text;
+                                StatusDangNhapcs.check = 2;
+                            }
+                            else
+                            {
+                                StatusDangNhapcs.user = txtID.Text;
+                                StatusDangNhapcs.check = 1;
+
+                            }
+                            checkDN = true;
+                            break;
+                        }
+
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Chưa Nhập Đủ Thông Tin Đăng Nhập", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             if(checkDN==false)
             {
                 MessageBox.Show("Sai Tên Đăng Nhập Hoặc Mật Khẩu", "Warning!!!!!!!",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
+            else
+            { 
+                if(StatusDangNhapcs.check==4)
+                {
+                    this.Hide();
+                    QLSV_MainForm mainQL = new QLSV_MainForm();
+                    mainQL.Show();
+                }
+                else
+                {
+                    this.Hide();
+                    GiaoDienUser ui = new GiaoDienUser();
+                    ui.Show();
+                }
+            }
+
         }
 
         private void DangNhap_Load(object sender, EventArgs e)

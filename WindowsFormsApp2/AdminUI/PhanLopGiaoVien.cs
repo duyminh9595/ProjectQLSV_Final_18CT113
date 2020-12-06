@@ -1,4 +1,5 @@
-﻿using QLSV_Library.service;
+﻿using QLSV_Library.model;
+using QLSV_Library.service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -89,9 +90,27 @@ namespace WindowsFormsApp2.AdminUI
 
         private void btnChiTiet_Click(object sender, EventArgs e)
         {
+            bool checkGV = false;
+            foreach(Lop lop in LoadExcel.lstLop)
+            {
+                if(lop.MaLop.Equals(maLopSelected))
+                {
+                    if(lop.giaoVien!=null)
+                    {
+                        checkGV = true;
+                    }
+                    break;
+                }
+            }    
             if (!String.IsNullOrEmpty(maLopSelected))
             {
-
+                if (checkGV == true)
+                {
+                    PhanLopGiaoVien_DanhSachSinhVien ui = new PhanLopGiaoVien_DanhSachSinhVien();
+                    ui.ShowDialog();
+                }
+                else
+                    MessageBox.Show("Lớp chưa có giáo viên chủ nhiệm", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
                 MessageBox.Show("Chưa Chọn Lớp Cần Hiện Danh Sách", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -101,7 +120,20 @@ namespace WindowsFormsApp2.AdminUI
         {
             if (!String.IsNullOrEmpty(maLopSelected))
             {
-
+                foreach(Lop lop in LoadExcel.lstLop)
+                {
+                    if(lop.MaLop.Equals(maLopSelected))
+                    {
+                        if (lop.giaoVien!=null)
+                            MessageBox.Show("Lớp này đã có giáo viên dạy","Chẩm hỏi",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                        else
+                        {
+                            PhanLopGiaoVien_GiaoVien ui = new PhanLopGiaoVien_GiaoVien();
+                            ui.ShowDialog();
+                            loadDS();
+                        }
+                    }
+                }
             }
             else
                 MessageBox.Show("Chưa Chọn Lớp Cần Phân Công Giáo Viên", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);

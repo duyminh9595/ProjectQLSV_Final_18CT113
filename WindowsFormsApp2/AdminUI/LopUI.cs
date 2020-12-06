@@ -171,6 +171,12 @@ namespace WindowsFormsApp2.AdminUI
                         }
                     }
                 }
+                string gvcn = "";
+                foreach(Lop lop in LoadExcel.lstLop)
+                {
+                    if (lop.MaLop.Equals(cmbLop.SelectedValue))
+                        gvcn = lop.giaoVien.TenGV;
+                }
                 if (!String.IsNullOrEmpty(mssvlt))
                 {
                     lblMSLT.Text = mssvlt;
@@ -178,7 +184,7 @@ namespace WindowsFormsApp2.AdminUI
                 else
                     lblMSLT.Text = "Chưa Có Lớp Trưởng";
                 lblSiSo.Text = siso.ToString();
-                lblGVCN.Text = "Sơn";
+                lblGVCN.Text = gvcn;
             }
             else
             {

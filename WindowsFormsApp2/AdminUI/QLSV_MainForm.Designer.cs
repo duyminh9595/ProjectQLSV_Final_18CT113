@@ -33,11 +33,14 @@
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.pnData = new System.Windows.Forms.Panel();
-            this.gunaGradientPanel1 = new Guna.UI.WinForms.GunaGradientPanel();
-            this.btnLop = new System.Windows.Forms.Button();
             this.btnSignOut = new System.Windows.Forms.Button();
             this.btnSinhVien = new System.Windows.Forms.Button();
+            this.gunaGradientPanel1 = new Guna.UI.WinForms.GunaGradientPanel();
+            this.btnMatKhau = new System.Windows.Forms.Button();
+            this.btnThemLop = new System.Windows.Forms.Button();
             this.btnGiaoVien = new System.Windows.Forms.Button();
+            this.btnLop = new System.Windows.Forms.Button();
+            this.btnMKGV = new System.Windows.Forms.Button();
             this.gunaGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,32 +67,6 @@
             this.pnData.Size = new System.Drawing.Size(791, 696);
             this.pnData.TabIndex = 2;
             // 
-            // gunaGradientPanel1
-            // 
-            this.gunaGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientPanel1.BackgroundImage")));
-            this.gunaGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.gunaGradientPanel1.Controls.Add(this.btnGiaoVien);
-            this.gunaGradientPanel1.Controls.Add(this.btnLop);
-            this.gunaGradientPanel1.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
-            this.gunaGradientPanel1.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
-            this.gunaGradientPanel1.GradientColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
-            this.gunaGradientPanel1.GradientColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
-            this.gunaGradientPanel1.Location = new System.Drawing.Point(26, 41);
-            this.gunaGradientPanel1.Name = "gunaGradientPanel1";
-            this.gunaGradientPanel1.Size = new System.Drawing.Size(133, 696);
-            this.gunaGradientPanel1.TabIndex = 3;
-            this.gunaGradientPanel1.Text = "gunaGradientPanel1";
-            // 
-            // btnLop
-            // 
-            this.btnLop.Location = new System.Drawing.Point(15, 26);
-            this.btnLop.Name = "btnLop";
-            this.btnLop.Size = new System.Drawing.Size(102, 84);
-            this.btnLop.TabIndex = 6;
-            this.btnLop.Text = "In Danh Sach Lop";
-            this.btnLop.UseVisualStyleBackColor = true;
-            this.btnLop.Click += new System.EventHandler(this.btnLop_Click);
-            // 
             // btnSignOut
             // 
             this.btnSignOut.Location = new System.Drawing.Point(715, 13);
@@ -110,6 +87,45 @@
             this.btnSinhVien.UseVisualStyleBackColor = true;
             this.btnSinhVien.Click += new System.EventHandler(this.btnSinhVien_Click);
             // 
+            // gunaGradientPanel1
+            // 
+            this.gunaGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientPanel1.BackgroundImage")));
+            this.gunaGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gunaGradientPanel1.Controls.Add(this.btnMKGV);
+            this.gunaGradientPanel1.Controls.Add(this.btnMatKhau);
+            this.gunaGradientPanel1.Controls.Add(this.btnThemLop);
+            this.gunaGradientPanel1.Controls.Add(this.btnGiaoVien);
+            this.gunaGradientPanel1.Controls.Add(this.btnLop);
+            this.gunaGradientPanel1.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
+            this.gunaGradientPanel1.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
+            this.gunaGradientPanel1.GradientColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
+            this.gunaGradientPanel1.GradientColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(130)))), ((int)(((byte)(246)))));
+            this.gunaGradientPanel1.Location = new System.Drawing.Point(26, 41);
+            this.gunaGradientPanel1.Name = "gunaGradientPanel1";
+            this.gunaGradientPanel1.Size = new System.Drawing.Size(133, 696);
+            this.gunaGradientPanel1.TabIndex = 3;
+            this.gunaGradientPanel1.Text = "gunaGradientPanel1";
+            // 
+            // btnMatKhau
+            // 
+            this.btnMatKhau.Location = new System.Drawing.Point(15, 355);
+            this.btnMatKhau.Name = "btnMatKhau";
+            this.btnMatKhau.Size = new System.Drawing.Size(102, 84);
+            this.btnMatKhau.TabIndex = 9;
+            this.btnMatKhau.Text = "Đổi Mật Khẩu";
+            this.btnMatKhau.UseVisualStyleBackColor = true;
+            this.btnMatKhau.Click += new System.EventHandler(this.btnMatKhau_Click);
+            // 
+            // btnThemLop
+            // 
+            this.btnThemLop.Location = new System.Drawing.Point(15, 253);
+            this.btnThemLop.Name = "btnThemLop";
+            this.btnThemLop.Size = new System.Drawing.Size(102, 84);
+            this.btnThemLop.TabIndex = 8;
+            this.btnThemLop.Text = "Thêm Lớp";
+            this.btnThemLop.UseVisualStyleBackColor = true;
+            this.btnThemLop.Click += new System.EventHandler(this.btnThemLop_Click);
+            // 
             // btnGiaoVien
             // 
             this.btnGiaoVien.Location = new System.Drawing.Point(15, 140);
@@ -119,6 +135,26 @@
             this.btnGiaoVien.Text = "Giáo Viên";
             this.btnGiaoVien.UseVisualStyleBackColor = true;
             this.btnGiaoVien.Click += new System.EventHandler(this.btnGiaoVien_Click);
+            // 
+            // btnLop
+            // 
+            this.btnLop.Location = new System.Drawing.Point(15, 26);
+            this.btnLop.Name = "btnLop";
+            this.btnLop.Size = new System.Drawing.Size(102, 84);
+            this.btnLop.TabIndex = 6;
+            this.btnLop.Text = "In Danh Sach Lop";
+            this.btnLop.UseVisualStyleBackColor = true;
+            this.btnLop.Click += new System.EventHandler(this.btnLop_Click);
+            // 
+            // btnMKGV
+            // 
+            this.btnMKGV.Location = new System.Drawing.Point(15, 445);
+            this.btnMKGV.Name = "btnMKGV";
+            this.btnMKGV.Size = new System.Drawing.Size(102, 84);
+            this.btnMKGV.TabIndex = 10;
+            this.btnMKGV.Text = "Đổi Mật Khẩu Giáo Viên";
+            this.btnMKGV.UseVisualStyleBackColor = true;
+            this.btnMKGV.Click += new System.EventHandler(this.btnMKGV_Click);
             // 
             // QLSV_MainForm
             // 
@@ -153,5 +189,8 @@
         private System.Windows.Forms.Button btnSinhVien;
         private System.Windows.Forms.Button btnLop;
         private System.Windows.Forms.Button btnGiaoVien;
+        private System.Windows.Forms.Button btnThemLop;
+        private System.Windows.Forms.Button btnMatKhau;
+        private System.Windows.Forms.Button btnMKGV;
     }
 }

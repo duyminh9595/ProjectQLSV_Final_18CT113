@@ -23,6 +23,7 @@ namespace QLSV_Library.service
         public static List<SinhVien> lstSinhVien;
         public static List<NamHoc> lstNam;
         public static List<GiaoVien> lstGV;
+        public static List<Admin> lstAdmin;
         static LoadExcel()
         {
             wb = excel.Workbooks.Open(AppDomain.CurrentDomain.BaseDirectory+path);
@@ -32,12 +33,28 @@ namespace QLSV_Library.service
             svChuaXepLop = new SinhVienChuaXepLop();
             lstNam = new List<NamHoc>();
             lstGV = new List<GiaoVien>();
+            lstAdmin = new List<Admin>();
             ReadGV(0);
             ReadKhoa(0, 0);
             ReadLop(0, 0);
             ReadSinhVien(0);
             ReadNam(0);
+            ReadAdmin(0);
             excel.Quit();
+        }
+
+        private static void ReadAdmin(int i)
+        {
+            ws = wb.Worksheets[6];
+            i++;
+            while (ws.Cells[i, 1].Value != null)
+            {
+                Admin admin = new Admin();
+                admin.UserName = ws.Cells[i, 1].Value;
+                admin.PassWord = ws.Cells[i, 2].Value;
+                lstAdmin.Add(admin);
+                ++i;
+            }
         }
 
         private static void ReadGV(int i)
@@ -50,6 +67,7 @@ namespace QLSV_Library.service
                 gv.MaGV = ws.Cells[i, 1].Value;
                 gv.TenGV = ws.Cells[i, 2].Value;
                 gv.Email = ws.Cells[i, 3].Value;
+                gv.PassWord = ws.Cells[i, 4].Value;
                 lstGV.Add(gv);
                 ++i;
             }
@@ -189,6 +207,22 @@ namespace QLSV_Library.service
             writeSinhVien();
             writeNam();
             writeGiaoVien();
+            writeAdmin();
+        }
+
+        private static void writeAdmin()
+        {
+            ws = wb.Worksheets[6];
+            ws.Cells.ClearContents();
+            int i = 1;
+            int j = 0;
+            foreach (Admin a in lstAdmin)
+            {
+                j = 1;
+                ws.Cells[i, j++].Value = a.UserName;
+                ws.Cells[i, j++].Value = a.PassWord;
+                ++i;
+            }
         }
 
         private static void writeGiaoVien()
@@ -202,7 +236,8 @@ namespace QLSV_Library.service
                 j = 1;
                 ws.Cells[i, j++].Value = gv.MaGV;
                 ws.Cells[i, j++].Value = gv.TenGV;
-                ws.Cells[i, j].Value = gv.Email;
+                ws.Cells[i, j++].Value = gv.Email;
+                ws.Cells[i, j].Value = gv.PassWord;
                 ++i;
             }
         }
@@ -235,7 +270,8 @@ namespace QLSV_Library.service
                 ws.Cells[i, j++].Value = dataLop.MaLop;
                 ws.Cells[i, j++].Value = dataLop.TenLop;
                 ws.Cells[i, j++].Value = dataLop.khoa.MaKhoa;
-                ws.Cells[i, j++].Value = dataLop.giaoVien.MaGV;
+                if(dataLop.giaoVien!=null)
+                    ws.Cells[i, j++].Value = dataLop.giaoVien.MaGV;
                 ++i;
             }
         }

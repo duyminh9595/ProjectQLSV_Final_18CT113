@@ -78,8 +78,12 @@ namespace WindowsFormsApp2.AdminUI
 
                     }
                 }
+                this.Close();
             }
-            this.Close();
+            else
+            {
+                MessageBox.Show("Chưa Nhập Đủ Thông Tin", "Chấm Hỏi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

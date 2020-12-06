@@ -11,5 +11,6 @@ namespace QLSV_Library.model
         public string MaGV { get; set; }
         public string TenGV { get; set; }
         public string Email { get; set; }
+        public string PassWord { get; set; }
     }
 }
