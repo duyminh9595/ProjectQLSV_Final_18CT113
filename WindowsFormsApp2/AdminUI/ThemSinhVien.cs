@@ -26,18 +26,23 @@ namespace WindowsFormsApp2.AdminUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if(!String.IsNullOrWhiteSpace(txtSDT.Text)&& !String.IsNullOrWhiteSpace(txtTen.Text)&&!String.IsNullOrWhiteSpace(txtEmail.Text)
-                &&!String.IsNullOrWhiteSpace(txtDiaChi.Text))
+            if (CheckTrungEmail.check(LoadExcel.lstSinhVien, LoadExcel.lstAdmin, LoadExcel.lstGV, txtEmail.Text))
             {
-                if (txtEmail.Text.Contains("@"))
-                    checkThem();
+                if (!String.IsNullOrWhiteSpace(txtSDT.Text) && !String.IsNullOrWhiteSpace(txtTen.Text) && !String.IsNullOrWhiteSpace(txtEmail.Text)
+                && !String.IsNullOrWhiteSpace(txtDiaChi.Text))
+                {
+                    if (txtEmail.Text.Contains("@"))
+                        checkThem();
+                    else
+                        MessageBox.Show("Emai không đúng định dạng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
                 else
-                    MessageBox.Show("Emai không đúng định dạng", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                {
+                    MessageBox.Show("Chưa Nhập Đủ Thông Tin", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             else
-            {
-                MessageBox.Show("Chưa Nhập Đủ Thông Tin", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+                MessageBox.Show("Email bị trùng", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void checkThem()

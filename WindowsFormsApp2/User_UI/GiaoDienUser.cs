@@ -62,5 +62,19 @@ namespace WindowsFormsApp2.User_UI
                 ui.ShowDialog();
             }
         }
+
+        private void btnDanhSach_Click(object sender, EventArgs e)
+        {
+            if(StatusDangNhapcs.check==2)
+            {
+                DanhSachSV_User ui = new DanhSachSV_User();
+                ui.ShowDialog();
+            }
+            else
+            {
+                DanhSachSV_GV_User ui = new DanhSachSV_GV_User();
+                ui.ShowDialog();
+            }
+        }
     }
 }

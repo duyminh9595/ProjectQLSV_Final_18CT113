@@ -52,6 +52,7 @@ namespace QLSV_Library.service
                 Admin admin = new Admin();
                 admin.UserName = ws.Cells[i, 1].Value;
                 admin.PassWord = ws.Cells[i, 2].Value;
+                admin.Email= ws.Cells[i, 3].Value;
                 lstAdmin.Add(admin);
                 ++i;
             }
@@ -221,6 +222,7 @@ namespace QLSV_Library.service
                 j = 1;
                 ws.Cells[i, j++].Value = a.UserName;
                 ws.Cells[i, j++].Value = a.PassWord;
+                ws.Cells[i, j++].Value = a.Email;
                 ++i;
             }
         }

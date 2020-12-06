@@ -189,6 +189,24 @@
     <Compile Include="AdminUI\QLSV_MainForm.Designer.cs">
       <DependentUpon>QLSV_MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuenMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuenMatKhau.Designer.cs">
+      <DependentUpon>QuenMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_UI\DanhSachSV_GV_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_UI\DanhSachSV_GV_User.Designer.cs">
+      <DependentUpon>DanhSachSV_GV_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_UI\DanhSachSV_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_UI\DanhSachSV_User.Designer.cs">
+      <DependentUpon>DanhSachSV_User.cs</DependentUpon>
+    </Compile>
     <Compile Include="User_UI\DoiMatKhau_USer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -274,7 +292,16 @@
     <EmbeddedResource Include="AdminUI\QLSV_MainForm.resx">
       <DependentUpon>QLSV_MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QuenMatKhau.resx">
+      <DependentUpon>QuenMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="User_UI\DanhSachSV_GV_User.resx">
+      <DependentUpon>DanhSachSV_GV_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_UI\DanhSachSV_User.resx">
+      <DependentUpon>DanhSachSV_User.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User_UI\DoiMatKhau_USer.resx">
       <DependentUpon>DoiMatKhau_USer.cs</DependentUpon>
     </EmbeddedResource>

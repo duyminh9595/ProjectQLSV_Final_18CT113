@@ -18,7 +18,7 @@ namespace WindowsFormsApp2.AdminUI
         {
             InitializeComponent();
         }
-
+        string emailSelected = "";
         private void SuaSinhVien_Load(object sender, EventArgs e)
         {
             int ms = SinhVienUI.mssvSelected;
@@ -29,6 +29,7 @@ namespace WindowsFormsApp2.AdminUI
                 {
                     txtDiaChi.Text = sv.DiaChi;
                     txtEmail.Text = sv.UserName;
+                    emailSelected = sv.UserName;
                     txtMK.Text = sv.MatKhau;
                     txtSDT.Text = sv.SDT.ToString();
                     txtTen.Text = sv.Ten;
@@ -51,39 +52,45 @@ namespace WindowsFormsApp2.AdminUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrWhiteSpace(txtSDT.Text) && !String.IsNullOrWhiteSpace(txtTen.Text) && !String.IsNullOrWhiteSpace(txtEmail.Text)
-                && !String.IsNullOrWhiteSpace(txtDiaChi.Text) && !String.IsNullOrWhiteSpace(txtMK.Text))
+            if (CheckTrungEmail.check(LoadExcel.lstSinhVien, LoadExcel.lstAdmin, LoadExcel.lstGV, txtEmail.Text)||emailSelected.Equals(txtEmail.Text))
             {
-                foreach (SinhVien sv in LoadExcel.lstSinhVien)
+                if (!String.IsNullOrWhiteSpace(txtSDT.Text) && !String.IsNullOrWhiteSpace(txtTen.Text) && !String.IsNullOrWhiteSpace(txtEmail.Text)
+                && !String.IsNullOrWhiteSpace(txtDiaChi.Text) && !String.IsNullOrWhiteSpace(txtMK.Text))
                 {
-                    if (sv.MSSV.Equals(SinhVienUI.mssvSelected.ToString()))
+                    foreach (SinhVien sv in LoadExcel.lstSinhVien)
                     {
-
-                        sv.Ten = txtTen.Text;
-                        sv.DiaChi = txtDiaChi.Text;
-                        sv.SDT = Int32.Parse(txtSDT.Text);
-                        if ((string)cmbGioiTinh.SelectedItem == "NAM")
+                        if (sv.MSSV.Equals(SinhVienUI.mssvSelected.ToString()))
                         {
 
-                            sv.GioiTinh = "NAM";
-                        }
-                        else
-                            sv.GioiTinh = "NU";
-                        sv.MatKhau = txtMK.Text;
-                        DateTime iDate = pickDate.Value;
-                        sv.NgaySinh = DateTime.Parse(iDate.ToShortDateString());
-                        sv.UserName = txtEmail.Text;
-                        MessageBox.Show("Sửa Thông Tin Thành Công", "Thành Công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        break;
+                            sv.Ten = txtTen.Text;
+                            sv.DiaChi = txtDiaChi.Text;
+                            sv.SDT = Int32.Parse(txtSDT.Text);
+                            if ((string)cmbGioiTinh.SelectedItem == "NAM")
+                            {
 
+                                sv.GioiTinh = "NAM";
+                            }
+                            else
+                                sv.GioiTinh = "NU";
+                            sv.MatKhau = txtMK.Text;
+                            DateTime iDate = pickDate.Value;
+                            sv.NgaySinh = DateTime.Parse(iDate.ToShortDateString());
+                            sv.UserName = txtEmail.Text;
+                            MessageBox.Show("Sửa Thông Tin Thành Công", "Thành Công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            break;
+
+                        }
                     }
+                    this.Close();
                 }
-                this.Close();
+                else
+                {
+                    MessageBox.Show("Chưa Nhập Đủ Thông Tin", "Chấm Hỏi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
+
             else
-            {
-                MessageBox.Show("Chưa Nhập Đủ Thông Tin", "Chấm Hỏi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                MessageBox.Show("Email bị trùng", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }

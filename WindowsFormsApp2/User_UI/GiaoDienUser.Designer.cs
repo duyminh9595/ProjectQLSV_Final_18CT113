@@ -105,6 +105,7 @@
             this.btnDanhSach.Size = new System.Drawing.Size(169, 69);
             this.btnDanhSach.TabIndex = 7;
             this.btnDanhSach.Text = "Danh Sách Sinh Viên Lớp";
+            this.btnDanhSach.Click += new System.EventHandler(this.btnDanhSach_Click);
             // 
             // btnThongTin
             // 

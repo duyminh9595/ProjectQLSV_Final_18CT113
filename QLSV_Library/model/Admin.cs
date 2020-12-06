@@ -10,5 +10,6 @@ namespace QLSV_Library.model
     {
         public string UserName { get; set; }
         public string PassWord { get; set; }
+        public string Email { get; set; }
     }
 }

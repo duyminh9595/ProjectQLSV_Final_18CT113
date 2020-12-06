@@ -161,6 +161,7 @@ namespace WindowsFormsApp2
             this.lblQuenMatKhau.Size = new System.Drawing.Size(120, 20);
             this.lblQuenMatKhau.TabIndex = 6;
             this.lblQuenMatKhau.Text = "Quên Mật Khẩu";
+            this.lblQuenMatKhau.Click += new System.EventHandler(this.lblQuenMatKhau_Click);
             this.lblQuenMatKhau.MouseEnter += new System.EventHandler(this.label3_MouseEnter);
             this.lblQuenMatKhau.MouseLeave += new System.EventHandler(this.lblQuenMatKhau_MouseLeave);
             // 

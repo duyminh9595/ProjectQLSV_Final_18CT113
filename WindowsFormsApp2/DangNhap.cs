@@ -159,5 +159,11 @@ namespace WindowsFormsApp2
         private void DangNhap_Load(object sender, EventArgs e)
         {
         }
+
+        private void lblQuenMatKhau_Click(object sender, EventArgs e)
+        {
+            QuenMatKhau ui = new QuenMatKhau();
+            ui.ShowDialog();
+        }
     }
 }

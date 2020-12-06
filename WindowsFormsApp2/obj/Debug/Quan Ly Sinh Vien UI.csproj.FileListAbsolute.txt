@@ -116,3 +116,6 @@ C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\ob
 C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.User_UI.GiaoDienUser.resources
 C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.User_UI.ThongTinSinhVien_User.resources
 C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.User_UI.ThongTinGiaoVien_User.resources
+C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.User_UI.DanhSachSV_User.resources
+C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.User_UI.DanhSachSV_GV_User.resources
+C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.QuenMatKhau.resources
