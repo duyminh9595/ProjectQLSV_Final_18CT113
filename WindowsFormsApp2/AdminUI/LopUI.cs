@@ -175,7 +175,10 @@ namespace WindowsFormsApp2.AdminUI
                 foreach(Lop lop in LoadExcel.lstLop)
                 {
                     if (lop.MaLop.Equals(cmbLop.SelectedValue))
-                        gvcn = lop.giaoVien.TenGV;
+                    {
+                        if(lop.giaoVien!=null)
+                            gvcn = lop.giaoVien.TenGV;
+                    }
                 }
                 if (!String.IsNullOrEmpty(mssvlt))
                 {

@@ -203,7 +203,7 @@ namespace WindowsFormsApp2
             this.txtID.SelectedText = "";
             this.txtID.Size = new System.Drawing.Size(189, 37);
             this.txtID.TabIndex = 3;
-            this.txtID.Text = "GV1";
+            this.txtID.Text = "admin";
             this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // label1

@@ -21,12 +21,18 @@ namespace WindowsFormsApp2
 
         private void gunaLabel1_Click(object sender, EventArgs e)
         {
+            loadData();
+        }
+
+        private void loadData()
+        {
             pnData.Controls.Clear();
             Home formHome = new Home() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            
+
             pnData.Controls.Add(formHome);
             formHome.Show();
         }
+
         private void QLSV_MainForm_Load(object sender, EventArgs e)
         {
            
@@ -36,49 +42,59 @@ namespace WindowsFormsApp2
 
         private void QLSV_MainForm_Load_1(object sender, EventArgs e)
         {
-
+            loadData();
         }
 
-        private void btnSignOut_Click(object sender, EventArgs e)
-        {
-            LoadExcel.exitUI();
-            Application.Exit();
-        }
+        
 
-        private void btnSinhVien_Click(object sender, EventArgs e)
+        
+
+        
+        private void btnDanhSachSinhVien_Click(object sender, EventArgs e)
         {
-            SinhVienUI formSV = new SinhVienUI() ;
+
+            SinhVienUI formSV = new SinhVienUI();
             formSV.ShowDialog();
         }
 
-        private void btnLop_Click(object sender, EventArgs e)
+        private void btnGV_Click(object sender, EventArgs e)
+        {
+
+            PhanLopGiaoVien ui = new PhanLopGiaoVien();
+            ui.ShowDialog();
+        }
+
+        private void btnDanhSachLop_Click(object sender, EventArgs e)
         {
             LopUI ui = new LopUI();
             ui.ShowDialog();
         }
 
-        private void btnGiaoVien_Click(object sender, EventArgs e)
-        {
-            PhanLopGiaoVien ui = new PhanLopGiaoVien();
-            ui.ShowDialog();
-        }
-
-        private void btnThemLop_Click(object sender, EventArgs e)
+        private void btnThemL_Click(object sender, EventArgs e)
         {
             ThemLop ui = new ThemLop();
             ui.ShowDialog();
         }
 
-        private void btnMatKhau_Click(object sender, EventArgs e)
+        private void btnDoiMKAdmin_Click(object sender, EventArgs e)
         {
+
             DoiMatKhau ui = new DoiMatKhau();
             ui.ShowDialog();
         }
 
-        private void btnMKGV_Click(object sender, EventArgs e)
+        private void btnMatKhauGiaoVien_Click(object sender, EventArgs e)
         {
+
             DoiMatKhauGV ui = new DoiMatKhauGV();
             ui.ShowDialog();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+
+            LoadExcel.exitUI();
+            Application.Exit();
         }
     }
 }
