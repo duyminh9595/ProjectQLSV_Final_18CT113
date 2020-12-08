@@ -1,4 +1,5 @@
-﻿using Microsoft.Reporting.WebForms;
+﻿using Guna.UI.WinForms;
+using Microsoft.Reporting.WebForms;
 using QLSV_Library.model;
 using QLSV_Library.service;
 using System;
@@ -22,7 +23,16 @@ namespace WindowsFormsApp2.AdminUI
 
         private void LopUI_Load(object sender, EventArgs e)
         {
+            dgvThongTinhSinhVien.Columns[0].HeaderText = "Mã Số Sinh Viên"; // header text
 
+            dgvThongTinhSinhVien.Columns[1].HeaderText = "Họ Và Tên Sinh Viên";
+
+            dgvThongTinhSinhVien.Columns[2].HeaderText = "Giới Tính";
+
+            dgvThongTinhSinhVien.Columns[3].HeaderText = "Năm Sinh";
+
+            dgvThongTinhSinhVien.Columns[4].HeaderText = "SDT";
+            /*
             dgvThongTinhSinhVien.AutoGenerateColumns = false;
             dgvThongTinhSinhVien.DataSource = LoadExcel.lstSinhVien;
 
@@ -41,10 +51,9 @@ namespace WindowsFormsApp2.AdminUI
             dgvThongTinhSinhVien.Columns[3].HeaderText = "Năm Sinh";
             dgvThongTinhSinhVien.Columns[3].Name = "namsinh";
             dgvThongTinhSinhVien.Columns[3].DataPropertyName = "NgaySinh";
-
-            dgvThongTinhSinhVien.Columns[4].HeaderText = "SDT";
+            c
             dgvThongTinhSinhVien.Columns[4].Name = "SDT";
-            dgvThongTinhSinhVien.Columns[4].DataPropertyName = "SDT";
+            dgvThongTinhSinhVien.Columns[4].DataPropertyName = "SDT";*/
 
             loadNamHoc();
             loadNganhHoc();
@@ -79,12 +88,50 @@ namespace WindowsFormsApp2.AdminUI
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            int height = dgvThongTinhSinhVien.Height;
+            /*int height = dgvThongTinhSinhVien.Height;
             dgvThongTinhSinhVien.Height = dgvThongTinhSinhVien.RowCount * dgvThongTinhSinhVien.RowTemplate.Height * 2;
             bmp = new Bitmap(dgvThongTinhSinhVien.Width, dgvThongTinhSinhVien.Height);
             dgvThongTinhSinhVien.DrawToBitmap(bmp, new Rectangle(0, 0, dgvThongTinhSinhVien.Width, dgvThongTinhSinhVien.Height));
             dgvThongTinhSinhVien.Height = height;
-            printPreviewDialog1.ShowDialog();
+            printPreviewDialog1.ShowDialog();*/
+            if (dgvThongTinhSinhVien.DataSource != null)
+            {
+                DataSet ds = new DataSet();
+                DataTable table = new DataTable();
+                table.Columns.Add("Mã Số Sinh Viên", typeof(string));
+                table.Columns.Add("Họ Và Tên Sinh Viên", typeof(string));
+                table.Columns.Add("Giới Tính", typeof(string));
+                table.Columns.Add("Ngày Sinh", typeof(string));
+                table.Columns.Add("Số Điện Thoại", typeof(string));
+                foreach (DataGridViewRow dt in dgvThongTinhSinhVien.Rows)
+                {
+                    table.Rows.Add(dt.Cells[0].Value, dt.Cells[1].Value, dt.Cells[2].Value, dt.Cells[3].Value, dt.Cells[4].Value);
+                }
+                ds.Tables.Add(table);
+                //ds.WriteXmlSchema("applicant.xml");
+                PrintTheReport p = new PrintTheReport((string)cmbLop.DisplayMember, (string)cmbLop.SelectedValue, lblMSLT.Text, lblSiSo.Text, lblGVCN.Text);
+                CrystalReport2 cr = new CrystalReport2();
+                cr.SetDataSource(ds);
+                foreach (Lop l in LoadExcel.lstLop)
+                {
+                    if(l.MaLop.Equals((string)cmbLop.SelectedValue))
+                    {
+                        cr.SetParameterValue("tenLop", l.TenLop);
+                        break;
+                    }
+                }
+                cr.SetParameterValue("maLop", (string)cmbLop.SelectedValue);
+                cr.SetParameterValue("tenGVCN", lblGVCN.Text);
+                cr.SetParameterValue("namhoc", Double.Parse(cmbLop.SelectedValue.ToString().Substring(0, 2)) + 2000);
+                cr.SetParameterValue("siSo", lblSiSo.Text);
+                cr.SetParameterValue("msLT", lblMSLT.Text);
+                p.crystalReportViewer1.ReportSource = cr;
+                p.crystalReportViewer1.Refresh();
+                p.Show();
+            }
+            else
+                MessageBox.Show("Chưa Chọn Lớp Cần In", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
         }
         Bitmap bmp;
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
@@ -153,7 +200,7 @@ namespace WindowsFormsApp2.AdminUI
                 dgvThongTinhSinhVien.Columns[4].HeaderText = "SDT";
                 dgvThongTinhSinhVien.Columns[4].Name = "SDT";
                 dgvThongTinhSinhVien.Columns[4].DataPropertyName = "SDT";
-
+                loadTest();
                 lblMaLop.Text = cmbLop.SelectedValue.ToString();
                 string mssvlt = "";
                 int siso = 0;
@@ -196,6 +243,10 @@ namespace WindowsFormsApp2.AdminUI
                 lblGVCN.Text = "";
                 lblMaLop.Text = "";
             }
+        }
+
+        private void loadTest()
+        {
         }
     }
 }
