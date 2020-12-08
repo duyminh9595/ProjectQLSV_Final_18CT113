@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblMSSV = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnThoat = new Guna.UI.WinForms.GunaGradientButton();
@@ -38,6 +39,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblLopCu = new System.Windows.Forms.Label();
+            this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.gunaElipse3 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.SuspendLayout();
             // 
             // lblMSSV
@@ -191,10 +195,26 @@
             this.lblLopCu.TabIndex = 36;
             this.lblLopCu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // gunaElipse1
+            // 
+            this.gunaElipse1.Radius = 7;
+            this.gunaElipse1.TargetControl = this;
+            // 
+            // gunaElipse2
+            // 
+            this.gunaElipse2.Radius = 7;
+            this.gunaElipse2.TargetControl = this.btnThem;
+            // 
+            // gunaElipse3
+            // 
+            this.gunaElipse3.Radius = 7;
+            this.gunaElipse3.TargetControl = this.btnThoat;
+            // 
             // ChuyenLopFormSVUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(368, 368);
             this.Controls.Add(this.lblLopCu);
             this.Controls.Add(this.label4);
@@ -227,5 +247,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblLopCu;
+        private Guna.UI.WinForms.GunaElipse gunaElipse1;
+        private Guna.UI.WinForms.GunaElipse gunaElipse2;
+        private Guna.UI.WinForms.GunaElipse gunaElipse3;
     }
 }

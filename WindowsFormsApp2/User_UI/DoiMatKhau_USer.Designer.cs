@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnExit = new Guna.UI.WinForms.GunaButton();
+            this.components = new System.ComponentModel.Container();
             this.btnConfirm = new Guna.UI.WinForms.GunaButton();
             this.txtConfirm = new Guna.UI.WinForms.GunaLineTextBox();
             this.txtNewPass = new Guna.UI.WinForms.GunaLineTextBox();
@@ -37,31 +37,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.gunaElipse3 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.gunaElipse4 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.btnExit = new Guna.UI.WinForms.GunaButton();
             this.SuspendLayout();
-            // 
-            // btnExit
-            // 
-            this.btnExit.AnimationHoverSpeed = 0.07F;
-            this.btnExit.AnimationSpeed = 0.03F;
-            this.btnExit.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnExit.BorderColor = System.Drawing.Color.Black;
-            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnExit.FocusedColor = System.Drawing.Color.Empty;
-            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Image = null;
-            this.btnExit.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnExit.Location = new System.Drawing.Point(218, 287);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnExit.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnExit.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnExit.OnHoverImage = null;
-            this.btnExit.OnPressedColor = System.Drawing.Color.Black;
-            this.btnExit.Size = new System.Drawing.Size(168, 42);
-            this.btnExit.TabIndex = 17;
-            this.btnExit.Text = "Thoát";
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnConfirm
             // 
@@ -73,8 +54,8 @@
             this.btnConfirm.FocusedColor = System.Drawing.Color.Empty;
             this.btnConfirm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.ForeColor = System.Drawing.Color.White;
-            this.btnConfirm.Image = null;
-            this.btnConfirm.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnConfirm.Image = global::WindowsFormsApp2.Properties.Resources.ok_hand_light_skin_tone_48px;
+            this.btnConfirm.ImageSize = new System.Drawing.Size(35, 35);
             this.btnConfirm.Location = new System.Drawing.Point(14, 287);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -161,7 +142,8 @@
             // 
             // gunaLabel1
             // 
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.Location = new System.Drawing.Point(12, 9);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(374, 80);
@@ -169,10 +151,55 @@
             this.gunaLabel1.Text = "Đổi Mật Khẩu";
             this.gunaLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // gunaElipse1
+            // 
+            this.gunaElipse1.Radius = 15;
+            this.gunaElipse1.TargetControl = this;
+            // 
+            // gunaElipse2
+            // 
+            this.gunaElipse2.Radius = 15;
+            this.gunaElipse2.TargetControl = this.gunaLabel1;
+            // 
+            // gunaElipse3
+            // 
+            this.gunaElipse3.Radius = 10;
+            this.gunaElipse3.TargetControl = this.btnConfirm;
+            // 
+            // gunaElipse4
+            // 
+            this.gunaElipse4.Radius = 10;
+            this.gunaElipse4.TargetControl = this.btnExit;
+            // 
+            // btnExit
+            // 
+            this.btnExit.AnimationHoverSpeed = 0.07F;
+            this.btnExit.AnimationSpeed = 0.03F;
+            this.btnExit.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnExit.BorderColor = System.Drawing.Color.Black;
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnExit.FocusedColor = System.Drawing.Color.Empty;
+            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Image = global::WindowsFormsApp2.Properties.Resources.delete_64px1;
+            this.btnExit.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnExit.Location = new System.Drawing.Point(218, 287);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnExit.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnExit.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnExit.OnHoverImage = null;
+            this.btnExit.OnPressedColor = System.Drawing.Color.Black;
+            this.btnExit.Size = new System.Drawing.Size(168, 42);
+            this.btnExit.TabIndex = 17;
+            this.btnExit.Text = "Thoát";
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // DoiMatKhau_USer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(403, 349);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnConfirm);
@@ -202,5 +229,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
+        private Guna.UI.WinForms.GunaElipse gunaElipse1;
+        private Guna.UI.WinForms.GunaElipse gunaElipse2;
+        private Guna.UI.WinForms.GunaElipse gunaElipse3;
+        private Guna.UI.WinForms.GunaElipse gunaElipse4;
     }
 }

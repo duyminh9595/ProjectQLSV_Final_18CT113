@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label3 = new System.Windows.Forms.Label();
             this.btnThoat = new Guna.UI.WinForms.GunaGradientButton();
             this.btnThem = new Guna.UI.WinForms.GunaGradientButton();
@@ -36,6 +37,10 @@
             this.cmbNganh = new Guna.UI.WinForms.GunaComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblMSSV = new System.Windows.Forms.Label();
+            this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.gunaElipse3 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.gunaElipse4 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.SuspendLayout();
             // 
             // label3
@@ -163,17 +168,40 @@
             // 
             // lblMSSV
             // 
+            this.lblMSSV.BackColor = System.Drawing.Color.Red;
             this.lblMSSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMSSV.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblMSSV.Location = new System.Drawing.Point(23, 9);
             this.lblMSSV.Name = "lblMSSV";
             this.lblMSSV.Size = new System.Drawing.Size(329, 68);
             this.lblMSSV.TabIndex = 26;
             this.lblMSSV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // gunaElipse1
+            // 
+            this.gunaElipse1.Radius = 15;
+            this.gunaElipse1.TargetControl = this;
+            // 
+            // gunaElipse2
+            // 
+            this.gunaElipse2.Radius = 10;
+            this.gunaElipse2.TargetControl = this.lblMSSV;
+            // 
+            // gunaElipse3
+            // 
+            this.gunaElipse3.Radius = 5;
+            this.gunaElipse3.TargetControl = this.btnThem;
+            // 
+            // gunaElipse4
+            // 
+            this.gunaElipse4.Radius = 5;
+            this.gunaElipse4.TargetControl = this.btnThoat;
+            // 
             // PhanLopFormSVUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(368, 262);
             this.Controls.Add(this.lblMSSV);
             this.Controls.Add(this.label3);
@@ -202,5 +230,9 @@
         private Guna.UI.WinForms.GunaComboBox cmbNganh;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblMSSV;
+        private Guna.UI.WinForms.GunaElipse gunaElipse1;
+        private Guna.UI.WinForms.GunaElipse gunaElipse2;
+        private Guna.UI.WinForms.GunaElipse gunaElipse3;
+        private Guna.UI.WinForms.GunaElipse gunaElipse4;
     }
 }

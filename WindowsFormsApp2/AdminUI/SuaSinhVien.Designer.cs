@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.btnThoat = new Guna.UI.WinForms.GunaGradientButton();
-            this.btnThem = new Guna.UI.WinForms.GunaGradientButton();
             this.lblMSSV = new System.Windows.Forms.Label();
             this.cmbGioiTinh = new Guna.UI.WinForms.GunaComboBox();
             this.txtEmail = new Guna.UI.WinForms.GunaTextBox();
@@ -47,6 +46,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtMK = new Guna.UI.WinForms.GunaTextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.btnThem = new Guna.UI.WinForms.GunaGradientButton();
+            this.gunaElipse3 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.SuspendLayout();
             // 
             // gunaElipse1
@@ -65,9 +67,9 @@
             this.btnThoat.FocusedColor = System.Drawing.Color.Empty;
             this.btnThoat.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.White;
-            this.btnThoat.Image = null;
+            this.btnThoat.Image = global::WindowsFormsApp2.Properties.Resources.exit_sign_40px;
             this.btnThoat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnThoat.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnThoat.ImageSize = new System.Drawing.Size(40, 40);
             this.btnThoat.Location = new System.Drawing.Point(261, 558);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.OnHoverBaseColor1 = System.Drawing.Color.Black;
@@ -82,37 +84,10 @@
             this.btnThoat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // btnThem
-            // 
-            this.btnThem.AnimationHoverSpeed = 0.07F;
-            this.btnThem.AnimationSpeed = 0.03F;
-            this.btnThem.BaseColor1 = System.Drawing.Color.SlateBlue;
-            this.btnThem.BaseColor2 = System.Drawing.Color.Fuchsia;
-            this.btnThem.BorderColor = System.Drawing.Color.Black;
-            this.btnThem.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnThem.FocusedColor = System.Drawing.Color.Empty;
-            this.btnThem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Image = null;
-            this.btnThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnThem.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnThem.Location = new System.Drawing.Point(120, 558);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
-            this.btnThem.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
-            this.btnThem.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnThem.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnThem.OnHoverImage = null;
-            this.btnThem.OnPressedColor = System.Drawing.Color.Black;
-            this.btnThem.Size = new System.Drawing.Size(135, 42);
-            this.btnThem.TabIndex = 29;
-            this.btnThem.Text = "OK";
-            this.btnThem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
             // lblMSSV
             // 
             this.lblMSSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMSSV.ForeColor = System.Drawing.SystemColors.Control;
             this.lblMSSV.Location = new System.Drawing.Point(12, 16);
             this.lblMSSV.Name = "lblMSSV";
             this.lblMSSV.Size = new System.Drawing.Size(383, 44);
@@ -315,11 +290,49 @@
             this.label8.Text = "Mật Khẩu";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // gunaElipse2
+            // 
+            this.gunaElipse2.Radius = 10;
+            this.gunaElipse2.TargetControl = this.btnThem;
+            // 
+            // btnThem
+            // 
+            this.btnThem.AnimationHoverSpeed = 0.07F;
+            this.btnThem.AnimationSpeed = 0.03F;
+            this.btnThem.BaseColor1 = System.Drawing.Color.SlateBlue;
+            this.btnThem.BaseColor2 = System.Drawing.Color.Fuchsia;
+            this.btnThem.BorderColor = System.Drawing.Color.Black;
+            this.btnThem.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnThem.FocusedColor = System.Drawing.Color.Empty;
+            this.btnThem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.Image = global::WindowsFormsApp2.Properties.Resources.easy_48px;
+            this.btnThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnThem.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnThem.Location = new System.Drawing.Point(120, 558);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
+            this.btnThem.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
+            this.btnThem.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnThem.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnThem.OnHoverImage = null;
+            this.btnThem.OnPressedColor = System.Drawing.Color.Black;
+            this.btnThem.Size = new System.Drawing.Size(135, 42);
+            this.btnThem.TabIndex = 29;
+            this.btnThem.Text = "OK";
+            this.btnThem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // gunaElipse3
+            // 
+            this.gunaElipse3.Radius = 10;
+            this.gunaElipse3.TargetControl = this.btnThoat;
+            // 
             // SuaSinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightBlue;
+            this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(409, 641);
             this.Controls.Add(this.txtMK);
             this.Controls.Add(this.label8);
@@ -367,5 +380,7 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI.WinForms.GunaTextBox txtTen;
         private System.Windows.Forms.Label label1;
+        private Guna.UI.WinForms.GunaElipse gunaElipse2;
+        private Guna.UI.WinForms.GunaElipse gunaElipse3;
     }
 }

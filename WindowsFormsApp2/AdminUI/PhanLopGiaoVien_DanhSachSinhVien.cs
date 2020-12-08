@@ -94,25 +94,32 @@ namespace WindowsFormsApp2.AdminUI
 
         private void btnLopTruong_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có muốn mã số "+maSV+" làm lớp trưởng lớp "+PhanLopGiaoVien.maLopSelected, "Xác Nhận", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
+            if(!String.IsNullOrEmpty(maSV))
             {
-                foreach(Lop lop in LoadExcel.lstLop)
+                DialogResult result = MessageBox.Show("Bạn có muốn mã số " + maSV + " làm lớp trưởng lớp " + PhanLopGiaoVien.maLopSelected, "Xác Nhận", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
                 {
-                    if(lop.MaLop.Equals(PhanLopGiaoVien.maLopSelected))
+                    foreach (Lop lop in LoadExcel.lstLop)
                     {
-                        foreach(SinhVien sv in lop.dsSinhVien)
+                        if (lop.MaLop.Equals(PhanLopGiaoVien.maLopSelected))
                         {
-                            if (sv.MSSV.Equals(maSV))
+                            foreach (SinhVien sv in lop.dsSinhVien)
                             {
-                                sv.TrangThaiHocXong = "YES";
+                                if (sv.MSSV.Equals(maSV))
+                                {
+                                    sv.TrangThaiHocXong = "YES";
+                                }
+                                else
+                                    sv.TrangThaiHocXong = "NO";
                             }
-                            else
-                                sv.TrangThaiHocXong = "NO";
                         }
                     }
+                    loadData();
                 }
-                loadData();
+            }
+            else
+            {
+                MessageBox.Show("Chưa Chọn Sinh Viên Để Làm Lớp Trưởng", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         string maSV;

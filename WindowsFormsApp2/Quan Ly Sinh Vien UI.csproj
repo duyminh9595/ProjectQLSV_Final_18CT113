@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.78\lib\net461\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI">
       <HintPath>..\..\..\..\Desktop\_Getintopc.com_Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
     </Reference>
@@ -380,6 +383,90 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\exit %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\To Go_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exchange_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_male_user_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reset_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\easy_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_sign_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enter_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkmark_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkmark_64px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\approval_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdown_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_window_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\today_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_property_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\strike_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find_and_replace_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tick_box_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_window_80px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

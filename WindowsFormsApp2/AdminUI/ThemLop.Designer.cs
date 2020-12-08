@@ -28,11 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnThem = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.cmbNganh = new Guna.UI.WinForms.GunaComboBox();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.cmbNamHoc = new Guna.UI.WinForms.GunaComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.gunaElipse3 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.btnExit = new Guna.UI.WinForms.GunaButton();
             this.SuspendLayout();
             // 
@@ -46,9 +51,9 @@
             this.btnThem.FocusedColor = System.Drawing.Color.Empty;
             this.btnThem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Image = null;
+            this.btnThem.Image = global::WindowsFormsApp2.Properties.Resources.add_64px;
             this.btnThem.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnThem.Location = new System.Drawing.Point(132, 102);
+            this.btnThem.Location = new System.Drawing.Point(132, 175);
             this.btnThem.Name = "btnThem";
             this.btnThem.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnThem.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -63,7 +68,7 @@
             // gunaLabel2
             // 
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.Location = new System.Drawing.Point(12, 59);
+            this.gunaLabel2.Location = new System.Drawing.Point(12, 132);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(100, 23);
             this.gunaLabel2.TabIndex = 13;
@@ -81,7 +86,7 @@
             this.cmbNganh.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbNganh.ForeColor = System.Drawing.Color.Black;
             this.cmbNganh.FormattingEnabled = true;
-            this.cmbNganh.Location = new System.Drawing.Point(132, 56);
+            this.cmbNganh.Location = new System.Drawing.Point(132, 129);
             this.cmbNganh.Name = "cmbNganh";
             this.cmbNganh.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbNganh.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -91,7 +96,7 @@
             // gunaLabel1
             // 
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.Location = new System.Drawing.Point(12, 9);
+            this.gunaLabel1.Location = new System.Drawing.Point(12, 82);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(100, 23);
             this.gunaLabel1.TabIndex = 11;
@@ -109,12 +114,39 @@
             this.cmbNamHoc.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbNamHoc.ForeColor = System.Drawing.Color.Black;
             this.cmbNamHoc.FormattingEnabled = true;
-            this.cmbNamHoc.Location = new System.Drawing.Point(132, 6);
+            this.cmbNamHoc.Location = new System.Drawing.Point(132, 79);
             this.cmbNamHoc.Name = "cmbNamHoc";
             this.cmbNamHoc.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbNamHoc.OnHoverItemForeColor = System.Drawing.Color.White;
             this.cmbNamHoc.Size = new System.Drawing.Size(242, 30);
             this.cmbNamHoc.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(2, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(372, 53);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Thêm Lớp";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // gunaElipse1
+            // 
+            this.gunaElipse1.Radius = 5;
+            this.gunaElipse1.TargetControl = this.btnExit;
+            // 
+            // gunaElipse2
+            // 
+            this.gunaElipse2.Radius = 5;
+            this.gunaElipse2.TargetControl = this.btnThem;
+            // 
+            // gunaElipse3
+            // 
+            this.gunaElipse3.Radius = 10;
+            this.gunaElipse3.TargetControl = this.label4;
             // 
             // btnExit
             // 
@@ -126,9 +158,9 @@
             this.btnExit.FocusedColor = System.Drawing.Color.Empty;
             this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Image = null;
+            this.btnExit.Image = global::WindowsFormsApp2.Properties.Resources.shutdown_40px;
             this.btnExit.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnExit.Location = new System.Drawing.Point(259, 102);
+            this.btnExit.Location = new System.Drawing.Point(259, 175);
             this.btnExit.Name = "btnExit";
             this.btnExit.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnExit.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -144,7 +176,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(387, 154);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(387, 214);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.gunaLabel2);
@@ -168,5 +202,9 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaComboBox cmbNamHoc;
         private Guna.UI.WinForms.GunaButton btnExit;
+        private System.Windows.Forms.Label label4;
+        private Guna.UI.WinForms.GunaElipse gunaElipse1;
+        private Guna.UI.WinForms.GunaElipse gunaElipse2;
+        private Guna.UI.WinForms.GunaElipse gunaElipse3;
     }
 }

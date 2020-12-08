@@ -30,11 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LopUI));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
-            this.btnPrint = new Guna.UI.WinForms.GunaButton();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,14 +42,12 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvThongTinhSinhVien = new Guna.UI.WinForms.GunaDataGridView();
-            this.btnExit = new Guna.UI.WinForms.GunaButton();
             this.cmbNamHoc = new Guna.UI.WinForms.GunaComboBox();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.cmbNganh = new Guna.UI.WinForms.GunaComboBox();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.cmbLop = new Guna.UI.WinForms.GunaComboBox();
-            this.btnSearch = new Guna.UI.WinForms.GunaButton();
             this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
             this.lblSiSo = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel11 = new Guna.UI.WinForms.GunaLabel();
@@ -60,6 +57,14 @@
             this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
             this.lblMaLop = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
+            this.btnSearch = new Guna.UI.WinForms.GunaButton();
+            this.btnExit = new Guna.UI.WinForms.GunaButton();
+            this.btnPrint = new Guna.UI.WinForms.GunaButton();
+            this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.gunaElipse3 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.gunaElipse4 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.gunaElipse5 = new Guna.UI.WinForms.GunaElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinhSinhVien)).BeginInit();
             this.gunaGroupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -68,30 +73,6 @@
             // 
             this.gunaElipse1.Radius = 15;
             this.gunaElipse1.TargetControl = this;
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.AnimationHoverSpeed = 0.07F;
-            this.btnPrint.AnimationSpeed = 0.03F;
-            this.btnPrint.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnPrint.BorderColor = System.Drawing.Color.Black;
-            this.btnPrint.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnPrint.FocusedColor = System.Drawing.Color.Empty;
-            this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnPrint.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.Image = null;
-            this.btnPrint.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnPrint.Location = new System.Drawing.Point(455, 396);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnPrint.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnPrint.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnPrint.OnHoverImage = null;
-            this.btnPrint.OnPressedColor = System.Drawing.Color.Black;
-            this.btnPrint.Size = new System.Drawing.Size(160, 42);
-            this.btnPrint.TabIndex = 0;
-            this.btnPrint.Text = "Print";
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // printPreviewDialog1
             // 
@@ -135,21 +116,21 @@
             // 
             // dgvThongTinhSinhVien
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvThongTinhSinhVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.dgvThongTinhSinhVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvThongTinhSinhVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvThongTinhSinhVien.BackgroundColor = System.Drawing.Color.White;
             this.dgvThongTinhSinhVien.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvThongTinhSinhVien.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvThongTinhSinhVien.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvThongTinhSinhVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvThongTinhSinhVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvThongTinhSinhVien.ColumnHeadersHeight = 21;
             this.dgvThongTinhSinhVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -157,17 +138,17 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvThongTinhSinhVien.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvThongTinhSinhVien.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgvThongTinhSinhVien.EnableHeadersVisualStyles = false;
             this.dgvThongTinhSinhVien.GridColor = System.Drawing.Color.White;
-            this.dgvThongTinhSinhVien.Location = new System.Drawing.Point(12, 195);
+            this.dgvThongTinhSinhVien.Location = new System.Drawing.Point(12, 302);
             this.dgvThongTinhSinhVien.Name = "dgvThongTinhSinhVien";
             this.dgvThongTinhSinhVien.RowHeadersVisible = false;
             this.dgvThongTinhSinhVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -197,30 +178,6 @@
             this.dgvThongTinhSinhVien.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvThongTinhSinhVien.SelectionChanged += new System.EventHandler(this.dgvThongTinhSinhVien_SelectionChanged);
             // 
-            // btnExit
-            // 
-            this.btnExit.AnimationHoverSpeed = 0.07F;
-            this.btnExit.AnimationSpeed = 0.03F;
-            this.btnExit.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnExit.BorderColor = System.Drawing.Color.Black;
-            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnExit.FocusedColor = System.Drawing.Color.Empty;
-            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Image = null;
-            this.btnExit.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnExit.Location = new System.Drawing.Point(627, 396);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnExit.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnExit.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnExit.OnHoverImage = null;
-            this.btnExit.OnPressedColor = System.Drawing.Color.Black;
-            this.btnExit.Size = new System.Drawing.Size(160, 42);
-            this.btnExit.TabIndex = 2;
-            this.btnExit.Text = "Exit";
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
             // cmbNamHoc
             // 
             this.cmbNamHoc.BackColor = System.Drawing.Color.Transparent;
@@ -232,7 +189,7 @@
             this.cmbNamHoc.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbNamHoc.ForeColor = System.Drawing.Color.Black;
             this.cmbNamHoc.FormattingEnabled = true;
-            this.cmbNamHoc.Location = new System.Drawing.Point(132, 12);
+            this.cmbNamHoc.Location = new System.Drawing.Point(132, 119);
             this.cmbNamHoc.Name = "cmbNamHoc";
             this.cmbNamHoc.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbNamHoc.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -243,7 +200,7 @@
             // gunaLabel1
             // 
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.Location = new System.Drawing.Point(12, 15);
+            this.gunaLabel1.Location = new System.Drawing.Point(12, 122);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(100, 23);
             this.gunaLabel1.TabIndex = 4;
@@ -253,7 +210,7 @@
             // gunaLabel2
             // 
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.Location = new System.Drawing.Point(12, 65);
+            this.gunaLabel2.Location = new System.Drawing.Point(12, 172);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(100, 23);
             this.gunaLabel2.TabIndex = 6;
@@ -271,7 +228,7 @@
             this.cmbNganh.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbNganh.ForeColor = System.Drawing.Color.Black;
             this.cmbNganh.FormattingEnabled = true;
-            this.cmbNganh.Location = new System.Drawing.Point(132, 62);
+            this.cmbNganh.Location = new System.Drawing.Point(132, 169);
             this.cmbNganh.Name = "cmbNganh";
             this.cmbNganh.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbNganh.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -282,7 +239,7 @@
             // gunaLabel3
             // 
             this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel3.Location = new System.Drawing.Point(12, 115);
+            this.gunaLabel3.Location = new System.Drawing.Point(12, 222);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(100, 23);
             this.gunaLabel3.TabIndex = 8;
@@ -300,36 +257,12 @@
             this.cmbLop.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbLop.ForeColor = System.Drawing.Color.Black;
             this.cmbLop.FormattingEnabled = true;
-            this.cmbLop.Location = new System.Drawing.Point(132, 112);
+            this.cmbLop.Location = new System.Drawing.Point(132, 219);
             this.cmbLop.Name = "cmbLop";
             this.cmbLop.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbLop.OnHoverItemForeColor = System.Drawing.Color.White;
             this.cmbLop.Size = new System.Drawing.Size(242, 30);
             this.cmbLop.TabIndex = 7;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.AnimationHoverSpeed = 0.07F;
-            this.btnSearch.AnimationSpeed = 0.03F;
-            this.btnSearch.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnSearch.BorderColor = System.Drawing.Color.Black;
-            this.btnSearch.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnSearch.FocusedColor = System.Drawing.Color.Empty;
-            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Image = null;
-            this.btnSearch.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSearch.Location = new System.Drawing.Point(259, 12);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnSearch.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnSearch.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnSearch.OnHoverImage = null;
-            this.btnSearch.OnPressedColor = System.Drawing.Color.Black;
-            this.btnSearch.Size = new System.Drawing.Size(115, 30);
-            this.btnSearch.TabIndex = 9;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // gunaGroupBox1
             // 
@@ -344,8 +277,9 @@
             this.gunaGroupBox1.Controls.Add(this.gunaLabel7);
             this.gunaGroupBox1.Controls.Add(this.lblMaLop);
             this.gunaGroupBox1.Controls.Add(this.gunaLabel4);
+            this.gunaGroupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaGroupBox1.LineColor = System.Drawing.Color.Gainsboro;
-            this.gunaGroupBox1.Location = new System.Drawing.Point(410, 12);
+            this.gunaGroupBox1.Location = new System.Drawing.Point(410, 119);
             this.gunaGroupBox1.Name = "gunaGroupBox1";
             this.gunaGroupBox1.Size = new System.Drawing.Size(377, 177);
             this.gunaGroupBox1.TabIndex = 10;
@@ -428,11 +362,117 @@
             this.gunaLabel4.Text = "Mã Lớp";
             this.gunaLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // btnSearch
+            // 
+            this.btnSearch.AnimationHoverSpeed = 0.07F;
+            this.btnSearch.AnimationSpeed = 0.03F;
+            this.btnSearch.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnSearch.BorderColor = System.Drawing.Color.Black;
+            this.btnSearch.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnSearch.FocusedColor = System.Drawing.Color.Empty;
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Image = global::WindowsFormsApp2.Properties.Resources.search_64px;
+            this.btnSearch.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnSearch.Location = new System.Drawing.Point(259, 119);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnSearch.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnSearch.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnSearch.OnHoverImage = null;
+            this.btnSearch.OnPressedColor = System.Drawing.Color.Black;
+            this.btnSearch.Size = new System.Drawing.Size(115, 30);
+            this.btnSearch.TabIndex = 9;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.AnimationHoverSpeed = 0.07F;
+            this.btnExit.AnimationSpeed = 0.03F;
+            this.btnExit.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnExit.BorderColor = System.Drawing.Color.Black;
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnExit.FocusedColor = System.Drawing.Color.Empty;
+            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Image = global::WindowsFormsApp2.Properties.Resources.exit_50px;
+            this.btnExit.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnExit.Location = new System.Drawing.Point(627, 503);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnExit.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnExit.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnExit.OnHoverImage = null;
+            this.btnExit.OnPressedColor = System.Drawing.Color.Black;
+            this.btnExit.Size = new System.Drawing.Size(160, 42);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.Text = "Exit";
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.AnimationHoverSpeed = 0.07F;
+            this.btnPrint.AnimationSpeed = 0.03F;
+            this.btnPrint.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnPrint.BorderColor = System.Drawing.Color.Black;
+            this.btnPrint.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnPrint.FocusedColor = System.Drawing.Color.Empty;
+            this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.ForeColor = System.Drawing.Color.White;
+            this.btnPrint.Image = global::WindowsFormsApp2.Properties.Resources.print_64px;
+            this.btnPrint.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnPrint.Location = new System.Drawing.Point(455, 503);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnPrint.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnPrint.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnPrint.OnHoverImage = null;
+            this.btnPrint.OnPressedColor = System.Drawing.Color.Black;
+            this.btnPrint.Size = new System.Drawing.Size(160, 42);
+            this.btnPrint.TabIndex = 0;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // gunaElipse2
+            // 
+            this.gunaElipse2.Radius = 10;
+            this.gunaElipse2.TargetControl = this.btnPrint;
+            // 
+            // gunaElipse3
+            // 
+            this.gunaElipse3.Radius = 10;
+            this.gunaElipse3.TargetControl = this.btnExit;
+            // 
+            // gunaElipse4
+            // 
+            this.gunaElipse4.Radius = 5;
+            this.gunaElipse4.TargetControl = this.btnPrint;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(774, 80);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Thông Tin Chi Tiết Về Lớp";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // gunaElipse5
+            // 
+            this.gunaElipse5.Radius = 20;
+            this.gunaElipse5.TargetControl = this.label1;
+            // 
             // LopUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(800, 560);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.gunaGroupBox1);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.gunaLabel3);
@@ -484,5 +524,10 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel7;
         private Guna.UI.WinForms.GunaLabel lblMaLop;
         private Guna.UI.WinForms.GunaLabel gunaLabel4;
+        private Guna.UI.WinForms.GunaElipse gunaElipse2;
+        private Guna.UI.WinForms.GunaElipse gunaElipse3;
+        private Guna.UI.WinForms.GunaElipse gunaElipse4;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI.WinForms.GunaElipse gunaElipse5;
     }
 }

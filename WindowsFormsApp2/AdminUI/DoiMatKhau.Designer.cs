@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblTitle = new Guna.UI.WinForms.GunaLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -35,13 +36,19 @@
             this.txtOlddPass = new Guna.UI.WinForms.GunaLineTextBox();
             this.txtNewPass = new Guna.UI.WinForms.GunaLineTextBox();
             this.txtConfirm = new Guna.UI.WinForms.GunaLineTextBox();
-            this.btnConfirm = new Guna.UI.WinForms.GunaButton();
             this.btnExit = new Guna.UI.WinForms.GunaButton();
+            this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.gunaElipse3 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.gunaElipse4 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.btnConfirm = new Guna.UI.WinForms.GunaButton();
             this.SuspendLayout();
             // 
             // lblTitle
             // 
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.BackColor = System.Drawing.Color.Blue;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.SystemColors.Control;
             this.lblTitle.Location = new System.Drawing.Point(13, 13);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(374, 80);
@@ -121,30 +128,6 @@
             this.txtConfirm.Size = new System.Drawing.Size(222, 41);
             this.txtConfirm.TabIndex = 6;
             // 
-            // btnConfirm
-            // 
-            this.btnConfirm.AnimationHoverSpeed = 0.07F;
-            this.btnConfirm.AnimationSpeed = 0.03F;
-            this.btnConfirm.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnConfirm.BorderColor = System.Drawing.Color.Black;
-            this.btnConfirm.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnConfirm.FocusedColor = System.Drawing.Color.Empty;
-            this.btnConfirm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.ForeColor = System.Drawing.Color.White;
-            this.btnConfirm.Image = null;
-            this.btnConfirm.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnConfirm.Location = new System.Drawing.Point(15, 291);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnConfirm.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnConfirm.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnConfirm.OnHoverImage = null;
-            this.btnConfirm.OnPressedColor = System.Drawing.Color.Black;
-            this.btnConfirm.Size = new System.Drawing.Size(168, 42);
-            this.btnConfirm.TabIndex = 7;
-            this.btnConfirm.Text = "Xác Nhận";
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
-            // 
             // btnExit
             // 
             this.btnExit.AnimationHoverSpeed = 0.07F;
@@ -155,8 +138,8 @@
             this.btnExit.FocusedColor = System.Drawing.Color.Empty;
             this.btnExit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Image = null;
-            this.btnExit.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnExit.Image = global::WindowsFormsApp2.Properties.Resources.export_50px;
+            this.btnExit.ImageSize = new System.Drawing.Size(30, 30);
             this.btnExit.Location = new System.Drawing.Point(219, 291);
             this.btnExit.Name = "btnExit";
             this.btnExit.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -169,10 +152,55 @@
             this.btnExit.Text = "Thoát";
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // gunaElipse1
+            // 
+            this.gunaElipse1.Radius = 15;
+            this.gunaElipse1.TargetControl = this;
+            // 
+            // gunaElipse2
+            // 
+            this.gunaElipse2.Radius = 15;
+            this.gunaElipse2.TargetControl = this.lblTitle;
+            // 
+            // gunaElipse3
+            // 
+            this.gunaElipse3.Radius = 10;
+            this.gunaElipse3.TargetControl = this.btnConfirm;
+            // 
+            // gunaElipse4
+            // 
+            this.gunaElipse4.Radius = 10;
+            this.gunaElipse4.TargetControl = this.btnExit;
+            // 
+            // btnConfirm
+            // 
+            this.btnConfirm.AnimationHoverSpeed = 0.07F;
+            this.btnConfirm.AnimationSpeed = 0.03F;
+            this.btnConfirm.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnConfirm.BorderColor = System.Drawing.Color.Black;
+            this.btnConfirm.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnConfirm.FocusedColor = System.Drawing.Color.Empty;
+            this.btnConfirm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirm.ForeColor = System.Drawing.Color.White;
+            this.btnConfirm.Image = global::WindowsFormsApp2.Properties.Resources.approval_40px;
+            this.btnConfirm.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnConfirm.Location = new System.Drawing.Point(15, 291);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnConfirm.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnConfirm.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnConfirm.OnHoverImage = null;
+            this.btnConfirm.OnPressedColor = System.Drawing.Color.Black;
+            this.btnConfirm.Size = new System.Drawing.Size(168, 42);
+            this.btnConfirm.TabIndex = 7;
+            this.btnConfirm.Text = "Xác Nhận";
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            // 
             // DoiMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(399, 355);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnConfirm);
@@ -203,5 +231,9 @@
         private Guna.UI.WinForms.GunaLineTextBox txtConfirm;
         private Guna.UI.WinForms.GunaButton btnConfirm;
         private Guna.UI.WinForms.GunaButton btnExit;
+        private Guna.UI.WinForms.GunaElipse gunaElipse1;
+        private Guna.UI.WinForms.GunaElipse gunaElipse2;
+        private Guna.UI.WinForms.GunaElipse gunaElipse3;
+        private Guna.UI.WinForms.GunaElipse gunaElipse4;
     }
 }

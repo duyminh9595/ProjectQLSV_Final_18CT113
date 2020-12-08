@@ -153,3 +153,5 @@ C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsA
 C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.User_UI.GiaoDienUser.resources
 C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.User_UI.ThongTinGiaoVien_User.resources
 C:\Users\dangh\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.User_UI.ThongTinSinhVien_User.resources
+C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\Dapper.dll
+C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\Dapper.xml

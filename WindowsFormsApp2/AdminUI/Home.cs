@@ -27,6 +27,8 @@ namespace WindowsFormsApp2
             int namBefore1 = 0, namBefore2 = 0, namBefore3 = 0, namBefore4 = 0,namBefore0=0;
             int namhientai = DateTime.Now.Year;
             int svTinhDongNai = 0, svTinhKhac = 0;
+            lblChuaXepLop.Text = "0";
+            lblSVConHoc.Text = "0";
             
             foreach(Khoa data in LoadExcel.lstKhoa)
             {

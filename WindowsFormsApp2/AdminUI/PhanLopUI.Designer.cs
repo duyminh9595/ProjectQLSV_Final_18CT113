@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbNganh = new Guna.UI.WinForms.GunaComboBox();
             this.cmbLop = new Guna.UI.WinForms.GunaComboBox();
@@ -35,12 +36,17 @@
             this.btnThoat = new Guna.UI.WinForms.GunaGradientButton();
             this.btnThem = new Guna.UI.WinForms.GunaGradientButton();
             this.label3 = new System.Windows.Forms.Label();
+            this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.label4 = new System.Windows.Forms.Label();
+            this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.gunaElipse3 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.gunaElipse4 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(12, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 23);
             this.label1.TabIndex = 0;
@@ -58,7 +64,7 @@
             this.cmbNganh.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbNganh.ForeColor = System.Drawing.Color.Black;
             this.cmbNganh.FormattingEnabled = true;
-            this.cmbNganh.Location = new System.Drawing.Point(160, 6);
+            this.cmbNganh.Location = new System.Drawing.Point(159, 85);
             this.cmbNganh.Name = "cmbNganh";
             this.cmbNganh.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbNganh.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -77,7 +83,7 @@
             this.cmbLop.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbLop.ForeColor = System.Drawing.Color.Black;
             this.cmbLop.FormattingEnabled = true;
-            this.cmbLop.Location = new System.Drawing.Point(160, 54);
+            this.cmbLop.Location = new System.Drawing.Point(159, 133);
             this.cmbLop.Name = "cmbLop";
             this.cmbLop.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cmbLop.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -87,7 +93,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 58);
+            this.label2.Location = new System.Drawing.Point(12, 137);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 23);
             this.label2.TabIndex = 2;
@@ -108,7 +114,7 @@
             this.btnThoat.Image = null;
             this.btnThoat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnThoat.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnThoat.Location = new System.Drawing.Point(256, 108);
+            this.btnThoat.Location = new System.Drawing.Point(255, 187);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.OnHoverBaseColor1 = System.Drawing.Color.Black;
             this.btnThoat.OnHoverBaseColor2 = System.Drawing.Color.Black;
@@ -136,7 +142,7 @@
             this.btnThem.Image = null;
             this.btnThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnThem.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnThem.Location = new System.Drawing.Point(160, 108);
+            this.btnThem.Location = new System.Drawing.Point(159, 187);
             this.btnThem.Name = "btnThem";
             this.btnThem.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btnThem.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -153,18 +159,51 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 108);
+            this.label3.Location = new System.Drawing.Point(11, 187);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 42);
             this.label3.TabIndex = 18;
             this.label3.Text = "Chức Năng";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // gunaElipse1
+            // 
+            this.gunaElipse1.TargetControl = this;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(13, 13);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(328, 69);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Phân Lớp Cho Sinh Viên";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // gunaElipse2
+            // 
+            this.gunaElipse2.Radius = 10;
+            this.gunaElipse2.TargetControl = this.label4;
+            // 
+            // gunaElipse3
+            // 
+            this.gunaElipse3.Radius = 10;
+            this.gunaElipse3.TargetControl = this.btnThoat;
+            // 
+            // gunaElipse4
+            // 
+            this.gunaElipse4.Radius = 10;
+            this.gunaElipse4.TargetControl = this.btnThem;
+            // 
             // PhanLopUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(354, 167);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(354, 244);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnThem);
@@ -190,5 +229,10 @@
         private Guna.UI.WinForms.GunaGradientButton btnThoat;
         private Guna.UI.WinForms.GunaGradientButton btnThem;
         private System.Windows.Forms.Label label3;
+        private Guna.UI.WinForms.GunaElipse gunaElipse1;
+        private System.Windows.Forms.Label label4;
+        private Guna.UI.WinForms.GunaElipse gunaElipse2;
+        private Guna.UI.WinForms.GunaElipse gunaElipse3;
+        private Guna.UI.WinForms.GunaElipse gunaElipse4;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtMK = new Guna.UI.WinForms.GunaTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnThem = new Guna.UI.WinForms.GunaGradientButton();
@@ -44,6 +45,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtTen = new Guna.UI.WinForms.GunaTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.gunaElipse3 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.SuspendLayout();
             // 
             // txtMK
@@ -84,9 +88,9 @@
             this.btnThem.FocusedColor = System.Drawing.Color.Empty;
             this.btnThem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Image = null;
+            this.btnThem.Image = global::WindowsFormsApp2.Properties.Resources.ok_40px;
             this.btnThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnThem.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnThem.ImageSize = new System.Drawing.Size(35, 35);
             this.btnThem.Location = new System.Drawing.Point(260, 568);
             this.btnThem.Name = "btnThem";
             this.btnThem.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
@@ -103,10 +107,12 @@
             // 
             // lblMSSV
             // 
-            this.lblMSSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMSSV.Location = new System.Drawing.Point(12, 28);
+            this.lblMSSV.BackColor = System.Drawing.Color.Green;
+            this.lblMSSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMSSV.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblMSSV.Location = new System.Drawing.Point(12, 9);
             this.lblMSSV.Name = "lblMSSV";
-            this.lblMSSV.Size = new System.Drawing.Size(383, 44);
+            this.lblMSSV.Size = new System.Drawing.Size(383, 63);
             this.lblMSSV.TabIndex = 45;
             this.lblMSSV.Tag = "";
             this.lblMSSV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -286,6 +292,21 @@
             this.label1.Text = "Họ Và Tên";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // gunaElipse1
+            // 
+            this.gunaElipse1.Radius = 15;
+            this.gunaElipse1.TargetControl = this;
+            // 
+            // gunaElipse2
+            // 
+            this.gunaElipse2.Radius = 10;
+            this.gunaElipse2.TargetControl = this.lblMSSV;
+            // 
+            // gunaElipse3
+            // 
+            this.gunaElipse3.Radius = 5;
+            this.gunaElipse3.TargetControl = this.btnThem;
+            // 
             // ThongTinSinhVien_User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -335,5 +356,8 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI.WinForms.GunaTextBox txtTen;
         private System.Windows.Forms.Label label1;
+        private Guna.UI.WinForms.GunaElipse gunaElipse1;
+        private Guna.UI.WinForms.GunaElipse gunaElipse2;
+        private Guna.UI.WinForms.GunaElipse gunaElipse3;
     }
 }

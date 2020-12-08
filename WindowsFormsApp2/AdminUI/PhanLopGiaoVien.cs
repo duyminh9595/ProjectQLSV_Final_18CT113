@@ -60,7 +60,7 @@ namespace WindowsFormsApp2.AdminUI
             {
                 dgvLop.DataSource = null;
                 dgvLop.AutoGenerateColumns = false;
-                dgvLop.DataSource = LoadExcel.lstLop.Where(p => p.giaoVien.TenGV.ToUpper().Contains(txtTen.Text.ToUpper()) ||p.MaLop.ToUpper().Equals(txtTen.Text.ToUpper())).ToList();
+                dgvLop.DataSource = LoadExcel.lstLop.Where(p =>p.giaoVien!=null&& p.giaoVien.TenGV.ToUpper().Contains(txtTen.Text.ToUpper()) ||p.MaLop.ToUpper().Equals(txtTen.Text.ToUpper())).ToList();
                 dgvLop.Columns[0].Name = "malop"; // name
                 dgvLop.Columns[0].HeaderText = "Mã Lớp"; // header text
                 dgvLop.Columns[0].DataPropertyName = "MaLop"; // field name

@@ -55,25 +55,26 @@ namespace WindowsFormsApp2
 
             SinhVienUI formSV = new SinhVienUI();
             formSV.ShowDialog();
+            loadData();
         }
 
         private void btnGV_Click(object sender, EventArgs e)
         {
 
             PhanLopGiaoVien ui = new PhanLopGiaoVien();
-            ui.ShowDialog();
+            ui.ShowDialog(); loadData();
         }
 
         private void btnDanhSachLop_Click(object sender, EventArgs e)
         {
             LopUI ui = new LopUI();
-            ui.ShowDialog();
+            ui.ShowDialog(); loadData();
         }
 
         private void btnThemL_Click(object sender, EventArgs e)
         {
             ThemLop ui = new ThemLop();
-            ui.ShowDialog();
+            ui.ShowDialog(); loadData();
         }
 
         private void btnDoiMKAdmin_Click(object sender, EventArgs e)
@@ -88,6 +89,7 @@ namespace WindowsFormsApp2
 
             DoiMatKhauGV ui = new DoiMatKhauGV();
             ui.ShowDialog();
+            loadData();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)

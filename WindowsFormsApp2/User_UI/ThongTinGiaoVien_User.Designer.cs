@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtMK = new Guna.UI.WinForms.GunaTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.lblMSSV = new System.Windows.Forms.Label();
@@ -35,6 +36,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtTen = new Guna.UI.WinForms.GunaTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.gunaElipse3 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.btnExit = new Guna.UI.WinForms.GunaGradientButton();
             this.SuspendLayout();
             // 
@@ -48,7 +52,7 @@
             this.txtMK.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtMK.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtMK.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMK.Location = new System.Drawing.Point(122, 183);
+            this.txtMK.Location = new System.Drawing.Point(122, 197);
             this.txtMK.Name = "txtMK";
             this.txtMK.PasswordChar = '\0';
             this.txtMK.SelectedText = "";
@@ -58,7 +62,7 @@
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(14, 183);
+            this.label8.Location = new System.Drawing.Point(14, 197);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(109, 44);
             this.label8.TabIndex = 56;
@@ -67,10 +71,11 @@
             // 
             // lblMSSV
             // 
-            this.lblMSSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMSSV.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblMSSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMSSV.Location = new System.Drawing.Point(12, 9);
             this.lblMSSV.Name = "lblMSSV";
-            this.lblMSSV.Size = new System.Drawing.Size(383, 44);
+            this.lblMSSV.Size = new System.Drawing.Size(383, 58);
             this.lblMSSV.TabIndex = 54;
             this.lblMSSV.Tag = "";
             this.lblMSSV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -85,7 +90,7 @@
             this.txtEmail.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtEmail.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(120, 118);
+            this.txtEmail.Location = new System.Drawing.Point(120, 132);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.SelectedText = "";
@@ -95,7 +100,7 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 118);
+            this.label6.Location = new System.Drawing.Point(12, 132);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(109, 44);
             this.label6.TabIndex = 52;
@@ -112,7 +117,7 @@
             this.txtTen.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtTen.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtTen.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTen.Location = new System.Drawing.Point(120, 56);
+            this.txtTen.Location = new System.Drawing.Point(120, 70);
             this.txtTen.Name = "txtTen";
             this.txtTen.PasswordChar = '\0';
             this.txtTen.SelectedText = "";
@@ -122,12 +127,27 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 56);
+            this.label1.Location = new System.Drawing.Point(12, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(109, 44);
             this.label1.TabIndex = 50;
             this.label1.Text = "Họ Và Tên";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // gunaElipse1
+            // 
+            this.gunaElipse1.Radius = 15;
+            this.gunaElipse1.TargetControl = this;
+            // 
+            // gunaElipse2
+            // 
+            this.gunaElipse2.Radius = 10;
+            this.gunaElipse2.TargetControl = this.lblMSSV;
+            // 
+            // gunaElipse3
+            // 
+            this.gunaElipse3.Radius = 5;
+            this.gunaElipse3.TargetControl = this.btnExit;
             // 
             // btnExit
             // 
@@ -140,10 +160,10 @@
             this.btnExit.FocusedColor = System.Drawing.Color.Empty;
             this.btnExit.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Image = null;
+            this.btnExit.Image = global::WindowsFormsApp2.Properties.Resources.exit_sign_40px1;
             this.btnExit.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnExit.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnExit.Location = new System.Drawing.Point(263, 250);
+            this.btnExit.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnExit.Location = new System.Drawing.Point(263, 264);
             this.btnExit.Name = "btnExit";
             this.btnExit.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btnExit.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -161,7 +181,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(409, 315);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.txtMK);
@@ -190,5 +210,8 @@
         private Guna.UI.WinForms.GunaTextBox txtTen;
         private System.Windows.Forms.Label label1;
         private Guna.UI.WinForms.GunaGradientButton btnExit;
+        private Guna.UI.WinForms.GunaElipse gunaElipse1;
+        private Guna.UI.WinForms.GunaElipse gunaElipse2;
+        private Guna.UI.WinForms.GunaElipse gunaElipse3;
     }
 }
