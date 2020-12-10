@@ -171,3 +171,66 @@ C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bi
 C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\Duy minh\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.PrintTheReport.resources
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\Quan Ly Sinh Vien UI.csprojResolveAssemblyReference.cache
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AdminUI.ChuyenLopFormSVUI.resources
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AdminUI.DoiMatKhau.resources
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AdminUI.DoiMatKhauGV.resources
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AdminUI.LopUI.resources
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AdminUI.PhanLopFormSVUI.resources
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AdminUI.PhanLopGiaoVien.resources
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AdminUI.PhanLopGiaoVien_DanhSachSinhVien.resources
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AdminUI.PhanLopGiaoVien_GiaoVien.resources
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AdminUI.PhanLopUI.resources
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AdminUI.SinhVienUI.resources
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AdminUI.SuaSinhVien.resources
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AdminUI.ThemLop.resources
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AdminUI.ThemSinhVien.resources
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.DangNhap.resources
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Home.resources
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.PrintTheReport.resources
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.QLSV_MainForm.resources
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.QuenMatKhau.resources
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.User_UI.DanhSachSV_GV_User.resources
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.User_UI.DanhSachSV_User.resources
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.User_UI.DoiMatKhau_USer.resources
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.User_UI.GiaoDienUser.resources
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.User_UI.ThongTinGiaoVien_User.resources
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.User_UI.ThongTinSinhVien_User.resources
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\obj\Debug\Quan Ly Sinh Vien UI.csproj.GenerateResource.Cache
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\Dapper.dll
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\Microsoft.ReportViewer.DataVisualization.DLL
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\Microsoft.ReportViewer.Design.DLL
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\Microsoft.ReportViewer.WebDesign.DLL
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\QLSV_Library.dll
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\EnvDTE.dll
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\EnvDTE80.dll
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\stdole.dll
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\Microsoft.MSXML.dll
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\QLSV_Library.pdb
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\Dapper.xml
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\EnvDTE.xml
+C:\Users\quyle\OneDrive\Documents\GitHub\ProjectQLSV_Final_18CT113\WindowsFormsApp2\bin\Debug\EnvDTE80.xml
