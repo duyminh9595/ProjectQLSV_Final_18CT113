@@ -60,6 +60,7 @@
             this.txtMK.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtMK.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtMK.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMK.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtMK.Location = new System.Drawing.Point(122, 498);
             this.txtMK.Name = "txtMK";
             this.txtMK.PasswordChar = '\0';
@@ -127,7 +128,7 @@
             this.cmbGioiTinh.Enabled = false;
             this.cmbGioiTinh.FocusedColor = System.Drawing.Color.Empty;
             this.cmbGioiTinh.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbGioiTinh.ForeColor = System.Drawing.Color.Black;
+            this.cmbGioiTinh.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.cmbGioiTinh.FormattingEnabled = true;
             this.cmbGioiTinh.Items.AddRange(new object[] {
             "NAM",
@@ -149,6 +150,7 @@
             this.txtEmail.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtEmail.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtEmail.Location = new System.Drawing.Point(120, 433);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
@@ -185,7 +187,7 @@
             this.pickDate.Enabled = false;
             this.pickDate.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.pickDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pickDate.ForeColor = System.Drawing.Color.Black;
+            this.pickDate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pickDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.pickDate.Location = new System.Drawing.Point(120, 309);
             this.pickDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
@@ -197,7 +199,7 @@
             this.pickDate.OnPressedColor = System.Drawing.Color.Black;
             this.pickDate.Size = new System.Drawing.Size(275, 44);
             this.pickDate.TabIndex = 40;
-            this.pickDate.Text = "16/10/2020";
+            this.pickDate.Text = "10/16/2020";
             this.pickDate.Value = new System.DateTime(2020, 10, 16, 18, 53, 41, 194);
             // 
             // label4
@@ -220,6 +222,7 @@
             this.txtSDT.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtSDT.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtSDT.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSDT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtSDT.Location = new System.Drawing.Point(120, 243);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.PasswordChar = '\0';
@@ -247,6 +250,7 @@
             this.txtDiaChi.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtDiaChi.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtDiaChi.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiaChi.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtDiaChi.Location = new System.Drawing.Point(120, 132);
             this.txtDiaChi.Multiline = true;
             this.txtDiaChi.Name = "txtDiaChi";
@@ -275,6 +279,7 @@
             this.txtTen.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtTen.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtTen.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTen.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtTen.Location = new System.Drawing.Point(120, 75);
             this.txtTen.Name = "txtTen";
             this.txtTen.PasswordChar = '\0';

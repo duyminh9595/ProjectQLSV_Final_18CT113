@@ -63,5 +63,59 @@ namespace WindowsFormsApp2.User_UI
         {
             this.Close();
         }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            if (dgvThongTinhSinhVien.DataSource != null)
+            {
+                DataSet ds = new DataSet();
+                DataTable table = new DataTable();
+                table.Columns.Add("Mã Số Sinh Viên", typeof(string));
+                table.Columns.Add("Họ Và Tên Sinh Viên", typeof(string));
+                table.Columns.Add("Giới Tính", typeof(string));
+                table.Columns.Add("Ngày Sinh", typeof(string));
+                table.Columns.Add("Số Điện Thoại", typeof(string));
+                foreach (DataGridViewRow dt in dgvThongTinhSinhVien.Rows)
+                {
+                    table.Rows.Add(dt.Cells[0].Value, dt.Cells[1].Value, dt.Cells[2].Value, dt.Cells[3].Value, dt.Cells[4].Value);
+                }
+                ds.Tables.Add(table);
+                //ds.WriteXmlSchema("applicant.xml");
+                PrintTheReport p = new PrintTheReport("1", "1", "1", "1", "1");
+                CrystalReport2 cr = new CrystalReport2();
+                cr.SetDataSource(ds);
+                foreach(SinhVien sv in LoadExcel.lstSinhVien)
+                {
+                    if(sv.MSSV.Equals(StatusDangNhapcs.user))
+                    {
+                        cr.SetParameterValue("tenLop", sv.lop.TenLop);
+                        cr.SetParameterValue("siSo",sv.lop.dsSinhVien.Count().ToString());
+                        cr.SetParameterValue("tenGVCN", sv.lop.giaoVien.TenGV);
+                        foreach (SinhVien sv1 in LoadExcel.lstSinhVien)
+                        {
+                            if (sv1.lop == sv.lop)
+                            {
+                                if (sv1.TrangThaiHocXong.Equals("YES"))
+                                {
+
+                                    cr.SetParameterValue("msLT", sv1.MSSV);
+                                    break;
+                                }
+                            }
+                        }
+                        cr.SetParameterValue("maLop", sv.lop.MaLop);
+                        cr.SetParameterValue("namhoc", Double.Parse(sv.lop.MaLop.ToString().Substring(0, 2)) + 2000);
+
+
+                    }
+                }
+                p.crystalReportViewer1.ReportSource = cr;
+                p.crystalReportViewer1.Refresh();
+                p.Show();
+            }
+            else
+                MessageBox.Show("Chưa Chọn Lớp Cần In", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        }
     }
 }

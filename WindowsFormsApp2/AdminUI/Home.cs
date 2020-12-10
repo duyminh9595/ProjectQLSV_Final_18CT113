@@ -108,7 +108,15 @@ namespace WindowsFormsApp2
                 chartSVTinhThanh.Series["Series1"].Points.AddXY("Tỉnh Đồng Nai", svTinhDongNai.ToString());
             }
             lblSVConHoc.Text = slsvconhoc.ToString();
-            lblChuaXepLop.Text = LoadExcel.svChuaXepLop.dsSVChuaXepLop.Count().ToString();
+            int count = 0;
+            foreach(SinhVien sv in LoadExcel.lstSinhVien)
+            {
+                if(sv.lop==null)
+                {
+                    ++count;
+                }
+            }
+            lblChuaXepLop.Text = count.ToString();
         }
     }
 }
