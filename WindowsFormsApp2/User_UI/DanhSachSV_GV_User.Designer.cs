@@ -45,11 +45,11 @@
             this.cmbLop = new System.Windows.Forms.ComboBox();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.gunaElipse2 = new Guna.UI.WinForms.GunaElipse(this.components);
-            this.gunaElipse3 = new Guna.UI.WinForms.GunaElipse(this.components);
-            this.gunaElipse4 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.btnSearch = new Guna.UI.WinForms.GunaButton();
-            this.btnExit = new Guna.UI.WinForms.GunaButton();
+            this.gunaElipse3 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.btnPrint = new Guna.UI.WinForms.GunaButton();
+            this.gunaElipse4 = new Guna.UI.WinForms.GunaElipse(this.components);
+            this.btnExit = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinhSinhVien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -212,16 +212,6 @@
             this.gunaElipse2.Radius = 5;
             this.gunaElipse2.TargetControl = this.btnSearch;
             // 
-            // gunaElipse3
-            // 
-            this.gunaElipse3.Radius = 10;
-            this.gunaElipse3.TargetControl = this.btnPrint;
-            // 
-            // gunaElipse4
-            // 
-            this.gunaElipse4.Radius = 10;
-            this.gunaElipse4.TargetControl = this.btnExit;
-            // 
             // btnSearch
             // 
             this.btnSearch.AnimationHoverSpeed = 0.07F;
@@ -246,29 +236,10 @@
             this.btnSearch.Text = "Search";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // btnExit
+            // gunaElipse3
             // 
-            this.btnExit.AnimationHoverSpeed = 0.07F;
-            this.btnExit.AnimationSpeed = 0.03F;
-            this.btnExit.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnExit.BorderColor = System.Drawing.Color.Black;
-            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnExit.FocusedColor = System.Drawing.Color.Empty;
-            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Image = global::WindowsFormsApp2.Properties.Resources.sign_out_64px1;
-            this.btnExit.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnExit.Location = new System.Drawing.Point(618, 506);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnExit.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnExit.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnExit.OnHoverImage = null;
-            this.btnExit.OnPressedColor = System.Drawing.Color.Black;
-            this.btnExit.Size = new System.Drawing.Size(170, 42);
-            this.btnExit.TabIndex = 9;
-            this.btnExit.Text = "Thoát";
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.gunaElipse3.Radius = 10;
+            this.gunaElipse3.TargetControl = this.btnPrint;
             // 
             // btnPrint
             // 
@@ -292,6 +263,36 @@
             this.btnPrint.Size = new System.Drawing.Size(170, 42);
             this.btnPrint.TabIndex = 8;
             this.btnPrint.Text = "In Danh Sách";
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // gunaElipse4
+            // 
+            this.gunaElipse4.Radius = 10;
+            this.gunaElipse4.TargetControl = this.btnExit;
+            // 
+            // btnExit
+            // 
+            this.btnExit.AnimationHoverSpeed = 0.07F;
+            this.btnExit.AnimationSpeed = 0.03F;
+            this.btnExit.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnExit.BorderColor = System.Drawing.Color.Black;
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnExit.FocusedColor = System.Drawing.Color.Empty;
+            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Image = global::WindowsFormsApp2.Properties.Resources.sign_out_64px1;
+            this.btnExit.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnExit.Location = new System.Drawing.Point(618, 506);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnExit.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnExit.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnExit.OnHoverImage = null;
+            this.btnExit.OnPressedColor = System.Drawing.Color.Black;
+            this.btnExit.Size = new System.Drawing.Size(170, 42);
+            this.btnExit.TabIndex = 9;
+            this.btnExit.Text = "Thoát";
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // DanhSachSV_GV_User
             // 
